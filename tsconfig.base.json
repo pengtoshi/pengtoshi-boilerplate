@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "allowJs": true,
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "strictNullChecks": true,
+    "baseUrl": ".",
+    "paths": {
+      "@libs/ui": ["libs/ui/src/index.ts"],
+      "~/client-next/*": ["apps/client-next/*"],
+      "~/server-next/*": ["apps/server-next/*"],
+      "~/prisma/*": ["libs/prisma/*"],
+      "~/ui/*": ["libs/ui/*"]
+    }
+  },
+  "exclude": ["node_modules", "tmp", "dist", ".next"]
+}

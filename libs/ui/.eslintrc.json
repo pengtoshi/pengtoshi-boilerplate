@@ -1,0 +1,20 @@
+{
+  "extends": ["plugin:@nx/react-typescript", "next", "next/core-web-vitals", "../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*", "node_modules/**", "*.config.js", "*.config.ts"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@typescript-eslint/no-namespace": 0
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {}
+    }
+  ]
+}

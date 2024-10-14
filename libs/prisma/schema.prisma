@@ -1,0 +1,91 @@
+datasource db {
+    provider = "postgresql"
+    url      = env("PRISMA_DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+    output   = "./generated/client"
+}
+
+model User {
+    /// 아이디
+    id        String     @id @default(cuid())
+    /// 지갑 주소
+    address   String     @unique @db.VarChar(42)
+    /// 역할
+    role      ROLE       @default(USER)
+    /// 상태
+    status    STATUS     @default(ACTIVE)
+    /// 일회용 논스값
+    nonce     String?
+    /// 인증 관련 정보
+    authToken AuthToken?
+    /// 생성 일시
+    createdAt DateTime   @default(now()) @db.Timestamp(3)
+    /// 수정 일시
+    updatedAt DateTime   @updatedAt @db.Timestamp(3)
+}
+
+model AuthToken {
+    /// 사용자
+    user                  User    @relation(fields: [userId], references: [id])
+    /// 사용자 ID
+    userId                String  @id @unique
+    /// access token
+    accessToken           String
+    /// 암호화된 refresh token
+    encryptedRefreshToken String?
+}
+
+model Token {
+    /// 아이디
+    id        String   @id @default(cuid())
+    /// 토큰 주소 - debankTokenId를 사용
+    address   String   @unique
+    /// 네트워크
+    chain     Chain    @relation(fields: [chainId], references: [chainId])
+    /// 체인 ID
+    chainId   Int
+    /// 이름
+    name      String
+    /// 심볼
+    symbol    String
+    /// 자리수
+    decimals  Int
+    /// 로고 URL
+    logoUrl   String
+    /// 가격
+    price     Float
+    /// 스테이블 코인 여부
+    isStable  Boolean  @default(false)
+    /// 생성 일시
+    createdAt DateTime @default(now()) @db.Timestamp(3)
+    /// 수정 일시
+    updatedAt DateTime @updatedAt @db.Timestamp(3)
+}
+
+model Chain {
+    /// 체인 ID
+    chainId   Int      @id @unique
+    /// 네트워크
+    name      String
+    /// 생성 일시
+    createdAt DateTime @default(now()) @db.Timestamp(3)
+    /// 수정 일시
+    updatedAt DateTime @updatedAt @db.Timestamp(3)
+    /// 토큰
+    tokens    Token[]
+}
+
+enum ROLE {
+    USER
+    ADMIN
+    WIZ
+}
+
+enum STATUS {
+    ACTIVE
+    INACTIVE
+    DELETE
+}
