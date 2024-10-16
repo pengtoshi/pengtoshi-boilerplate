@@ -1,9 +1,12 @@
 /* eslint-disable */
+// FIXME: Add configuration after add storybook
 export default {
-  displayName: "constants",
+  displayName: "ui",
   preset: "../../jest.preset.js",
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
-  coverageDirectory: "../../coverage/libs/constants",
+  coverageDirectory: "<rootDir>/../../coverage/libs/ui",
   collectCoverageFrom: ["<rootDir>/src/**/*.{ts,tsx,js,jsx}"],
   coveragePathIgnorePatterns: ["<rootDir>/src/index.ts"],
+  setupFiles: [],
+  passWithNoTests: true,
 };

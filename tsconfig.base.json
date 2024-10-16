@@ -25,7 +25,7 @@
       "@libs/utils-client": ["libs/utils/src/client/index.ts"],
       "@libs/utils-server": ["libs/utils/src/server/index.ts"],
       "~/client-next/*": ["apps/client-next/*"],
-      "~/server-next/*": ["apps/server-next/*"],
+      "~/server-nest/*": ["apps/server-nest/*"],
       "~/prisma/*": ["libs/prisma/*"],
       "~/ui/*": ["libs/ui/*"]
     }
