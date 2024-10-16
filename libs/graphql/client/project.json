@@ -4,17 +4,6 @@
   "sourceRoot": "libs/graphql/client/src",
   "projectType": "library",
   "targets": {
-    "build": {
-      "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "rootDir": ".",
-        "outputPath": "dist/libs/graphql/client",
-        "main": "libs/graphql/client/src/index.ts",
-        "tsConfig": "libs/graphql/client/tsconfig.lib.json",
-        "assets": ["libs/graphql/client/*.md"]
-      }
-    },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
