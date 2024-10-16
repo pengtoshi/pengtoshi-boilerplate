@@ -15,7 +15,7 @@
     "db-migrate:dev": "dotenv -e ./apps/server-nest/.env.development -- prisma migrate dev --schema libs/prisma/schema.prisma",
     "db-migrate:dev:create-only": "dotenv -e ./apps/server-nest/.env.development -- prisma migrate dev --schema libs/prisma/schema.prisma --create-only",
     "db-migrate:dev:status": "dotenv -e ./apps/server-nest/.env.development -- prisma migrate status --schema libs/prisma/schema.prisma",
-    "db-migrate:test": "dotenv -e ./apps/server-e2e/.env.testing -- prisma migrate deploy --schema libs/prisma/schema.prisma",
+    "db-migrate:test": "dotenv -e ./apps/server-nest-e2e/.env.testing -- prisma migrate deploy --schema libs/prisma/schema.prisma",
     "db-migrate:deploy:local": "dotenv -e ./apps/server-nest/.env.development prisma migrate deploy --schema libs/prisma/schema.prisma",
     "db-migrate:deploy:qa": "dotenv -e ./apps/server-nest/.env.qa prisma migrate deploy --schema libs/prisma/schema.prisma",
     "db-migrate:deploy": "prisma migrate deploy --schema libs/prisma/schema.prisma",

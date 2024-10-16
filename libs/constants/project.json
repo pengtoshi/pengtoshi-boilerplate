@@ -4,27 +4,9 @@
   "sourceRoot": "libs/constants/src",
   "projectType": "library",
   "targets": {
-    "build": {
-      "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "rootDir": ".",
-        "outputPath": "dist/libs/constants",
-        "main": "libs/constants/src/index.ts",
-        "tsConfig": "libs/constants/tsconfig.lib.json",
-        "assets": ["libs/constants/*.md"]
-      }
-    },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/constants"],
-      "options": {
-        "jestConfig": "libs/constants/jest.config.ts"
-      }
     }
   },
   "tags": ["scope:shared"]

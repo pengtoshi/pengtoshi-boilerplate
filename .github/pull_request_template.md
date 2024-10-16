@@ -1,9 +1,14 @@
-### 변경 사항
+### Issue
 
-주요 변경사항을 작성해 주세요.
+#1
 
-<br/>
+### Changes
 
-### 리뷰어에게
+Short description of the changes made.
 
-리뷰어가 특별히 주의해서 보았으면 하는 항목이나 주의해야 할 사항들이 있다면 기록해 주세요.
+- Changes 1
+- Changes 2
+
+### To Reviewer
+
+Please note any specific items or points of concern that you would like the reviewer to pay special attention to.

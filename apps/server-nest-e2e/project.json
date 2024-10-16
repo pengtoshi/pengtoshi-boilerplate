@@ -4,13 +4,21 @@
   "implicitDependencies": ["server-nest"],
   "projectType": "application",
   "targets": {
-    "e2e": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{e2eProjectRoot}"],
+      "outputs": ["{workspaceRoot}/coverage/apps/server-nest-e2e"],
       "options": {
         "jestConfig": "apps/server-nest-e2e/jest.config.ts",
-        "passWithNoTests": true
+        "passWithNoTests": true,
+        "runInBand": true,
+        "logHeapUsage": true,
+        "workerIdleMemoryLimit": "1GB"
       }
     }
-  }
+  },
+  "tags": ["scope:server"]
 }

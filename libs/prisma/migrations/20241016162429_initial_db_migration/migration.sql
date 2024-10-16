@@ -1,12 +1,11 @@
 -- CreateEnum
-CREATE TYPE "ROLE" AS ENUM ('USER', 'ADMIN', 'WIZ');
+CREATE TYPE "ROLE" AS ENUM ('USER', 'ADMIN');
 
 -- CreateEnum
 CREATE TYPE "STATUS" AS ENUM ('ACTIVE', 'INACTIVE', 'DELETE');
 
 -- CreateTable
 CREATE TABLE "User" (
-    "id" TEXT NOT NULL,
     "address" VARCHAR(42) NOT NULL,
     "role" "ROLE" NOT NULL DEFAULT 'USER',
     "status" "STATUS" NOT NULL DEFAULT 'ACTIVE',
@@ -14,16 +13,16 @@ CREATE TABLE "User" (
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "User_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "User_pkey" PRIMARY KEY ("address")
 );
 
 -- CreateTable
 CREATE TABLE "AuthToken" (
-    "userId" TEXT NOT NULL,
+    "userAddress" TEXT NOT NULL,
     "accessToken" TEXT NOT NULL,
     "encryptedRefreshToken" TEXT,
 
-    CONSTRAINT "AuthToken_pkey" PRIMARY KEY ("userId")
+    CONSTRAINT "AuthToken_pkey" PRIMARY KEY ("userAddress")
 );
 
 -- CreateTable
@@ -36,7 +35,6 @@ CREATE TABLE "Token" (
     "decimals" INTEGER NOT NULL,
     "logoUrl" TEXT NOT NULL,
     "price" DOUBLE PRECISION NOT NULL,
-    "isStable" BOOLEAN NOT NULL DEFAULT false,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
@@ -57,7 +55,7 @@ CREATE TABLE "Chain" (
 CREATE UNIQUE INDEX "User_address_key" ON "User"("address");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "AuthToken_userId_key" ON "AuthToken"("userId");
+CREATE UNIQUE INDEX "AuthToken_userAddress_key" ON "AuthToken"("userAddress");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Token_address_key" ON "Token"("address");
@@ -66,7 +64,7 @@ CREATE UNIQUE INDEX "Token_address_key" ON "Token"("address");
 CREATE UNIQUE INDEX "Chain_chainId_key" ON "Chain"("chainId");
 
 -- AddForeignKey
-ALTER TABLE "AuthToken" ADD CONSTRAINT "AuthToken_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "AuthToken" ADD CONSTRAINT "AuthToken_userAddress_fkey" FOREIGN KEY ("userAddress") REFERENCES "User"("address") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "Token" ADD CONSTRAINT "Token_chainId_fkey" FOREIGN KEY ("chainId") REFERENCES "Chain"("chainId") ON DELETE RESTRICT ON UPDATE CASCADE;

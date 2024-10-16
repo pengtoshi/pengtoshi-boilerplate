@@ -2,18 +2,15 @@
 export default {
   displayName: "server-nest-e2e",
   preset: "../../jest.preset.js",
-  globalSetup: "<rootDir>/src/support/global-setup.ts",
-  globalTeardown: "<rootDir>/src/support/global-teardown.ts",
-  setupFiles: ["<rootDir>/src/support/test-setup.ts"],
+  moduleFileExtensions: ["ts", "js"],
   testEnvironment: "node",
-  transform: {
-    "^.+\\.[tj]s$": [
-      "ts-jest",
-      {
-        tsconfig: "<rootDir>/tsconfig.spec.json",
-      },
-    ],
-  },
-  moduleFileExtensions: ["ts", "js", "html"],
   coverageDirectory: "../../coverage/server-nest-e2e",
+  forceExit: true,
+  collectCoverageFrom: ["<rootDir>/src/**/*.{ts,tsx,js,jsx}"],
+  testTimeout: 10000,
+  moduleNameMapper: {
+    "^~/server-nest-e2e/(.*)$": "<rootDir>/$1",
+    "^~/prisma/(.*)$": "<rootDir>/../../libs/prisma/$1",
+  },
+  transformIgnorePatterns: ["libs/prisma/generated/client"],
 };

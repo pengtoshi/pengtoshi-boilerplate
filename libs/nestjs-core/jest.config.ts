@@ -10,4 +10,5 @@ export default {
     "^~/prisma/(.*)$": "<rootDir>/../../libs/prisma/$1",
   },
   transformIgnorePatterns: ["libs/prisma/generated/client"],
+  passWithNoTests: true,
 };
