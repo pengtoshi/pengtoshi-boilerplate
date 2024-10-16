@@ -2,12 +2,12 @@ const {
   utils: { getProjects },
 } = require("@commitlint/config-nx-scopes");
 
+const typeEnum = ["Feat", "Fix", "Chore", "Test", "Deploy", "Refactor"];
+
 const Configuration = {
   extends: ["git-commit-emoji", "@commitlint/config-nx-scopes"],
   rules: {
     //* Type
-    "type-enum": [2, "always", ["✨ Feat", "🔨 Fix", "🍎 Chore", "🧪 Test", "🌊 Deploy", "🏗️ Refactor"]],
-    "type-case": [2, "always", "start-case"],
     "type-empty": [2, "never"],
 
     //* Scope
@@ -38,6 +38,37 @@ const Configuration = {
       message.startsWith("Rebase") ||
       message.startsWith("Tag"),
   ],
+  parserPreset: {
+    parserOpts: {
+      headerPattern: /^(?:\S+\s+)?(\S+)(?:\(([^\)]+)\))?: (.+)(?:\s+\(#\d+\))?$/,
+      headerCorrespondence: ["type", "scope", "subject"],
+    },
+  },
+  plugins: [
+    {
+      rules: {
+        "custom-type-enum": (parsed, _when, value) => {
+          const { type } = parsed;
+          const strippedType = type.replace(/^[^\w]+/, "");
+          if (!value.includes(strippedType)) {
+            return [false, `type must be one of [${value.join(", ")}]`];
+          }
+          return [true];
+        },
+        "custom-type-case": (parsed, _when, value) => {
+          const { type } = parsed;
+          const strippedType = type.replace(/^[^\w]+/, "");
+          if (value === "pascal-case" && !/^[A-Z][a-z]+$/.test(strippedType)) {
+            return [false, `type must be pascal-case`];
+          }
+          return [true];
+        },
+      },
+    },
+  ],
 };
+
+Configuration.rules["type-enum"] = [2, "always", typeEnum];
+Configuration.rules["type-case"] = [2, "always", "pascal-case"];
 
 module.exports = Configuration;
