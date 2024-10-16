@@ -51,7 +51,7 @@ export class UserService {
 
     await this.prisma.authToken.upsert({
       create: {
-        userId: user.id,
+        userAddress: user.address,
         accessToken,
         encryptedRefreshToken,
       },
@@ -59,7 +59,7 @@ export class UserService {
         accessToken,
         encryptedRefreshToken,
       },
-      where: { userId: user.id },
+      where: { userAddress: user.address },
     });
 
     return { accessToken, refreshToken };
@@ -72,7 +72,7 @@ export class UserService {
     const user = await this.prisma.extended.user.findUnique({ where: { address } });
     if (!user) throw new GraphQLError(ErrorMessage.MSG_NOT_FOUND_USER);
 
-    const authToken = await this.prisma.authToken.findUnique({ where: { userId: user.id } });
+    const authToken = await this.prisma.authToken.findUnique({ where: { userAddress: user.address } });
     if (!authToken) throw new GraphQLError(ErrorMessage.MSG_NOT_FOUND_AUTH_TOKEN);
 
     const isMatch = await bcrypt.compare(refreshToken, authToken.encryptedRefreshToken);
@@ -82,7 +82,7 @@ export class UserService {
 
     const accessToken = this.authService.generateAccessToken({ address });
     await this.prisma.authToken.update({
-      where: { userId: user.id },
+      where: { userAddress: user.address },
       data: {
         accessToken,
       },
