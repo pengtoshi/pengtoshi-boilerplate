@@ -18,7 +18,12 @@
     "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
+      "@libs/constants": ["libs/constants/src/index.ts"],
+      "@libs/model": ["libs/model/src/index.ts"],
+      "@libs/nestjs-core": ["libs/nestjs-core/src/index.ts"],
       "@libs/ui": ["libs/ui/src/index.ts"],
+      "@libs/utils-client": ["libs/utils/src/client/index.ts"],
+      "@libs/utils-server": ["libs/utils/src/server/index.ts"],
       "~/client-next/*": ["apps/client-next/*"],
       "~/server-next/*": ["apps/server-next/*"],
       "~/prisma/*": ["libs/prisma/*"],
