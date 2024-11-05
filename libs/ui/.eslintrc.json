@@ -1,9 +1,12 @@
 {
   "extends": ["plugin:@nx/react-typescript", "next", "next/core-web-vitals", "../../.eslintrc.json"],
-  "ignorePatterns": ["!**/*", "node_modules/**", "*.config.js", "*.config.ts"],
+  "ignorePatterns": ["!**/*", "node_modules/**", ".storybook/**", "*.config.js", "*.config.ts"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "parserOptions": {
+        "project": ["libs/ui/tsconfig.*?.json"]
+      },
       "rules": {
         "@typescript-eslint/no-namespace": 0
       }

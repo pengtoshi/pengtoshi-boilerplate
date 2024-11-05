@@ -1,10 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "include": [
-    "../../apps/client/creator/**/*.stories.tsx",
-    "../../apps/client/user/**/*.stories.tsx",
-    "../../libs/ui/**/*.stories.tsx"
-  ],
+  "include": ["../../apps/client-next/**/*.stories.tsx", "../../libs/ui/**/*.stories.tsx"],
   "exclude": [
     "../../**/*.spec.js",
     "../../**/*.test.js",

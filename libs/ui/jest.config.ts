@@ -1,5 +1,4 @@
 /* eslint-disable */
-// FIXME: Add configuration after add storybook
 export default {
   displayName: "ui",
   preset: "../../jest.preset.js",
@@ -8,5 +7,10 @@ export default {
   collectCoverageFrom: ["<rootDir>/src/**/*.{ts,tsx,js,jsx}"],
   coveragePathIgnorePatterns: ["<rootDir>/src/index.ts"],
   setupFiles: [],
-  passWithNoTests: true,
+  setupFilesAfterEnv: ["<rootDir>/setupJest.js"],
+  moduleNameMapper: {
+    "~/client-next/(.*)": "<rootDir>/../../apps/client-next/$1",
+    "~/ui/(.*)": "<rootDir>/../../libs/ui/$1",
+    "~/prisma/(.*)": "<rootDir>/../../libs/prisma/$1",
+  },
 };

@@ -24,9 +24,10 @@
       "@libs/ui": ["libs/ui/src/index.ts"],
       "@libs/utils-client": ["libs/utils/src/client/index.ts"],
       "@libs/utils-server": ["libs/utils/src/server/index.ts"],
+      "~/.storybook/*": [".storybook/*"],
       "~/client-next/*": ["apps/client-next/*"],
-      "~/server-nest/*": ["apps/server-nest/*"],
       "~/prisma/*": ["libs/prisma/*"],
+      "~/server-nest/*": ["apps/server-nest/*"],
       "~/ui/*": ["libs/ui/*"]
     }
   },
