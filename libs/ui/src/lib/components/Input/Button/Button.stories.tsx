@@ -10,10 +10,12 @@ const OneItem: StoryFn<ComponentProps<typeof Button>> = (args) => <Button {...ar
 const VariantList: StoryFn<ComponentProps<typeof Button>> = ({ variant, ...args }) => (
   <div className="flex flex-row gap-4">
     {(
-      [undefined, "default", "destructive", "outline", "secondary", "ghost", "link"] as Array<ButtonProps["variant"]>
+      [undefined, "solid", "outlinedPrimary", "outlinedAssertive", "textPrimary", "textAssertive"] as Array<
+        ButtonProps["variant"]
+      >
     ).map((targetVariant) => (
       <div className="flex flex-col gap-4" key={targetVariant}>
-        <p className="text-14/body/m text-gray-600">{targetVariant ?? "default"}</p>
+        <p className="text-14/body text-gray-600">{targetVariant ?? "default"}</p>
         <div className="flex flex-col gap-4">
           <Button {...args} variant={targetVariant ?? variant} />
           <Button {...args} variant={targetVariant ?? variant} disabled />
@@ -25,9 +27,9 @@ const VariantList: StoryFn<ComponentProps<typeof Button>> = ({ variant, ...args 
 
 const SizeList: StoryFn<ComponentProps<typeof Button>> = ({ size, ...args }) => (
   <div className="flex flex-row gap-4">
-    {([undefined, "default", "sm", "lg", "icon"] as Array<ButtonProps["size"]>).map((targetSize) => (
+    {([undefined, "small", "medium", "large"] as Array<ButtonProps["size"]>).map((targetSize) => (
       <div className="flex flex-col gap-4" key={targetSize}>
-        <p className="text-14/body/m text-gray-600">{targetSize ?? "default"}</p>
+        <p className="text-14/body text-gray-600">{targetSize ?? "default"}</p>
         <div className="flex flex-col gap-4">
           <Button {...args} size={targetSize ?? size} />
           <Button {...args} size={targetSize ?? size} disabled />
@@ -43,8 +45,8 @@ Default.args = {
   children: "Button",
 };
 
-export const Theme = VariantList.bind({});
-Theme.args = {
+export const Variant = VariantList.bind({});
+Variant.args = {
   type: "button",
   children: "Button",
 };
