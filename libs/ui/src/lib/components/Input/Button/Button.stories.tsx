@@ -1,8 +1,8 @@
 import type { StoryFn } from "@storybook/react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { ComponentProps } from "react";
 import type { ButtonProps } from "./Button";
 import { Button } from "./Button";
+import { Icon as IconComponent } from "../../Icon/Icon";
 
 export default { component: Button };
 
@@ -88,6 +88,6 @@ export const Icon = IconList.bind({});
 Icon.args = {
   type: "button",
   children: "Button",
-  leftIcon: <ChevronLeft className="size-4" />,
-  rightIcon: <ChevronRight className="size-4" />,
+  leftIcon: <IconComponent name="ChevronLeft" size={20} className="text-gray-50" />,
+  rightIcon: <IconComponent name="ChevronRight" size={20} className="text-gray-50" />,
 };
