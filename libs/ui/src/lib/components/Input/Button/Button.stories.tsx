@@ -1,14 +1,15 @@
 import type { StoryFn } from "@storybook/react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { ComponentProps } from "react";
 import type { ButtonProps } from "./Button";
 import { Button } from "./Button";
 
 export default { component: Button };
 
-const OneItem: StoryFn<ComponentProps<typeof Button>> = (args) => <Button {...args} />;
+const Template: StoryFn<ComponentProps<typeof Button>> = (args) => <Button {...args} />;
 
 const VariantList: StoryFn<ComponentProps<typeof Button>> = ({ variant, ...args }) => (
-  <div className="flex flex-row gap-4">
+  <div className="flex flex-row gap-8">
     {(
       [undefined, "solid", "outlinedPrimary", "outlinedAssertive", "textPrimary", "textAssertive"] as Array<
         ButtonProps["variant"]
@@ -26,7 +27,7 @@ const VariantList: StoryFn<ComponentProps<typeof Button>> = ({ variant, ...args 
 );
 
 const SizeList: StoryFn<ComponentProps<typeof Button>> = ({ size, ...args }) => (
-  <div className="flex flex-row gap-4">
+  <div className="flex flex-row gap-8">
     {([undefined, "small", "medium", "large"] as Array<ButtonProps["size"]>).map((targetSize) => (
       <div className="flex flex-col gap-4" key={targetSize}>
         <p className="text-14/body text-gray-600">{targetSize ?? "default"}</p>
@@ -39,7 +40,33 @@ const SizeList: StoryFn<ComponentProps<typeof Button>> = ({ size, ...args }) => 
   </div>
 );
 
-export const Default = OneItem.bind({});
+const IconList: StoryFn<ComponentProps<typeof Button>> = ({ leftIcon, rightIcon, ...args }) => (
+  <div className="flex flex-row gap-8">
+    <div className="flex flex-col gap-4">
+      <p className="text-14/body text-gray-600">No Icon</p>
+      <div className="flex flex-col gap-4">
+        <Button {...args} />
+        <Button {...args} disabled />
+      </div>
+    </div>
+    <div className="flex flex-col gap-4">
+      <p className="text-14/body text-gray-600">Left Icon</p>
+      <div className="flex flex-col gap-4">
+        <Button {...args} leftIcon={leftIcon} />
+        <Button {...args} leftIcon={leftIcon} disabled />
+      </div>
+    </div>
+    <div className="flex flex-col gap-4">
+      <p className="text-14/body text-gray-600">Right Icon</p>
+      <div className="flex flex-col gap-4">
+        <Button {...args} rightIcon={rightIcon} />
+        <Button {...args} rightIcon={rightIcon} disabled />
+      </div>
+    </div>
+  </div>
+);
+
+export const Default = Template.bind({});
 Default.args = {
   type: "button",
   children: "Button",
@@ -55,4 +82,12 @@ export const Size = SizeList.bind({});
 Size.args = {
   type: "button",
   children: "Button",
+};
+
+export const Icon = IconList.bind({});
+Icon.args = {
+  type: "button",
+  children: "Button",
+  leftIcon: <ChevronLeft className="size-4" />,
+  rightIcon: <ChevronRight className="size-4" />,
 };
