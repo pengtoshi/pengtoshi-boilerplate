@@ -71,7 +71,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
         />
       </div>
       <div className="flex w-full justify-between gap-4">
-        <div>
+        <div className="flex w-full flex-col items-start gap-0.5">
           {!!guide && <div className="text-12/body text-gray-600">{guide}</div>}
           {!!error && <div className="text-12/body text-etc-negative">{error}</div>}
         </div>

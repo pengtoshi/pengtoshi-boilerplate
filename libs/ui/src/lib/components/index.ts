@@ -7,5 +7,6 @@ export * from "./Icon/Icon";
 
 // input
 export * from "./Input/Button/Button";
+export * from "./Input/Dropdown/Dropdown";
 export * from "./Input/Textfield/Textfield";
 export * from "./Input/Textarea/Textarea";

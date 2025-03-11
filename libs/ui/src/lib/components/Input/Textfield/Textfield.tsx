@@ -82,8 +82,10 @@ export const Textfield = forwardRef<HTMLInputElement, TextfieldProps>(function T
         />
         {!!trailingIcon && trailingIcon}
       </div>
-      {!!guide && <div className="text-12/body text-gray-600">{guide}</div>}
-      {!!error && <div className="text-12/body text-etc-negative">{error}</div>}
+      <div className="flex w-full flex-col items-start gap-0.5">
+        {!!guide && <div className="text-12/body text-gray-600">{guide}</div>}
+        {!!error && <div className="text-12/body text-etc-negative">{error}</div>}
+      </div>
     </div>
   );
 });

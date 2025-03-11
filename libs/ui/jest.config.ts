@@ -9,6 +9,7 @@ export default {
   setupFiles: [],
   setupFilesAfterEnv: ["<rootDir>/setupJest.js"],
   moduleNameMapper: {
+    "\\.svg$": "<rootDir>/../../libs/ui/src/lib/utils/svg.mock.ts",
     "~/client-next/(.*)": "<rootDir>/../../apps/client-next/$1",
     "~/ui/(.*)": "<rootDir>/../../libs/ui/$1",
     "~/prisma/(.*)": "<rootDir>/../../libs/prisma/$1",
