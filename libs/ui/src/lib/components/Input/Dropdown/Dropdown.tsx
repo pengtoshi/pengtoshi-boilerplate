@@ -73,7 +73,7 @@ export const Dropdown = <T extends string | number>({
           />
         </button>
         {isOpen && (
-          <ul className="absolute left-0 mt-2 w-full rounded-md border border-gray-300 bg-white p-1 shadow drop-shadow-emphasize">
+          <ul className="absolute left-0 mt-2 w-full rounded-md border border-gray-300 bg-white p-1 shadow-emphasize">
             {options.map((option, index) => (
               <DropdownListText<T>
                 key={index}

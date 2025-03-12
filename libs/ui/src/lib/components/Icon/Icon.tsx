@@ -6,6 +6,9 @@ import { ReactComponent as ChevronDown } from "~/ui/public/icons/chevron_down.sv
 import { ReactComponent as ChevronLeft } from "~/ui/public/icons/chevron_left.svg";
 import { ReactComponent as ChevronRight } from "~/ui/public/icons/chevron_right.svg";
 import { ReactComponent as ChevronUp } from "~/ui/public/icons/chevron_up.svg";
+import { ReactComponent as CircleClose } from "~/ui/public/icons/circle_close.svg";
+import { ReactComponent as Dot } from "~/ui/public/icons/dot.svg";
+import { ReactComponent as Download } from "~/ui/public/icons/download.svg";
 
 export const IconVariants = {
   CheckThick,
@@ -14,6 +17,9 @@ export const IconVariants = {
   ChevronLeft,
   ChevronRight,
   ChevronUp,
+  Dot,
+  CircleClose,
+  Download,
 };
 
 type IconName = keyof typeof IconVariants;
