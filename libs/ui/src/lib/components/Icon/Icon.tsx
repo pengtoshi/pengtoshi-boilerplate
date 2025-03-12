@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { SVGProps } from "react";
+import { type SVGProps, useEffect, useState } from "react";
 import { ReactComponent as CheckThick } from "~/ui/public/icons/check_thick.svg";
 import { ReactComponent as CheckThin } from "~/ui/public/icons/check_thin.svg";
 import { ReactComponent as ChevronDown } from "~/ui/public/icons/chevron_down.svg";
@@ -31,5 +31,5 @@ export interface IconProps extends SVGProps<SVGSVGElement> {
 
 export const Icon = ({ name, size = 24, className, ...props }: IconProps) => {
   const IconComponent = IconVariants[name];
-  return <IconComponent {...props} width={size} height={size} className={clsx("text-gray-600", className)} />;
+  return <IconComponent {...props} width={size} height={size} className={className ?? "text-gray-600"} />;
 };

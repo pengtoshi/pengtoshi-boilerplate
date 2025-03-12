@@ -20,7 +20,7 @@ const InteractionSize = {
   medium: "h-8 w-8",
 };
 
-export const Radio = ({ active, handleClick, size = "medium", className, ...props }: RadioProps) => {
+export const Radio = ({ active, handleClick, size = "medium", disabled, className, ...props }: RadioProps) => {
   const [internalActive, setInternalActive] = useState(active);
 
   useEffect(() => {
@@ -31,19 +31,22 @@ export const Radio = ({ active, handleClick, size = "medium", className, ...prop
     <button
       type="button"
       className={clsx("group relative p-0.5 disabled:opacity-40", RadioSize[size], className)}
-      {...props}
+      disabled={disabled}
       onClick={() => {
         setInternalActive(!internalActive);
         handleClick();
       }}
+      {...props}
     >
       <div
         className={clsx(
-          "h-full w-full rounded-full bg-gray-100",
-          internalActive ? "border-4 border-primary-500" : "border-[1.5px] border-gray-300",
+          "h-full w-full rounded-full bg-gray-50",
+          internalActive ? "border-[5px] border-primary-500" : "border-[1.5px] border-gray-300",
         )}
       />
-      <Interaction focus={false} className={clsx("-left-1 -top-1 rounded-full", InteractionSize[size])} />
+      {!disabled && (
+        <Interaction focus={false} className={clsx("-left-1 -top-1 rounded-full", InteractionSize[size])} />
+      )}
     </button>
   );
 };
