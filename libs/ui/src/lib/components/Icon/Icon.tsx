@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
+import { ReactComponent as Check } from "~/ui/public/icons/check.svg";
 import { ReactComponent as CheckThick } from "~/ui/public/icons/check_thick.svg";
-import { ReactComponent as CheckThin } from "~/ui/public/icons/check_thin.svg";
 import { ReactComponent as ChevronDown } from "~/ui/public/icons/chevron_down.svg";
 import { ReactComponent as ChevronLeft } from "~/ui/public/icons/chevron_left.svg";
 import { ReactComponent as ChevronRight } from "~/ui/public/icons/chevron_right.svg";
@@ -16,12 +16,14 @@ import { ReactComponent as CirclePlus } from "~/ui/public/icons/circle_plus.svg"
 import { ReactComponent as CirclePlusFilled } from "~/ui/public/icons/circle_plus_filled.svg";
 import { ReactComponent as CircleQuestion } from "~/ui/public/icons/circle_question.svg";
 import { ReactComponent as CircleQuestionFilled } from "~/ui/public/icons/circle_question_filled.svg";
+import { ReactComponent as Close } from "~/ui/public/icons/close.svg";
+import { ReactComponent as CloseThick } from "~/ui/public/icons/close_thick.svg";
 import { ReactComponent as Dot } from "~/ui/public/icons/dot.svg";
 import { ReactComponent as Download } from "~/ui/public/icons/download.svg";
 
 export const IconVariants = {
+  Check,
   CheckThick,
-  CheckThin,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
@@ -37,6 +39,8 @@ export const IconVariants = {
   CirclePlusFilled,
   CircleQuestion,
   CircleQuestionFilled,
+  Close,
+  CloseThick,
   Dot,
   Download,
 };

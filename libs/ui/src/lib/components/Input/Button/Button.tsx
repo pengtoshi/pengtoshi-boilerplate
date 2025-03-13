@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { Button as ShadcnButton } from "../../../shadcn";
 import type { ButtonProps as ShadcnButtonProps } from "../../../shadcn";
 import { Interaction } from "../../Display/Interaction/Interaction";
@@ -15,9 +16,9 @@ const interactionBackground = {
   textAssertive: "",
 };
 
-export const Button = ({ children, leftIcon, rightIcon, ...props }: ButtonProps) => {
+export const Button = ({ children, leftIcon, rightIcon, className, ...props }: ButtonProps) => {
   return (
-    <ShadcnButton {...props} className="relative overflow-hidden">
+    <ShadcnButton {...props} className={clsx("relative overflow-hidden", className)}>
       <Interaction className={interactionBackground[props.variant ?? "solid"]} />
       {leftIcon}
       <span className="relative z-10">{children}</span>
