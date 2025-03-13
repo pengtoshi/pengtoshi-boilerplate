@@ -19,7 +19,7 @@ const interactionBackground = {
 export const Button = ({ children, leftIcon, rightIcon, className, ...props }: ButtonProps) => {
   return (
     <ShadcnButton {...props} className={clsx("relative overflow-hidden", className)}>
-      <Interaction className={interactionBackground[props.variant ?? "solid"]} />
+      <Interaction focus={false} className={interactionBackground[props.variant ?? "solid"]} />
       {leftIcon}
       <span className="relative z-10">{children}</span>
       {rightIcon}
