@@ -1,4 +1,5 @@
 import { Preview } from "@storybook/react";
+import { Toaster } from "@libs/ui";
 import "react-toastify/dist/ReactToastify.css";
 import "~/ui/public/styles/globals.css";
 
@@ -8,6 +9,16 @@ const preview: Preview = {
     layout: "padded",
     controls: { expanded: true },
   },
+  decorators: [
+    (Story, context) => {
+      return (
+        <>
+          <Toaster />
+          <Story />
+        </>
+      );
+    },
+  ],
 };
 
 export default preview;

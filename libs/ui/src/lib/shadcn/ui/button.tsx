@@ -4,7 +4,7 @@ import * as React from "react";
 import { cn } from "../utils/utils";
 
 const buttonVariants = cva(
-  "group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none",
+  "group inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none",
   {
     variants: {
       variant: {

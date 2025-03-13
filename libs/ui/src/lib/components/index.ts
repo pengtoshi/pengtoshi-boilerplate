@@ -2,6 +2,7 @@
 export * from "./Icon/Icon";
 
 // display
+export * from "./Feedback/Toaster/Toaster";
 
 // feedback
 
