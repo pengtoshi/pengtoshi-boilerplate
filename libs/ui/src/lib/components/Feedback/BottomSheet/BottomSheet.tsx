@@ -33,7 +33,7 @@ export const BottomSheet = ({
   return (
     <Drawer {...props}>
       <DrawerTrigger>{trigger}</DrawerTrigger>
-      <DrawerContent className={clsx(actionsDirection === "row" ? "pb-6" : "pb-3")}>
+      <DrawerContent>
         <div className="flex w-full flex-col gap-1">
           {title && <span className="text-16/body/emp text-gray-950">{title}</span>}
           {description && <span className="text-14/body text-gray-600">{description}</span>}
