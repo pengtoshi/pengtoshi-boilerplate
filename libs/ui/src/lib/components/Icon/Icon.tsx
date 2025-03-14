@@ -54,5 +54,5 @@ export interface IconProps extends SVGProps<SVGSVGElement> {
 
 export const Icon = ({ name, size = 24, className, ...props }: IconProps) => {
   const IconComponent = IconVariants[name];
-  return <IconComponent {...props} width={size} height={size} className={className ?? "text-gray-600"} />;
+  return <IconComponent {...props} width={size} height={size} className={className ?? "text-gray-950"} />;
 };

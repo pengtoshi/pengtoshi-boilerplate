@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { Dialog, DialogClose, DialogContent, DialogTrigger } from "../../../shadcn";
-import { Icon } from "../../Icon/Icon";
 import { Button } from "../../Input/Button/Button";
+import { IconButton } from "../../Input/Button/IconButton";
 
 export interface ModalAction {
   label: string;
@@ -40,7 +40,7 @@ export const Modal = ({
           </div>
           {closeButton && (
             <DialogClose asChild>
-              <Icon name="CloseThick" size={24} />
+              <IconButton name="CloseThick" size={20} iconClassName="!text-gray-600" />
             </DialogClose>
           )}
         </div>

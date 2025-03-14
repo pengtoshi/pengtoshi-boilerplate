@@ -8,7 +8,7 @@ export type ButtonProps = ShadcnButtonProps & {
   rightIcon?: React.ReactNode;
 };
 
-const interactionBackground = {
+const interactionClasses = {
   solid: "",
   outlinedPrimary: "!bg-primary-500",
   outlinedAssertive: "",
@@ -19,7 +19,7 @@ const interactionBackground = {
 export const Button = ({ children, leftIcon, rightIcon, className, ...props }: ButtonProps) => {
   return (
     <ShadcnButton {...props} className={clsx("relative overflow-hidden", className)}>
-      <Interaction focus={false} className={interactionBackground[props.variant ?? "solid"]} />
+      <Interaction focus={false} className={interactionClasses[props.variant ?? "solid"]} />
       {leftIcon}
       <span className="relative z-10">{children}</span>
       {rightIcon}
