@@ -42,7 +42,6 @@ libs/graphql/schema.graphql
 libs/graphql/*.schema.graphql
 libs/model/src/lib/@generated
 libs/prisma/generated
-**/__snapshots__/**
 
 # System Files
 .DS_Store
