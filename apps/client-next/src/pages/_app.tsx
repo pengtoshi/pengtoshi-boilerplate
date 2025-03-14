@@ -1,7 +1,6 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import "../../public/globals-client.css";
-import "react-toastify/dist/ReactToastify.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (

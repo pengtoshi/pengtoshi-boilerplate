@@ -5,7 +5,6 @@ import { Button } from "../../Input/Button/Button";
 export interface BottomSheetAction {
   label: string;
   onClick: () => void;
-  primary?: boolean;
 }
 
 export interface BottomSheetProps {
