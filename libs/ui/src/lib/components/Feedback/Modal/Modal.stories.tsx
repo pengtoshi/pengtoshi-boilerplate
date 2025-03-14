@@ -14,8 +14,5 @@ ModalComponent.args = {
   title: "Modal Title",
   size: "small",
   description: "Modal Description",
-  actions: [
-    { label: "Action 1", onClick: () => {} },
-    { label: "Action 2", onClick: () => {}, primary: true },
-  ],
+  actions: [{ label: "Main Action", onClick: () => {} }],
 };

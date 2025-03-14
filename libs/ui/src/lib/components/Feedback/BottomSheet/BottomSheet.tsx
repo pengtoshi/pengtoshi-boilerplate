@@ -1,51 +1,51 @@
 import clsx from "clsx";
-import { Dialog, DialogClose, DialogContent, DialogTrigger } from "../../../shadcn";
+import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from "../../../shadcn";
 import { Button } from "../../Input/Button/Button";
 
-export interface ModalAction {
+export interface BottomSheetAction {
   label: string;
   onClick: () => void;
+  primary?: boolean;
 }
 
-export interface ModalProps extends React.ComponentProps<typeof Dialog> {
+export interface BottomSheetProps {
   trigger?: React.ReactNode;
-  size?: "small" | "medium";
   title?: string;
   description?: string;
-  actions?: ModalAction[];
+  contents?: React.ReactNode;
+  actions?: BottomSheetAction[];
   actionsDirection?: "row" | "column";
   closeButton?: boolean;
   closeText?: string;
 }
 
-export const Modal = ({
+export const BottomSheet = ({
   trigger,
-  size = "small",
   title,
   description,
+  contents,
   actions,
   actionsDirection = "row",
   closeButton = true,
   closeText = "Close",
   ...props
-}: ModalProps) => {
+}: BottomSheetProps) => {
   return (
-    <Dialog {...props}>
-      <DialogTrigger>{trigger}</DialogTrigger>
-      <DialogContent className={clsx(size === "small" ? "max-w-[320px]" : "max-w-[480px]")}>
-        <div className="flex w-full items-start justify-between">
-          <div className="flex w-full flex-col gap-1">
-            {title && <span className="text-16/body/emp text-gray-950">{title}</span>}
-            {description && <span className="text-14/body text-gray-600">{description}</span>}
-          </div>
+    <Drawer {...props}>
+      <DrawerTrigger>{trigger}</DrawerTrigger>
+      <DrawerContent className={clsx(actionsDirection === "row" ? "pb-6" : "pb-3")}>
+        <div className="flex w-full flex-col gap-1">
+          {title && <span className="text-16/body/emp text-gray-950">{title}</span>}
+          {description && <span className="text-14/body text-gray-600">{description}</span>}
         </div>
+        {contents}
         <div className={clsx("flex w-full", actionsDirection === "row" ? "flex-row gap-3" : "flex-col gap-2")}>
           {closeButton && actionsDirection === "row" && (
-            <DialogClose asChild>
+            <DrawerClose asChild>
               <Button className="flex-1" variant="outlinedPrimary">
                 {closeText}
               </Button>
-            </DialogClose>
+            </DrawerClose>
           )}
           {actions?.map((action) => (
             <Button
@@ -58,14 +58,14 @@ export const Modal = ({
             </Button>
           ))}
           {closeButton && actionsDirection === "column" && (
-            <DialogClose asChild>
-              <Button className="w-full" variant="outlinedPrimary">
+            <DrawerClose asChild>
+              <Button className="w-full" variant="textPrimary">
                 {closeText}
               </Button>
-            </DialogClose>
+            </DrawerClose>
           )}
         </div>
-      </DialogContent>
-    </Dialog>
+      </DrawerContent>
+    </Drawer>
   );
 };
