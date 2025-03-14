@@ -3,7 +3,6 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 const colors = {
   gray: {
     0: "#ffffff",
-    10: "#f4f4f4",
     50: "#fafafa",
     100: "#f4f4f4",
     150: "#ebebeb",
@@ -25,13 +24,24 @@ const colors = {
     950: "#1f1f1f",
     1000: "#000000",
   },
+  primary: {
+    100: "#DBDDF5",
+    200: "#B8BBEB",
+    300: "#9499E0",
+    400: "#7177D6",
+    500: "#4D55CC",
+    600: "#3E44A3",
+    700: "#2E337A",
+    800: "#1F2252",
+    900: "#171A3D",
+    1000: "#0F1129",
+  },
   etc: {
-    positive: "#3DBE62",
+    positive: "#12B76A",
     positiveDeg: "#A7F0BA",
-    negative: "#FF2C52",
+    negative: "#F04438",
     negativeDeg: "#FF9EB0",
   },
-  // add @shadcn/ui configuration below here
 };
 
 /** @type {import('tailwindcss').Config} */
@@ -54,27 +64,25 @@ module.exports = {
       mx: "1800px",
     },
     fontFamily: {
-      sans: ["IBM Plex Sans", ...fontFamily.sans],
+      sans: ["Aspekta", ...fontFamily.sans],
     },
     fontSize: {
-      "60/landing": ["60px", { fontWeight: 600, lineHeight: "130%" }],
-      "36/landing": ["36px", { fontWeight: 600, lineHeight: "130%" }],
       "28/title": ["28px", { fontWeight: 600, lineHeight: "130%" }],
-      "24/heading/l": ["24px", { fontWeight: 600, lineHeight: "130%" }],
-      "20/heading/m": ["20px", { fontWeight: 600, lineHeight: "130%" }],
-      "18/heading/s": ["18px", { fontWeight: 600, lineHeight: "130%" }],
-      "18/heading/logo": ["18px", { fontWeight: 400, lineHeight: "130%", letterSpacing: "-5%" }],
-      "16/button/l": ["16px", { fontWeight: 500, lineHeight: "130%" }],
-      "14/button/m": ["14px", { fontWeight: 500, lineHeight: "130%" }],
-      "16/body/l/emp": ["16px", { fontWeight: 500, lineHeight: "140%" }],
-      "16/body/l": ["16px", { fontWeight: 400, lineHeight: "140%" }],
-      "14/body/m/emp": ["14px", { fontWeight: 500, lineHeight: "140%" }],
-      "14/body/m": ["14px", { fontWeight: 400, lineHeight: "140%" }],
-      "14/body/s/emp": ["14px", { fontWeight: 500, lineHeight: "140%" }],
-      "12/body/s": ["12px", { fontWeight: 400, lineHeight: "140%" }],
+      "24/heading": ["24px", { fontWeight: 600, lineHeight: "130%" }],
+      "20/heading": ["20px", { fontWeight: 600, lineHeight: "130%" }],
+      "18/heading": ["18px", { fontWeight: 600, lineHeight: "130%" }],
+      "16/button": ["16px", { fontWeight: 500, lineHeight: "130%" }],
+      "14/button": ["14px", { fontWeight: 500, lineHeight: "130%" }],
+      "16/body/emp": ["16px", { fontWeight: 500, lineHeight: "140%" }],
+      "16/body": ["16px", { fontWeight: 400, lineHeight: "140%" }],
+      "14/body/emp": ["14px", { fontWeight: 500, lineHeight: "140%" }],
+      "14/body": ["14px", { fontWeight: 400, lineHeight: "140%" }],
+      "12/body": ["12px", { fontWeight: 400, lineHeight: "140%" }],
     },
     extend: {
       boxShadow: {
+        emphasize:
+          "0px 2px 8px 0px rgba(0, 0, 0, 0.12), 0px 1px 4px 0px rgba(0, 0, 0, 0.08), 0px 0px 1px 0px rgba(0, 0, 0, 0.08)",
         toggle: "0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 3px 1px 0px rgba(0, 0, 0, 0.05)",
       },
       colors: {
@@ -91,10 +99,19 @@ module.exports = {
         500: "300ms",
       },
       // add @shadcn/ui configuration below here
-      borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
-        sm: "calc(var(--radius) - 4px)",
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },

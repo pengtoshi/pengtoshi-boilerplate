@@ -37,7 +37,7 @@
       "configurations": {
         "development": {
           "buildTarget": "client-next:build:development",
-          "port": 4201,
+          "port": 4200,
           "dev": true
         },
         "production": {
