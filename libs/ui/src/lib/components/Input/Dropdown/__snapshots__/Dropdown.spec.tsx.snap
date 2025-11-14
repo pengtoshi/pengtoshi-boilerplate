@@ -49,7 +49,7 @@ exports[`Dropdown should render 1`] = `
           class="relative inline-block w-full"
         >
           <button
-            class="group relative flex h-10 w-full items-center justify-between gap-2 rounded-md border px-4 border-line-normal dark:border-dark-line-normal bg-white focus:border-primary-normal dark:bg-black dark:focus:border-dark-primary-normal text-label-placeholder dark:!text-dark-label-placeholder"
+            class="group relative flex h-10 w-full items-center justify-between gap-2 rounded-md border px-4 border-line-normal bg-white focus:border-primary-normal dark:border-dark-line-normal dark:bg-black dark:focus:border-dark-primary-normal text-label-placeholder dark:!text-dark-label-placeholder"
             type="button"
           >
             <div

@@ -11,8 +11,17 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * 3. It does not support dead code elimination, so it will add unused operations.
  *
  * Therefore it is highly recommended to use the babel or swc plugin for production.
+ * Learn more about it here: https://the-guild.dev/graphql/codegen/plugins/presets/preset-client#reducing-bundle-size
  */
-const documents = {
+type Documents = {
+    "\n  fragment Chain on ChainInfo {\n    chainId\n    name\n  }\n\n  fragment Token on TokenInfo {\n    id\n    address\n    chainId\n    chain {\n      ...Chain\n    }\n    name\n    symbol\n    decimals\n    logoUrl\n    price\n    createdAt\n    updatedAt\n  }\n": typeof types.ChainFragmentDoc,
+    "\n  fragment User on UserInfo {\n    address\n    role\n    status\n    nonce\n    createdAt\n    updatedAt\n  }\n": typeof types.UserFragmentDoc,
+    "\n  mutation RefreshTokens($input: AuthTokenInput!) {\n    refreshTokens(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n": typeof types.RefreshTokensDocument,
+    "\n  mutation RequestLogin($input: UserInput!) {\n    requestLogin(input: $input) {\n      ...User\n    }\n  }\n": typeof types.RequestLoginDocument,
+    "\n  mutation VerifyLogin($input: VerifyUserInput!) {\n    verifyLogin(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n": typeof types.VerifyLoginDocument,
+    "\n  query FindUser {\n    findUser {\n      ...User\n    }\n  }\n": typeof types.FindUserDocument,
+};
+const documents: Documents = {
     "\n  fragment Chain on ChainInfo {\n    chainId\n    name\n  }\n\n  fragment Token on TokenInfo {\n    id\n    address\n    chainId\n    chain {\n      ...Chain\n    }\n    name\n    symbol\n    decimals\n    logoUrl\n    price\n    createdAt\n    updatedAt\n  }\n": types.ChainFragmentDoc,
     "\n  fragment User on UserInfo {\n    address\n    role\n    status\n    nonce\n    createdAt\n    updatedAt\n  }\n": types.UserFragmentDoc,
     "\n  mutation RefreshTokens($input: AuthTokenInput!) {\n    refreshTokens(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n": types.RefreshTokensDocument,

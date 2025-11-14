@@ -62,7 +62,7 @@ exports[`Toast should render 1`] = `
               Example Toast
             </p>
             <p
-              class="text-dark-label-assertive dark:text-label-assertive text-12/body"
+              class="text-12/body text-dark-label-assertive dark:text-label-assertive"
             >
               This is toast description.
             </p>
@@ -180,7 +180,7 @@ exports[`Toast should render 2`] = `
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !text-label-normal dark:!text-dark-label-normal !w-fit !bg-normal dark:!bg-dark-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -212,7 +212,7 @@ exports[`Toast should render 2`] = `
                 Example Toast
               </p>
               <p
-                class="text-dark-label-assertive dark:text-label-assertive text-12/body"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
@@ -239,14 +239,14 @@ exports[`Toast should render 2`] = `
                 Example Toast
               </p>
               <p
-                class="text-dark-label-assertive dark:text-label-assertive text-12/body"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !text-label-normal dark:!text-dark-label-normal !w-fit !bg-normal dark:!bg-dark-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -311,7 +311,7 @@ exports[`Toast should render 2`] = `
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !text-label-normal dark:!text-dark-label-normal !w-fit !bg-normal dark:!bg-dark-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -343,7 +343,7 @@ exports[`Toast should render 2`] = `
                 Example Toast
               </p>
               <p
-                class="text-dark-label-assertive dark:text-label-assertive text-12/body"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
@@ -370,14 +370,14 @@ exports[`Toast should render 2`] = `
                 Example Toast
               </p>
               <p
-                class="text-dark-label-assertive dark:text-label-assertive text-12/body"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !text-label-normal dark:!text-dark-label-normal !w-fit !bg-normal dark:!bg-dark-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -442,7 +442,7 @@ exports[`Toast should render 2`] = `
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !text-label-normal dark:!text-dark-label-normal !w-fit !bg-normal dark:!bg-dark-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -474,7 +474,7 @@ exports[`Toast should render 2`] = `
                 Example Toast
               </p>
               <p
-                class="text-dark-label-assertive dark:text-label-assertive text-12/body"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
@@ -501,14 +501,14 @@ exports[`Toast should render 2`] = `
                 Example Toast
               </p>
               <p
-                class="text-dark-label-assertive dark:text-label-assertive text-12/body"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !text-label-normal dark:!text-dark-label-normal !w-fit !bg-normal dark:!bg-dark-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -573,7 +573,7 @@ exports[`Toast should render 2`] = `
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !text-label-normal dark:!text-dark-label-normal !w-fit !bg-normal dark:!bg-dark-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -605,7 +605,7 @@ exports[`Toast should render 2`] = `
                 Example Toast
               </p>
               <p
-                class="text-dark-label-assertive dark:text-label-assertive text-12/body"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
@@ -632,14 +632,14 @@ exports[`Toast should render 2`] = `
                 Example Toast
               </p>
               <p
-                class="text-dark-label-assertive dark:text-label-assertive text-12/body"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !text-label-normal dark:!text-dark-label-normal !w-fit !bg-normal dark:!bg-dark-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"

@@ -71,30 +71,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": [
-    "ARBITRUM",
-    "clsx",
-    "codegen",
-    "commitlint",
-    "debank",
-    "deployers",
-    "Figtree",
-    "gitmessage",
-    "nestjs",
-    "Pretendard",
-    "SEPOLIA",
-    "shadcn",
-    "siwe",
-    "tailwindcss",
-    "tanstack",
-    "toastify",
-    "typechain",
-    "typechains",
-    "unveiled",
-    "upsert",
-    "UPSERTED",
-    "wagmi"
-  ],
   "files.associations": {
     "*html": "html",
     "*.css": "tailwindcss"

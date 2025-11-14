@@ -44,7 +44,7 @@ exports[`Radio should render 1`] = `
       type="button"
     >
       <div
-        class="h-full w-full rounded-full bg-normal transition-colors duration-300 dark:bg-dark-normal border-line-normal dark:border-dark-line-normal border-[1.5px]"
+        class="h-full w-full rounded-full bg-normal transition-colors duration-300 dark:bg-dark-normal border-[1.5px] border-line-normal dark:border-dark-line-normal"
       />
       <div
         class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12] -left-1 -top-1 rounded-full h-8 w-8"

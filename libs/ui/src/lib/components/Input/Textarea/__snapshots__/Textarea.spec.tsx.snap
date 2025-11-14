@@ -59,7 +59,7 @@ exports[`Textarea should render 1`] = `
           class="flex w-full flex-col items-start gap-0.5"
         />
         <div
-          class="text-label-assertive dark:text-dark-label-assertive text-12/body"
+          class="text-12/body text-label-assertive dark:text-dark-label-assertive"
         >
           0
           /

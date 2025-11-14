@@ -47,7 +47,7 @@ exports[`IconButton should render 1`] = `
         type="button"
       >
         <div
-          class="text-label-normal dark:text-dark-label-normal group-disabled:text-label-disabled dark:group-disabled:text-dark-label-disabled"
+          class="text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled"
           height="24"
           width="24"
         />
@@ -58,7 +58,7 @@ exports[`IconButton should render 1`] = `
         type="button"
       >
         <div
-          class="text-label-normal dark:text-dark-label-normal group-disabled:text-label-disabled dark:group-disabled:text-dark-label-disabled"
+          class="text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled"
           height="24"
           width="24"
         />
