@@ -1,17 +1,13 @@
 import type { AppProps } from "next/app";
-import Head from "next/head";
+import { ThemeProvider, Toaster } from "@libs/ui";
 import "../../public/globals-client.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <>
-      <Head>
-        <title>Welcome to apps/client-next!</title>
-      </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
-    </>
+    <ThemeProvider>
+      <Toaster />
+      <Component {...pageProps} />;
+    </ThemeProvider>
   );
 };
 

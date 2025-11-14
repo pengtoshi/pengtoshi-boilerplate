@@ -21,6 +21,7 @@ const config: StorybookConfig = {
   ],
   staticDirs: [path.resolve(__dirname, "../libs/ui/public")],
   addons: [
+    "storybook-dark-mode",
     "@storybook/addon-essentials",
     "@nx/react/plugins/storybook",
     {

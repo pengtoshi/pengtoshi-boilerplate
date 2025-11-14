@@ -1,5 +1,5 @@
 import { Preview } from "@storybook/react";
-import { Toaster } from "@libs/ui";
+import { ThemeProvider, Toaster } from "@libs/ui";
 import "~/ui/public/styles/globals.css";
 
 const preview: Preview = {
@@ -9,12 +9,12 @@ const preview: Preview = {
     controls: { expanded: true },
   },
   decorators: [
-    (Story, context) => {
+    (Story) => {
       return (
-        <>
+        <ThemeProvider>
           <Toaster />
           <Story />
-        </>
+        </ThemeProvider>
       );
     },
   ],

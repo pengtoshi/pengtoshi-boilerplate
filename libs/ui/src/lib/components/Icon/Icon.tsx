@@ -20,6 +20,8 @@ import { ReactComponent as Close } from "~/ui/public/icons/close.svg";
 import { ReactComponent as CloseThick } from "~/ui/public/icons/close_thick.svg";
 import { ReactComponent as Dot } from "~/ui/public/icons/dot.svg";
 import { ReactComponent as Download } from "~/ui/public/icons/download.svg";
+import { ReactComponent as DarkMode } from "~/ui/public/icons/moon.svg";
+import { ReactComponent as LightMode } from "~/ui/public/icons/sun.svg";
 
 export const IconVariants = {
   Check,
@@ -43,6 +45,8 @@ export const IconVariants = {
   CloseThick,
   Dot,
   Download,
+  DarkMode,
+  LightMode,
 };
 
 type IconName = keyof typeof IconVariants;
