@@ -3,6 +3,35 @@
 exports[`Switch should render 1`] = `
 <body>
   <div>
+    <script
+      nonce=""
+    >
+      ((e, s, n, l, o, d, u, h)=&gt;{
+    let m = document.documentElement, w = [
+        "light",
+        "dark"
+    ];
+    function p(r) {
+        (Array.isArray(e) ? e : [
+            e
+        ]).forEach((y)=&gt;{
+            let k = y === "class", S = k && d ? o.map((f)=&gt;d[f] || f) : o;
+            k ? (m.classList.remove(...S), m.classList.add(d && d[r] ? d[r] : r)) : m.setAttribute(y, r);
+        }), C(r);
+    }
+    function C(r) {
+        h && w.includes(r) && (m.style.colorScheme = r);
+    }
+    function a() {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (l) p(l);
+    else try {
+        let r = localStorage.getItem(s) || n, y = u && r === "system" ? a() : r;
+        p(y);
+    } catch (r) {}
+})("class","theme","system",null,["light","dark"],null,true,true)
+    </script>
     <section
       aria-atomic="false"
       aria-label="Notifications alt+T"
@@ -11,11 +40,11 @@ exports[`Switch should render 1`] = `
       tabindex="-1"
     />
     <button
-      class="relative z-10 flex-shrink-0 rounded-full transition-colors duration-300 disabled:opacity-40 h-[26px] w-12 bg-gray-300"
+      class="relative z-10 flex-shrink-0 rounded-full transition-colors duration-300 disabled:opacity-40 h-[26px] w-12 bg-background-disabled dark:bg-dark-background-disabled"
       type="button"
     >
       <div
-        class="absolute left-0.5 top-0.5 z-20 flex-shrink-0 rounded-full bg-gray-100 shadow-toggle transition-transform duration-300 h-[22px] w-[22px] translate-x-0"
+        class="absolute left-0.5 top-0.5 z-20 flex-shrink-0 rounded-full bg-normal transition-transform duration-300 dark:bg-dark-normal h-[22px] w-[22px] translate-x-0"
       />
     </button>
   </div>

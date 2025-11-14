@@ -3,6 +3,35 @@
 exports[`BottomSheet should render 1`] = `
 <body>
   <div>
+    <script
+      nonce=""
+    >
+      ((e, s, n, l, o, d, u, h)=&gt;{
+    let m = document.documentElement, w = [
+        "light",
+        "dark"
+    ];
+    function p(r) {
+        (Array.isArray(e) ? e : [
+            e
+        ]).forEach((y)=&gt;{
+            let k = y === "class", S = k && d ? o.map((f)=&gt;d[f] || f) : o;
+            k ? (m.classList.remove(...S), m.classList.add(d && d[r] ? d[r] : r)) : m.setAttribute(y, r);
+        }), C(r);
+    }
+    function C(r) {
+        h && w.includes(r) && (m.style.colorScheme = r);
+    }
+    function a() {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (l) p(l);
+    else try {
+        let r = localStorage.getItem(s) || n, y = u && r === "system" ? a() : r;
+        p(y);
+    } catch (r) {}
+})("class","theme","system",null,["light","dark"],null,true,true)
+    </script>
     <section
       aria-atomic="false"
       aria-label="Notifications alt+T"
@@ -18,7 +47,7 @@ exports[`BottomSheet should render 1`] = `
       type="button"
     >
       <button
-        class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+        class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
       >
         <div
           class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"

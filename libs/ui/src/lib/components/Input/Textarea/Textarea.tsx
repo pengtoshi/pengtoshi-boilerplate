@@ -13,11 +13,13 @@ export interface TextareaProps extends UIProps.TextArea {
 }
 
 const fieldCommon =
-  "flex h-[100px] px-4 py-2.5 gap-2.5 items-center justify-between self-stretch rounded-md border border-gray-300 autofill-hide transition-all duration-300";
+  "flex h-[100px] px-4 py-2.5 gap-2.5 items-center justify-between self-stretch rounded-md border border-line-normal dark:border-dark-line-normal autofill-hide transition-all duration-300";
 const inputCommon =
   "text-14/body peer w-full self-stretch overflow-ellipsis bg-transparent focus:outline-none resize-none";
-const fieldColor = "bg-gray-100 hover:bg-gray-50 focus-within:border-primary-500 focus-within:bg-gray-50";
-const textColor = "text-gray-950 placeholder:text-gray-400 disabled:text-gray-350";
+const fieldColor =
+  "bg-background-strong dark:bg-dark-background-strong hover:bg-normal dark:hover:bg-dark-normal focus-within:border-primary-normal dark:focus-within:border-dark-primary-normal focus-within:bg-normal dark:focus-within:bg-dark-normal";
+const textColor =
+  "text-label-normal dark:text-dark-label-normal placeholder:text-label-placeholder dark:placeholder:text-dark-label-placeholder disabled:text-label-disabled dark:disabled:text-dark-label-disabled";
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function Textarea(
   {
@@ -72,11 +74,11 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
       </div>
       <div className="flex w-full justify-between gap-4">
         <div className="flex w-full flex-col items-start gap-0.5">
-          {!!guide && <div className="text-12/body text-gray-600">{guide}</div>}
-          {!!error && <div className="text-12/body text-etc-negative">{error}</div>}
+          {!!guide && <div className="text-12/body text-label-assertive dark:text-dark-label-assertive">{guide}</div>}
+          {!!error && <div className="text-12/body text-status-negative dark:text-dark-status-negative">{error}</div>}
         </div>
         {!!maxLength && (
-          <div className="text-12/body text-gray-600">
+          <div className="text-12/body text-label-assertive dark:text-dark-label-assertive">
             {currentLength}/{maxLength}
           </div>
         )}

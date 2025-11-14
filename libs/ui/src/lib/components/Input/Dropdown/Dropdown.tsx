@@ -57,9 +57,13 @@ export const Dropdown = <T extends string | number>({
         <button
           type="button"
           className={clsx(
-            "group relative flex h-10 w-full items-center justify-between gap-2 rounded-md border border-gray-300 bg-white px-4 focus:border-primary-500",
-            selected ? "text-gray-950" : "text-gray-400",
-            disabled && "cursor-not-allowed bg-gray-200 text-gray-350",
+            "group relative flex h-10 w-full items-center justify-between gap-2 rounded-md border px-4",
+            "border-line-normal bg-white focus:border-primary-normal dark:border-dark-line-normal dark:bg-black dark:focus:border-dark-primary-normal",
+            selected
+              ? "text-label-normal dark:text-dark-label-normal"
+              : "text-label-placeholder dark:!text-dark-label-placeholder",
+            disabled &&
+              "cursor-not-allowed bg-background-disabled text-label-disabled dark:bg-dark-background-disabled dark:text-dark-label-disabled",
           )}
           onClick={() => setIsOpen(!isOpen)}
           disabled={disabled}
@@ -73,7 +77,7 @@ export const Dropdown = <T extends string | number>({
           />
         </button>
         {isOpen && (
-          <ul className="absolute left-0 mt-2 w-full rounded-md border border-gray-300 bg-white p-1 shadow-emphasize">
+          <ul className="absolute left-0 mt-2 w-full rounded-md border border-line-normal bg-white p-1 shadow-emphasize dark:border-dark-line-normal dark:bg-black">
             {options.map((option, index) => (
               <DropdownListText<T>
                 key={index}
@@ -87,8 +91,8 @@ export const Dropdown = <T extends string | number>({
         )}
       </div>
       <div className="flex w-full flex-col items-start gap-0.5">
-        {!!guide && <div className="text-12/body text-gray-600">{guide}</div>}
-        {!!error && <div className="text-12/body text-etc-negative">{error}</div>}
+        {!!guide && <div className="text-12/body text-label-assertive dark:text-dark-label-assertive">{guide}</div>}
+        {!!error && <div className="text-12/body text-status-negative dark:text-dark-status-negative">{error}</div>}
       </div>
     </div>
   );

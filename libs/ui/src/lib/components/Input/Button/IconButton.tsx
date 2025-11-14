@@ -13,7 +13,14 @@ export interface IconButtonProps extends UIProps.Button {
 export const IconButton = ({ disabled = false, className, name, size, iconClassName, ...props }: IconButtonProps) => {
   return (
     <button type="button" disabled={disabled} className={clsx("group", className)} {...props}>
-      <Icon name={name} size={size} className={clsx("text-gray-950 group-disabled:text-gray-350", iconClassName)} />
+      <Icon
+        name={name}
+        size={size}
+        className={clsx(
+          "text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled",
+          iconClassName,
+        )}
+      />
     </button>
   );
 };

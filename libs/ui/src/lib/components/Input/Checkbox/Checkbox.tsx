@@ -30,11 +30,13 @@ export const Checkbox = ({ active, handleClick, className, disabled, ...props }:
     >
       <div
         className={clsx(
-          "flex h-full w-full items-center justify-center rounded-sm bg-gray-100",
-          internalActive ? "bg-primary-500" : "border-[1.5px] border-gray-300",
+          "flex h-full w-full items-center justify-center rounded-sm bg-background-strong dark:bg-dark-background-strong",
+          internalActive
+            ? "!bg-primary-normal dark:!bg-dark-primary-normal"
+            : "border-[1.5px] border-line-normal dark:border-dark-line-normal",
         )}
       >
-        {internalActive && <Icon size={16} name="CheckThick" className="text-gray-50" />}
+        {internalActive && <Icon size={16} name="CheckThick" className="text-normal dark:text-dark-normal" />}
       </div>
       {!disabled && <Interaction focus={false} className={clsx("-left-1 -top-1 h-8 w-8 rounded-full")} />}
     </button>

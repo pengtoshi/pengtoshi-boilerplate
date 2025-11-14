@@ -3,6 +3,35 @@
 exports[`IconButton should render 1`] = `
 <body>
   <div>
+    <script
+      nonce=""
+    >
+      ((e, s, n, l, o, d, u, h)=&gt;{
+    let m = document.documentElement, w = [
+        "light",
+        "dark"
+    ];
+    function p(r) {
+        (Array.isArray(e) ? e : [
+            e
+        ]).forEach((y)=&gt;{
+            let k = y === "class", S = k && d ? o.map((f)=&gt;d[f] || f) : o;
+            k ? (m.classList.remove(...S), m.classList.add(d && d[r] ? d[r] : r)) : m.setAttribute(y, r);
+        }), C(r);
+    }
+    function C(r) {
+        h && w.includes(r) && (m.style.colorScheme = r);
+    }
+    function a() {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (l) p(l);
+    else try {
+        let r = localStorage.getItem(s) || n, y = u && r === "system" ? a() : r;
+        p(y);
+    } catch (r) {}
+})("class","theme","system",null,["light","dark"],null,true,true)
+    </script>
     <section
       aria-atomic="false"
       aria-label="Notifications alt+T"
@@ -18,7 +47,7 @@ exports[`IconButton should render 1`] = `
         type="button"
       >
         <div
-          class="text-gray-950 group-disabled:text-gray-350"
+          class="text-label-normal dark:text-dark-label-normal group-disabled:text-label-disabled dark:group-disabled:text-dark-label-disabled"
           height="24"
           width="24"
         />
@@ -29,7 +58,7 @@ exports[`IconButton should render 1`] = `
         type="button"
       >
         <div
-          class="text-gray-950 group-disabled:text-gray-350"
+          class="text-label-normal dark:text-dark-label-normal group-disabled:text-label-disabled dark:group-disabled:text-dark-label-disabled"
           height="24"
           width="24"
         />

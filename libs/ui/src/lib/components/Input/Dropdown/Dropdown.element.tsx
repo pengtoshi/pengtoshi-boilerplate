@@ -18,7 +18,10 @@ export const DropdownListText = <T extends string | number>({
     role="option"
     aria-selected={selected === option}
     tabIndex={0}
-    className={clsx("group relative cursor-pointer rounded-sm px-3 py-2", selected === option && "text-primary-500")}
+    className={clsx(
+      "group relative cursor-pointer rounded-sm px-3 py-2",
+      selected === option && "text-primary-normal dark:!text-dark-primary-normal",
+    )}
     onClick={() => onSelect(option)}
     onKeyDown={(e) => e.key === "Enter" && onSelect(option)}
   >

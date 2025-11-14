@@ -24,25 +24,27 @@ const iconMap: Record<NonNullable<ToastProps["type"]>, IconProps["name"]> = {
 };
 
 const colorMap: Record<NonNullable<ToastProps["type"]>, string> = {
-  success: "text-etc-positive",
-  error: "text-etc-negative",
-  info: "text-gray-50",
+  success: "text-dark-status-positive dark:text-status-positive",
+  error: "text-dark-status-negative dark:text-status-negative",
+  info: "text-dark-label-normal dark:text-label-normal",
 };
 
 export const Toast = ({ id, title, type = "info", description, button, showIcon = true }: ToastProps) => {
   return (
-    <div className="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3">
+    <div className="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal">
       <div className="flex items-center justify-start gap-2">
         {showIcon && <Icon size={20} name={iconMap[type]} className={colorMap[type]} />}
         <div className="flex flex-col gap-1">
           <p className={clsx("text-14/body/emp", colorMap[type])}>{title}</p>
-          {description && <p className="text-12/body text-gray-400">{description}</p>}
+          {description && (
+            <p className="text-12/body text-dark-label-assertive dark:text-label-assertive">{description}</p>
+          )}
         </div>
       </div>
       {!!button && (
         <Button
           size="small"
-          className="!w-fit !bg-gray-50 !text-gray-950"
+          className="!w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           onClick={() => {
             button.onClick();
             sonnerToast.dismiss(id);

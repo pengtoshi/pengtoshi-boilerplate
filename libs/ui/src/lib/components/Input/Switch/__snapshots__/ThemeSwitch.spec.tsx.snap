@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checkbox should render 1`] = `
+exports[`ThemeSwitch should render 1`] = `
 <body>
   <div>
     <script
@@ -40,14 +40,23 @@ exports[`Checkbox should render 1`] = `
       tabindex="-1"
     />
     <button
-      class="group relative h-6 w-6 p-[3px] disabled:opacity-40"
+      class="bg-background-disabled relative flex-shrink-0 overflow-hidden rounded-full transition-all duration-300 disabled:opacity-40 h-[26px] w-12"
       type="button"
     >
       <div
-        class="bg-background-strong dark:bg-dark-background-strong flex h-full w-full items-center justify-center rounded-sm border-line-normal dark:border-dark-line-normal border-[1.5px]"
+        aria-hidden="false"
+        class="opacity-100 pointer-events-none absolute right-1.5 top-1/2 -translate-y-1/2 text-line-normal transition-all duration-300"
+        height="14"
+        width="14"
       />
       <div
-        class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12] -left-1 -top-1 h-8 w-8 rounded-full"
+        aria-hidden="true"
+        class="opacity-0 pointer-events-none absolute left-1.5 top-1/2 -translate-y-1/2 text-dark-line-normal transition-all duration-300"
+        height="14"
+        width="14"
+      />
+      <div
+        class="bg-normal absolute left-0.5 top-0.5 rounded-full transition-all duration-300 h-[22px] w-[22px] translate-x-0"
       />
     </button>
   </div>

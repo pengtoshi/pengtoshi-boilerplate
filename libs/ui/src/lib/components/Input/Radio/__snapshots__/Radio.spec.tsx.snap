@@ -3,6 +3,35 @@
 exports[`Radio should render 1`] = `
 <body>
   <div>
+    <script
+      nonce=""
+    >
+      ((e, s, n, l, o, d, u, h)=&gt;{
+    let m = document.documentElement, w = [
+        "light",
+        "dark"
+    ];
+    function p(r) {
+        (Array.isArray(e) ? e : [
+            e
+        ]).forEach((y)=&gt;{
+            let k = y === "class", S = k && d ? o.map((f)=&gt;d[f] || f) : o;
+            k ? (m.classList.remove(...S), m.classList.add(d && d[r] ? d[r] : r)) : m.setAttribute(y, r);
+        }), C(r);
+    }
+    function C(r) {
+        h && w.includes(r) && (m.style.colorScheme = r);
+    }
+    function a() {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (l) p(l);
+    else try {
+        let r = localStorage.getItem(s) || n, y = u && r === "system" ? a() : r;
+        p(y);
+    } catch (r) {}
+})("class","theme","system",null,["light","dark"],null,true,true)
+    </script>
     <section
       aria-atomic="false"
       aria-label="Notifications alt+T"
@@ -15,7 +44,7 @@ exports[`Radio should render 1`] = `
       type="button"
     >
       <div
-        class="h-full w-full rounded-full bg-gray-50 border-[1.5px] border-gray-300"
+        class="h-full w-full rounded-full bg-normal transition-colors duration-300 dark:bg-dark-normal border-line-normal dark:border-dark-line-normal border-[1.5px]"
       />
       <div
         class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12] -left-1 -top-1 rounded-full h-8 w-8"
