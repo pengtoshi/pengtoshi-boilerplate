@@ -3,7 +3,7 @@
   "ignorePatterns": ["!**/*", ".expo", "web-build", "cache", "dist"],
   "overrides": [
     {
-      "files": [".babelrc.js", "metro.config.js"],
+      "files": ["babel.config.js", "metro.config.js"],
       "extends": ["plugin:@typescript-eslint/disable-type-checked"]
     },
     {
