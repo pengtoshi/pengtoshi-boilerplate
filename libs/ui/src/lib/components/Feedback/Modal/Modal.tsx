@@ -35,8 +35,10 @@ export const Modal = ({
       <DialogContent className={clsx(size === "small" ? "max-w-[320px]" : "max-w-[480px]")}>
         <div className="flex w-full items-start justify-between">
           <div className="flex w-full flex-col gap-1">
-            {title && <span className="text-16/body/emp text-gray-950">{title}</span>}
-            {description && <span className="text-14/body text-gray-600">{description}</span>}
+            {title && <span className="text-16/body/emp text-label-normal dark:text-dark-label-normal">{title}</span>}
+            {description && (
+              <span className="text-14/body text-label-assertive dark:text-dark-label-assertive">{description}</span>
+            )}
           </div>
         </div>
         <div className={clsx("flex w-full", actionsDirection === "row" ? "flex-row gap-3" : "flex-col gap-2")}>

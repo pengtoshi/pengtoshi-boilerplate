@@ -8,12 +8,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        solid: "bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350",
+        solid:
+          "bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled",
         outlinedPrimary:
-          "bg-transparent border border-primary-500 !text-primary-500 disabled:border-gray-300 disabled:!text-gray-350",
-        outlinedAssertive: "bg-transparent border border-gray-300 !text-gray-950 disabled:!text-gray-350",
-        textPrimary: "bg-transparent !text-primary-500 disabled:!text-gray-350 !px-2",
-        textAssertive: "bg-transparent !text-gray-600 disabled:!text-gray-350 !px-2",
+          "bg-transparent border border-primary-normal dark:border-dark-primary-normal !text-primary-normal dark:!text-dark-primary-normal disabled:border-line-normal dark:disabled:border-dark-line-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled",
+        outlinedAssertive:
+          "bg-transparent border border-line-normal dark:border-dark-line-normal !text-label-normal dark:!text-dark-label-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled",
+        textPrimary:
+          "bg-transparent !text-primary-normal dark:!text-dark-primary-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled !px-2",
+        textAssertive:
+          "bg-transparent !text-label-assertive dark:!text-dark-label-assertive disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled !px-2",
       },
       size: {
         small: "h-8 px-4 text-14/button gap-1",

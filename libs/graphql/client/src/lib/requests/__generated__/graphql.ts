@@ -82,8 +82,7 @@ export type QueryFindTokenByAddressArgs = {
 /** 사용자 역할 */
 export type Role =
   | 'ADMIN'
-  | 'USER'
-  | 'WIZ';
+  | 'USER';
 
 /** 사용자 상태 */
 export type Status =

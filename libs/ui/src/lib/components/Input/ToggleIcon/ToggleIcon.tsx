@@ -28,7 +28,14 @@ export const ToggleIcon = ({ active, handleClick, className, name, ...props }: T
       }}
       {...props}
     >
-      <Icon className={internalActive ? "text-primary-500" : "text-gray-400"} name={name} />
+      <Icon
+        className={
+          internalActive
+            ? "text-primary-normal dark:text-dark-primary-normal"
+            : "text-label-placeholder dark:text-dark-label-placeholder"
+        }
+        name={name}
+      />
       <Interaction focus={false} className={clsx("-left-1 -top-1 h-8 w-8 rounded-full")} />
     </button>
   );

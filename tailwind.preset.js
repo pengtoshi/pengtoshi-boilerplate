@@ -1,46 +1,71 @@
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const colors = {
-  gray: {
-    0: "#ffffff",
-    50: "#fafafa",
-    100: "#f4f4f4",
-    150: "#ebebeb",
-    200: "#e0e0e0",
-    250: "#d6d6d6",
-    300: "#c6c6c6",
-    350: "#b8b8b8",
-    400: "#a8a8a8",
-    450: "#9c9c9c",
-    500: "#8d8d8d",
-    550: "#808080",
-    600: "#6f6f6f",
-    650: "#636363",
-    700: "#525252",
-    750: "#4a4a4a",
-    800: "#393939",
-    850: "#333333",
-    900: "#262626",
-    950: "#1f1f1f",
-    1000: "#000000",
+  backdrop: "#3C3C4330",
+  normal: "#FAFAFA",
+  label: {
+    normal: "#1F1F1F",
+    assertive: "#6F6F6F",
+    placeholder: "#A8A8A8",
+    disabled: "#B8B8B8",
+  },
+  background: {
+    strong: "#F4F4F4",
+    disabled: "#E0E0E0",
+  },
+  line: {
+    normal: "#C6C6C6",
   },
   primary: {
-    100: "#DBDDF5",
-    200: "#B8BBEB",
-    300: "#9499E0",
-    400: "#7177D6",
-    500: "#4D55CC",
-    600: "#3E44A3",
-    700: "#2E337A",
-    800: "#1F2252",
-    900: "#171A3D",
-    1000: "#0F1129",
+    transparent: "#6E80E630",
+    normal: "#4C5FD5",
+    strong: "#3A49C5",
+    deg: "#B0BBF4",
   },
-  etc: {
-    positive: "#12B76A",
-    positiveDeg: "#A7F0BA",
-    negative: "#F04438",
-    negativeDeg: "#FF9EB0",
+  secondary: {
+    transparent: "#E0FA7430",
+    normal: "#D1F24A",
+    strong: "#B8DA2C",
+    deg: "#EEFBA0",
+  },
+  status: {
+    positive: "#00BF40",
+    cautionary: "#FF9200",
+    negative: "#FF4242",
+  },
+  dark: {
+    backdrop: "#3C3C4330",
+    normal: "#1F1F1F",
+    label: {
+      normal: "#F4F4F4",
+      assertive: "#A8A8A8",
+      placeholder: "#6F6F6F",
+      disabled: "#636363",
+    },
+    line: {
+      normal: "#525252",
+    },
+    background: {
+      strong: "#262626",
+      disabled: "#393939",
+    },
+    primary: {
+      transparent: "#6E80E630",
+      normal: "#6E80E6",
+      strong: "#91A1F0",
+      deg: "#5462B0",
+    },
+    secondary: {
+      transparent: "#E0FA7430",
+      normal: "#E0FA74",
+      strong: "#E8FB9F",
+      deg: "#A9C82A",
+    },
+    status: {
+      positive: "#33D96D",
+      cautionary: "#FFB347",
+      negative: "#FF7575",
+    },
   },
 };
 
@@ -56,6 +81,7 @@ module.exports = {
     "max-w-full",
     "max-h-full",
   ],
+  darkMode: ["class"],
   theme: {
     screens: {
       sm: "600px",
@@ -85,13 +111,7 @@ module.exports = {
           "0px 2px 8px 0px rgba(0, 0, 0, 0.12), 0px 1px 4px 0px rgba(0, 0, 0, 0.08), 0px 0px 1px 0px rgba(0, 0, 0, 0.08)",
         toggle: "0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 3px 1px 0px rgba(0, 0, 0, 0.05)",
       },
-      colors: {
-        ...colors,
-        theme: {
-          white: colors.gray[0],
-          black: colors.gray[1000],
-        },
-      },
+      colors,
       transitionProperty: {
         opacity: "opacity",
       },

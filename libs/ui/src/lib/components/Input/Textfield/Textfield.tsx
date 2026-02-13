@@ -24,10 +24,12 @@ const getDefaultValue = (type?: "number" | "text", value?: string | number, defa
 };
 
 const fieldCommon =
-  "flex h-10 px-4 gap-2.5 items-center justify-between self-stretch rounded-md border border-gray-300 autofill-hide transition-all duration-300";
+  "flex h-10 px-4 gap-2.5 items-center justify-between self-stretch rounded-md border border-line-normal dark:border-dark-line-normal autofill-hide transition-all duration-300";
 const inputCommon = "text-14/body peer w-full self-stretch overflow-ellipsis bg-transparent focus:outline-none";
-const fieldColor = "bg-gray-100 hover:bg-gray-50 focus-within:border-primary-500 focus-within:bg-gray-50";
-const textColor = "text-gray-950 placeholder:text-gray-400 disabled:text-gray-350";
+const fieldColor =
+  "bg-background-strong dark:bg-dark-background-strong hover:bg-normal dark:hover:bg-dark-normal focus-within:border-primary-normal dark:focus-within:border-dark-primary-normal focus-within:bg-normal dark:focus-within:bg-dark-normal";
+const textColor =
+  "text-label-normal dark:text-dark-label-normal placeholder:text-label-placeholder dark:placeholder:text-dark-label-placeholder disabled:text-label-disabled dark:disabled:text-dark-label-disabled";
 
 export const Textfield = forwardRef<HTMLInputElement, TextfieldProps>(function Textfield(
   {
@@ -66,7 +68,13 @@ export const Textfield = forwardRef<HTMLInputElement, TextfieldProps>(function T
 
   return (
     <div className={clsx("flex w-full flex-col items-start gap-1.5", className)}>
-      <div className={clsx(fieldCommon, fieldColor, disabled && "!bg-gray-200")}>
+      <div
+        className={clsx(
+          fieldCommon,
+          fieldColor,
+          disabled && "!bg-background-disabled dark:!bg-dark-background-disabled",
+        )}
+      >
         {!!leadingIcon && leadingIcon}
         <input
           id={inputId}
@@ -83,8 +91,8 @@ export const Textfield = forwardRef<HTMLInputElement, TextfieldProps>(function T
         {!!trailingIcon && trailingIcon}
       </div>
       <div className="flex w-full flex-col items-start gap-0.5">
-        {!!guide && <div className="text-12/body text-gray-600">{guide}</div>}
-        {!!error && <div className="text-12/body text-etc-negative">{error}</div>}
+        {!!guide && <div className="text-12/body text-label-assertive dark:text-dark-label-assertive">{guide}</div>}
+        {!!error && <div className="text-12/body text-status-negative dark:text-dark-status-negative">{error}</div>}
       </div>
     </div>
   );

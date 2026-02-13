@@ -38,7 +38,9 @@ export const Switch = ({ active, handleClick, size = "medium", className, ...pro
       className={clsx(
         "relative z-10 flex-shrink-0 rounded-full transition-colors duration-300 disabled:opacity-40",
         SwitchSize.container[size],
-        internalActive ? "bg-primary-500" : "bg-gray-300",
+        internalActive
+          ? "bg-primary-normal dark:bg-dark-primary-normal"
+          : "bg-background-disabled dark:bg-dark-background-disabled",
         className,
       )}
       onClick={() => {
@@ -49,7 +51,7 @@ export const Switch = ({ active, handleClick, size = "medium", className, ...pro
     >
       <div
         className={clsx(
-          "absolute left-0.5 top-0.5 z-20 flex-shrink-0 rounded-full bg-gray-100 shadow-toggle transition-transform duration-300",
+          "absolute left-0.5 top-0.5 z-20 flex-shrink-0 rounded-full bg-normal transition-transform duration-300 dark:bg-dark-normal",
           SwitchSize.toggle[size],
           getTranslateClass(internalActive, size),
         )}

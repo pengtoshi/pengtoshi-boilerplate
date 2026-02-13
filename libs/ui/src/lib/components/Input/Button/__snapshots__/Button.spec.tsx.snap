@@ -3,6 +3,35 @@
 exports[`Button should render 1`] = `
 <body>
   <div>
+    <script
+      nonce=""
+    >
+      ((e, s, n, l, o, d, u, h)=&gt;{
+    let m = document.documentElement, w = [
+        "light",
+        "dark"
+    ];
+    function p(r) {
+        (Array.isArray(e) ? e : [
+            e
+        ]).forEach((y)=&gt;{
+            let k = y === "class", S = k && d ? o.map((f)=&gt;d[f] || f) : o;
+            k ? (m.classList.remove(...S), m.classList.add(d && d[r] ? d[r] : r)) : m.setAttribute(y, r);
+        }), C(r);
+    }
+    function C(r) {
+        h && w.includes(r) && (m.style.colorScheme = r);
+    }
+    function a() {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (l) p(l);
+    else try {
+        let r = localStorage.getItem(s) || n, y = u && r === "system" ? a() : r;
+        p(y);
+    } catch (r) {}
+})("class","theme","system",null,["light","dark"],null,true,true)
+    </script>
     <section
       aria-atomic="false"
       aria-label="Notifications alt+T"
@@ -11,7 +40,7 @@ exports[`Button should render 1`] = `
       tabindex="-1"
     />
     <button
-      class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+      class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
       type="button"
     >
       <div
@@ -30,6 +59,35 @@ exports[`Button should render 1`] = `
 exports[`Button should render 2`] = `
 <body>
   <div>
+    <script
+      nonce=""
+    >
+      ((e, s, n, l, o, d, u, h)=&gt;{
+    let m = document.documentElement, w = [
+        "light",
+        "dark"
+    ];
+    function p(r) {
+        (Array.isArray(e) ? e : [
+            e
+        ]).forEach((y)=&gt;{
+            let k = y === "class", S = k && d ? o.map((f)=&gt;d[f] || f) : o;
+            k ? (m.classList.remove(...S), m.classList.add(d && d[r] ? d[r] : r)) : m.setAttribute(y, r);
+        }), C(r);
+    }
+    function C(r) {
+        h && w.includes(r) && (m.style.colorScheme = r);
+    }
+    function a() {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (l) p(l);
+    else try {
+        let r = localStorage.getItem(s) || n, y = u && r === "system" ? a() : r;
+        p(y);
+    } catch (r) {}
+})("class","theme","system",null,["light","dark"],null,true,true)
+    </script>
     <section
       aria-atomic="false"
       aria-label="Notifications alt+T"
@@ -52,7 +110,7 @@ exports[`Button should render 2`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -65,7 +123,7 @@ exports[`Button should render 2`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -92,7 +150,7 @@ exports[`Button should render 2`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -110,7 +168,7 @@ exports[`Button should render 2`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -142,7 +200,7 @@ exports[`Button should render 2`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -160,7 +218,7 @@ exports[`Button should render 2`] = `
             />
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -188,6 +246,35 @@ exports[`Button should render 2`] = `
 exports[`Button should render 3`] = `
 <body>
   <div>
+    <script
+      nonce=""
+    >
+      ((e, s, n, l, o, d, u, h)=&gt;{
+    let m = document.documentElement, w = [
+        "light",
+        "dark"
+    ];
+    function p(r) {
+        (Array.isArray(e) ? e : [
+            e
+        ]).forEach((y)=&gt;{
+            let k = y === "class", S = k && d ? o.map((f)=&gt;d[f] || f) : o;
+            k ? (m.classList.remove(...S), m.classList.add(d && d[r] ? d[r] : r)) : m.setAttribute(y, r);
+        }), C(r);
+    }
+    function C(r) {
+        h && w.includes(r) && (m.style.colorScheme = r);
+    }
+    function a() {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (l) p(l);
+    else try {
+        let r = localStorage.getItem(s) || n, y = u && r === "system" ? a() : r;
+        p(y);
+    } catch (r) {}
+})("class","theme","system",null,["light","dark"],null,true,true)
+    </script>
     <section
       aria-atomic="false"
       aria-label="Notifications alt+T"
@@ -210,7 +297,7 @@ exports[`Button should render 3`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -223,7 +310,7 @@ exports[`Button should render 3`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -250,7 +337,7 @@ exports[`Button should render 3`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-8 px-4 text-14/button gap-1 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden"
             type="button"
           >
             <div
@@ -263,7 +350,7 @@ exports[`Button should render 3`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-8 px-4 text-14/button gap-1 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -290,7 +377,7 @@ exports[`Button should render 3`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -303,7 +390,7 @@ exports[`Button should render 3`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -330,7 +417,7 @@ exports[`Button should render 3`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-12 px-6 text-16/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-12 px-6 text-16/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -343,7 +430,7 @@ exports[`Button should render 3`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-12 px-6 text-16/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-12 px-6 text-16/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -366,6 +453,35 @@ exports[`Button should render 3`] = `
 exports[`Button should render 4`] = `
 <body>
   <div>
+    <script
+      nonce=""
+    >
+      ((e, s, n, l, o, d, u, h)=&gt;{
+    let m = document.documentElement, w = [
+        "light",
+        "dark"
+    ];
+    function p(r) {
+        (Array.isArray(e) ? e : [
+            e
+        ]).forEach((y)=&gt;{
+            let k = y === "class", S = k && d ? o.map((f)=&gt;d[f] || f) : o;
+            k ? (m.classList.remove(...S), m.classList.add(d && d[r] ? d[r] : r)) : m.setAttribute(y, r);
+        }), C(r);
+    }
+    function C(r) {
+        h && w.includes(r) && (m.style.colorScheme = r);
+    }
+    function a() {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (l) p(l);
+    else try {
+        let r = localStorage.getItem(s) || n, y = u && r === "system" ? a() : r;
+        p(y);
+    } catch (r) {}
+})("class","theme","system",null,["light","dark"],null,true,true)
+    </script>
     <section
       aria-atomic="false"
       aria-label="Notifications alt+T"
@@ -388,7 +504,7 @@ exports[`Button should render 4`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -401,7 +517,7 @@ exports[`Button should render 4`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -428,7 +544,7 @@ exports[`Button should render 4`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -441,7 +557,7 @@ exports[`Button should render 4`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -468,11 +584,11 @@ exports[`Button should render 4`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-primary-500 !text-primary-500 disabled:border-gray-300 disabled:!text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-primary-normal dark:border-dark-primary-normal !text-primary-normal dark:!text-dark-primary-normal disabled:border-line-normal dark:disabled:border-dark-line-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
-              class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12] !bg-primary-500"
+              class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12] !bg-primary-normal dark:!bg-dark-primary-normal"
             />
             <span
               class="relative z-10"
@@ -481,12 +597,12 @@ exports[`Button should render 4`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-primary-500 !text-primary-500 disabled:border-gray-300 disabled:!text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-primary-normal dark:border-dark-primary-normal !text-primary-normal dark:!text-dark-primary-normal disabled:border-line-normal dark:disabled:border-dark-line-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
             <div
-              class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12] !bg-primary-500"
+              class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12] !bg-primary-normal dark:!bg-dark-primary-normal"
             />
             <span
               class="relative z-10"
@@ -508,7 +624,7 @@ exports[`Button should render 4`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-gray-300 !text-gray-950 disabled:!text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-line-normal dark:border-dark-line-normal !text-label-normal dark:!text-dark-label-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -521,7 +637,7 @@ exports[`Button should render 4`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-gray-300 !text-gray-950 disabled:!text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-line-normal dark:border-dark-line-normal !text-label-normal dark:!text-dark-label-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -548,11 +664,11 @@ exports[`Button should render 4`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-primary-500 disabled:!text-gray-350 !px-2 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-primary-normal dark:!text-dark-primary-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled !px-2 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
-              class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12] !bg-primary-500"
+              class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12] !bg-primary-normal dark:!bg-dark-primary-normal"
             />
             <span
               class="relative z-10"
@@ -561,12 +677,12 @@ exports[`Button should render 4`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-primary-500 disabled:!text-gray-350 !px-2 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-primary-normal dark:!text-dark-primary-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled !px-2 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
             <div
-              class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12] !bg-primary-500"
+              class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12] !bg-primary-normal dark:!bg-dark-primary-normal"
             />
             <span
               class="relative z-10"
@@ -588,7 +704,7 @@ exports[`Button should render 4`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-gray-600 disabled:!text-gray-350 !px-2 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-label-assertive dark:!text-dark-label-assertive disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled !px-2 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -601,7 +717,7 @@ exports[`Button should render 4`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-gray-600 disabled:!text-gray-350 !px-2 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-label-assertive dark:!text-dark-label-assertive disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled !px-2 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >

@@ -10,9 +10,9 @@ export type ButtonProps = ShadcnButtonProps & {
 
 const interactionClasses = {
   solid: "",
-  outlinedPrimary: "!bg-primary-500",
+  outlinedPrimary: "!bg-primary-normal dark:!bg-dark-primary-normal",
   outlinedAssertive: "",
-  textPrimary: "!bg-primary-500",
+  textPrimary: "!bg-primary-normal dark:!bg-dark-primary-normal",
   textAssertive: "",
 };
 

@@ -3,6 +3,35 @@
 exports[`Toast should render 1`] = `
 <body>
   <div>
+    <script
+      nonce=""
+    >
+      ((e, s, n, l, o, d, u, h)=&gt;{
+    let m = document.documentElement, w = [
+        "light",
+        "dark"
+    ];
+    function p(r) {
+        (Array.isArray(e) ? e : [
+            e
+        ]).forEach((y)=&gt;{
+            let k = y === "class", S = k && d ? o.map((f)=&gt;d[f] || f) : o;
+            k ? (m.classList.remove(...S), m.classList.add(d && d[r] ? d[r] : r)) : m.setAttribute(y, r);
+        }), C(r);
+    }
+    function C(r) {
+        h && w.includes(r) && (m.style.colorScheme = r);
+    }
+    function a() {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (l) p(l);
+    else try {
+        let r = localStorage.getItem(s) || n, y = u && r === "system" ? a() : r;
+        p(y);
+    } catch (r) {}
+})("class","theme","system",null,["light","dark"],null,true,true)
+    </script>
     <section
       aria-atomic="false"
       aria-label="Notifications alt+T"
@@ -14,13 +43,13 @@ exports[`Toast should render 1`] = `
       class="flex w-[360px] flex-col gap-4"
     >
       <div
-        class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+        class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
       >
         <div
           class="flex items-center justify-start gap-2"
         >
           <div
-            class="text-gray-50"
+            class="text-dark-label-normal dark:text-label-normal"
             height="20"
             width="20"
           />
@@ -28,12 +57,12 @@ exports[`Toast should render 1`] = `
             class="flex flex-col gap-1"
           >
             <p
-              class="text-14/body/emp text-gray-50"
+              class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
             >
               Example Toast
             </p>
             <p
-              class="text-12/body text-gray-400"
+              class="text-12/body text-dark-label-assertive dark:text-label-assertive"
             >
               This is toast description.
             </p>
@@ -41,7 +70,7 @@ exports[`Toast should render 1`] = `
         </div>
       </div>
       <button
-        class="group inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 !text-gray-50 disabled:bg-gray-150 disabled:text-gray-350 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden w-[160px]"
+        class="group inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden w-[160px]"
       >
         <div
           class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -60,6 +89,35 @@ exports[`Toast should render 1`] = `
 exports[`Toast should render 2`] = `
 <body>
   <div>
+    <script
+      nonce=""
+    >
+      ((e, s, n, l, o, d, u, h)=&gt;{
+    let m = document.documentElement, w = [
+        "light",
+        "dark"
+    ];
+    function p(r) {
+        (Array.isArray(e) ? e : [
+            e
+        ]).forEach((y)=&gt;{
+            let k = y === "class", S = k && d ? o.map((f)=&gt;d[f] || f) : o;
+            k ? (m.classList.remove(...S), m.classList.add(d && d[r] ? d[r] : r)) : m.setAttribute(y, r);
+        }), C(r);
+    }
+    function C(r) {
+        h && w.includes(r) && (m.style.colorScheme = r);
+    }
+    function a() {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (l) p(l);
+    else try {
+        let r = localStorage.getItem(s) || n, y = u && r === "system" ? a() : r;
+        p(y);
+    } catch (r) {}
+})("class","theme","system",null,["light","dark"],null,true,true)
+    </script>
     <section
       aria-atomic="false"
       aria-label="Notifications alt+T"
@@ -79,13 +137,13 @@ exports[`Toast should render 2`] = `
           default
         </span>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-gray-50"
+              class="text-dark-label-normal dark:text-label-normal"
               height="20"
               width="20"
             />
@@ -93,7 +151,7 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-gray-50"
+                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
               >
                 Example Toast
               </p>
@@ -101,13 +159,13 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-gray-50"
+              class="text-dark-label-normal dark:text-label-normal"
               height="20"
               width="20"
             />
@@ -115,14 +173,14 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-gray-50"
+                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
               >
                 Example Toast
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 disabled:bg-gray-150 disabled:text-gray-350 h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-gray-50 !text-gray-950"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -135,13 +193,13 @@ exports[`Toast should render 2`] = `
           </button>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-gray-50"
+              class="text-dark-label-normal dark:text-label-normal"
               height="20"
               width="20"
             />
@@ -149,12 +207,12 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-gray-50"
+                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-gray-400"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
@@ -162,13 +220,13 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-gray-50"
+              class="text-dark-label-normal dark:text-label-normal"
               height="20"
               width="20"
             />
@@ -176,19 +234,19 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-gray-50"
+                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-gray-400"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 disabled:bg-gray-150 disabled:text-gray-350 h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-gray-50 !text-gray-950"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -210,13 +268,13 @@ exports[`Toast should render 2`] = `
           success
         </span>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-etc-positive"
+              class="text-dark-status-positive dark:text-status-positive"
               height="20"
               width="20"
             />
@@ -224,7 +282,7 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-etc-positive"
+                class="text-14/body/emp text-dark-status-positive dark:text-status-positive"
               >
                 Example Toast
               </p>
@@ -232,13 +290,13 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-etc-positive"
+              class="text-dark-status-positive dark:text-status-positive"
               height="20"
               width="20"
             />
@@ -246,14 +304,14 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-etc-positive"
+                class="text-14/body/emp text-dark-status-positive dark:text-status-positive"
               >
                 Example Toast
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 disabled:bg-gray-150 disabled:text-gray-350 h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-gray-50 !text-gray-950"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -266,13 +324,13 @@ exports[`Toast should render 2`] = `
           </button>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-etc-positive"
+              class="text-dark-status-positive dark:text-status-positive"
               height="20"
               width="20"
             />
@@ -280,12 +338,12 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-etc-positive"
+                class="text-14/body/emp text-dark-status-positive dark:text-status-positive"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-gray-400"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
@@ -293,13 +351,13 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-etc-positive"
+              class="text-dark-status-positive dark:text-status-positive"
               height="20"
               width="20"
             />
@@ -307,19 +365,19 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-etc-positive"
+                class="text-14/body/emp text-dark-status-positive dark:text-status-positive"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-gray-400"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 disabled:bg-gray-150 disabled:text-gray-350 h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-gray-50 !text-gray-950"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -341,13 +399,13 @@ exports[`Toast should render 2`] = `
           error
         </span>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-etc-negative"
+              class="text-dark-status-negative dark:text-status-negative"
               height="20"
               width="20"
             />
@@ -355,7 +413,7 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-etc-negative"
+                class="text-14/body/emp text-dark-status-negative dark:text-status-negative"
               >
                 Example Toast
               </p>
@@ -363,13 +421,13 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-etc-negative"
+              class="text-dark-status-negative dark:text-status-negative"
               height="20"
               width="20"
             />
@@ -377,14 +435,14 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-etc-negative"
+                class="text-14/body/emp text-dark-status-negative dark:text-status-negative"
               >
                 Example Toast
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 disabled:bg-gray-150 disabled:text-gray-350 h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-gray-50 !text-gray-950"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -397,13 +455,13 @@ exports[`Toast should render 2`] = `
           </button>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-etc-negative"
+              class="text-dark-status-negative dark:text-status-negative"
               height="20"
               width="20"
             />
@@ -411,12 +469,12 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-etc-negative"
+                class="text-14/body/emp text-dark-status-negative dark:text-status-negative"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-gray-400"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
@@ -424,13 +482,13 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-etc-negative"
+              class="text-dark-status-negative dark:text-status-negative"
               height="20"
               width="20"
             />
@@ -438,19 +496,19 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-etc-negative"
+                class="text-14/body/emp text-dark-status-negative dark:text-status-negative"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-gray-400"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 disabled:bg-gray-150 disabled:text-gray-350 h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-gray-50 !text-gray-950"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -472,13 +530,13 @@ exports[`Toast should render 2`] = `
           info
         </span>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-gray-50"
+              class="text-dark-label-normal dark:text-label-normal"
               height="20"
               width="20"
             />
@@ -486,7 +544,7 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-gray-50"
+                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
               >
                 Example Toast
               </p>
@@ -494,13 +552,13 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-gray-50"
+              class="text-dark-label-normal dark:text-label-normal"
               height="20"
               width="20"
             />
@@ -508,14 +566,14 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-gray-50"
+                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
               >
                 Example Toast
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 disabled:bg-gray-150 disabled:text-gray-350 h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-gray-50 !text-gray-950"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -528,13 +586,13 @@ exports[`Toast should render 2`] = `
           </button>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-gray-50"
+              class="text-dark-label-normal dark:text-label-normal"
               height="20"
               width="20"
             />
@@ -542,12 +600,12 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-gray-50"
+                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-gray-400"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
@@ -555,13 +613,13 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-gray-950 px-4 py-3"
+          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
             <div
-              class="text-gray-50"
+              class="text-dark-label-normal dark:text-label-normal"
               height="20"
               width="20"
             />
@@ -569,19 +627,19 @@ exports[`Toast should render 2`] = `
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-gray-50"
+                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-gray-400"
+                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
               >
                 This is toast description.
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-500 disabled:bg-gray-150 disabled:text-gray-350 h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-gray-50 !text-gray-950"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"

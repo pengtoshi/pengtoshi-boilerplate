@@ -40,8 +40,10 @@ export const Radio = ({ active, handleClick, size = "medium", disabled, classNam
     >
       <div
         className={clsx(
-          "h-full w-full rounded-full bg-gray-50",
-          internalActive ? "border-[5px] border-primary-500" : "border-[1.5px] border-gray-300",
+          "h-full w-full rounded-full bg-normal transition-colors duration-300 dark:bg-dark-normal",
+          internalActive
+            ? "border-[5px] border-primary-normal dark:border-dark-primary-normal"
+            : "border-[1.5px] border-line-normal dark:border-dark-line-normal",
         )}
       />
       {!disabled && (
