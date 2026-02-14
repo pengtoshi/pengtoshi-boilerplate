@@ -4,11 +4,10 @@ module.exports = {
   content: [
     "./index.{js,jsx,ts,tsx}",
     "./src/**/*.{js,jsx,ts,tsx}",
-    "../../libs/ui/src/**/*.{js,jsx,ts,tsx}",
+    "../../libs/ui/mobile/src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {},
   },
   plugins: [],
 };
-

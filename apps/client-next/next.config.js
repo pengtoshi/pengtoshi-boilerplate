@@ -30,6 +30,39 @@ const nextConfig = {
     isrMemoryCacheSize: 50,
     scrollRestoration: true,
   },
+  webpack(config) {
+    // NOTE: This is a workaround to allow SVGs to be imported as React components.
+    const fileLoaderRule = config.module.rules.find((rule) => rule?.test?.test?.(".svg"));
+    config.module.rules.push(
+      // Keep default behavior when importing with ?url
+      {
+        ...fileLoaderRule,
+        test: /\.svg$/i,
+        resourceQuery: /url/,
+      },
+      // Use SVGR component transform for regular imports
+      {
+        test: /\.svg$/i,
+        issuer: fileLoaderRule?.issuer,
+        resourceQuery: { not: [...(fileLoaderRule?.resourceQuery?.not ?? []), /url/] },
+        use: [
+          {
+            loader: "@svgr/webpack",
+            options: {
+              exportType: "named",
+              namedExport: "ReactComponent",
+              icon: true,
+              dimensions: false,
+            },
+          },
+        ],
+      },
+    );
+    if (fileLoaderRule) {
+      fileLoaderRule.exclude = /\.svg$/i;
+    }
+    return config;
+  },
 };
 
 module.exports = withNx(nextConfig);

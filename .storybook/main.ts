@@ -1,9 +1,4 @@
 import type { StorybookConfig } from "@storybook/nextjs";
-import path from "path";
-import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
-import { fileURLToPath } from "url";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const config: StorybookConfig = {
   framework: "@storybook/nextjs",
@@ -14,54 +9,58 @@ const config: StorybookConfig = {
       files: "**/*.stories.@(js|jsx|ts|tsx)",
     },
     {
-      directory: "../libs/ui/src/lib",
-      titlePrefix: "UI",
+      directory: "../libs/ui/web/src/lib",
+      titlePrefix: "Web UI components",
       files: "**/*.stories.@(js|jsx|ts|tsx)",
     },
   ],
-  staticDirs: [path.resolve(__dirname, "../libs/ui/public")],
-  addons: [
-    "storybook-dark-mode",
-    "@storybook/addon-essentials",
-    "@nx/react/plugins/storybook",
-    {
-      name: "storybook-addon-swc",
-      options: {
-        enable: true,
-        enableSwcLoader: true,
-        enableSwcMinify: true,
-        swcLoaderOptions: {
-          jsc: {
-            parser: {
-              syntax: "typescript",
-              tsx: true,
-              decorators: true,
-              dynamicImport: false,
-            },
-            transform: {
-              legacyDecorator: true,
-              decoratorMetadata: true,
-              react: {
-                runtime: "automatic",
-              },
-            },
-            target: "es2022",
+  staticDirs: ["../libs/ui/web/public"],
+  addons: ["storybook-dark-mode", "@storybook/addon-essentials", "@nx/react/plugins/storybook"],
+  webpackFinal: async (config, _options) => {
+    // NOTE: This is a workaround to allow SVGs to be imported as React components.
+    const rules = ((config.module?.rules ?? []) as any[]).slice();
+    const removeSvgFromAssetRules = (ruleList: any[]) => {
+      ruleList.forEach((rule) => {
+        if (!rule || typeof rule !== "object") return;
+
+        if (Array.isArray(rule.oneOf)) {
+          removeSvgFromAssetRules(rule.oneOf);
+        }
+
+        if (rule.test instanceof RegExp && rule.test.test(".svg")) {
+          rule.exclude = /\.svg$/i;
+        }
+      });
+    };
+
+    removeSvgFromAssetRules(rules);
+    rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: [
+        {
+          loader: "@svgr/webpack",
+          options: {
+            exportType: "named",
+            namedExport: "ReactComponent",
+            icon: true,
+            dimensions: false,
           },
         },
-        swcMinifyOptions: {},
-      },
-    },
-  ],
-  webpackFinal: async (config) => {
-    return {
-      ...config,
-      devtool: false,
-      ignoreWarnings: [/Failed to parse source map/],
-      resolve: {
-        ...config.resolve,
-        plugins: [new TsconfigPathsPlugin({ configFile: path.resolve(__dirname, "./tsconfig.json") })],
-      },
+      ],
+    });
+
+    config.devtool = false;
+    config.ignoreWarnings = [/Failed to parse source map/];
+    config.resolve = {
+      ...config.resolve,
     };
+    config.module = {
+      ...config.module,
+      rules,
+    };
+
+    return config;
   },
   docs: {
     autodocs: true,

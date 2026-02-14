@@ -1,7 +1,7 @@
 {
-  "name": "ui",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/ui/src",
+  "name": "ui-web",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/web/src",
   "projectType": "library",
   "targets": {
     "lint": {
@@ -39,9 +39,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/ui"],
+      "outputs": ["{workspaceRoot}/coverage/libs/ui/web"],
       "options": {
-        "jestConfig": "libs/ui/jest.config.ts",
+        "jestConfig": "libs/ui/web/jest.config.ts",
         "maxWorkers": 3,
         "memoryUsage": "4G"
       }

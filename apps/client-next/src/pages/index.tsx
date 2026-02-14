@@ -1,6 +1,5 @@
-import { ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { Button, Dropdown, Textarea, Textfield } from "@libs/ui";
+import { Button, Dropdown } from "@libs/ui-web";
 
 export const Home = () => {
   const options = ["Apple", "Banana", "Cherry"];
@@ -9,6 +8,7 @@ export const Home = () => {
   return (
     <div className="flex h-screen w-screen flex-col items-center justify-center bg-gray-50">
       <div className="flex flex-col gap-4 p-8">
+        <Button>Click me</Button>
         <Dropdown options={options} onSelect={setSelected} />
       </div>
     </div>

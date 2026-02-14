@@ -23,13 +23,13 @@
     "kill:all": "chmod 755 tools/scripts/kill_local_apps.sh && sh tools/scripts/kill_local_apps.sh",
     "lint:all": "nx run-many --target=lint --all --parallel=3",
     "lint-staged": "lint-staged --relative",
-    "storybook": "nx storybook ui",
-    "build-storybook": "nx build-storybook ui",
+    "storybook": "nx storybook ui-web",
+    "build-storybook": "nx build-storybook ui-web",
     "prepare": "npm-run-all prepare:*",
     "prepare:husky": "husky install",
     "prepare:commit-template": "git config commit.template .gitmessage.txt",
     "prepare:prisma": "prisma generate --schema libs/prisma/schema.prisma",
-    "shadcn:add": "npx shadcn-ui add --cwd libs/ui",
+    "shadcn:add": "npx shadcn-ui add --cwd libs/ui-web",
     "start": "nx serve",
     "start:all": "docker-compose up -d && yarn kill:all && nx run-many --target=serve --all --parallel=5",
     "test": "nx test",
@@ -83,7 +83,7 @@
     "@trivago/prettier-plugin-sort-imports": "^4.2.1",
     "@types/jest": "29.5.14",
     "@types/js-cookie": "^3.0.6",
-    "@types/node": "~18.16.9",
+    "@types/node": "20.19.9",
     "@types/react": "^19.1.0",
     "@types/react-dom": "18.3.0",
     "@types/supertest": "^2.0.15",
@@ -261,5 +261,8 @@
     "wagmi": "^2.12.7",
     "zod": "^3.23.8",
     "zustand": "^5.0.0-rc.2"
+  },
+  "resolutions": {
+    "webpack": "5.101.2"
   }
 }
