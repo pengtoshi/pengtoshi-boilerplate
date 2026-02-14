@@ -1,4 +1,5 @@
 import type { StoryFn } from "@storybook/react";
+import { DownloadIcon } from "lucide-react";
 import { useState } from "react";
 import type { ComponentProps } from "react";
 import { ToggleIcon } from "./ToggleIcon";
@@ -12,5 +13,5 @@ const Template: StoryFn<ComponentProps<typeof ToggleIcon>> = (args: ComponentPro
 
 export const Default = Template.bind({});
 Default.args = {
-  name: "Download",
+  icon: <DownloadIcon className="h-5 w-5 text-label-normal dark:text-dark-label-normal" />,
 };

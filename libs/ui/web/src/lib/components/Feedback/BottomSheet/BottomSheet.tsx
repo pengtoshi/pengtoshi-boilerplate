@@ -1,10 +1,13 @@
 import clsx from "clsx";
+import type { UIProps } from "../../../props";
 import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from "../../../shadcn";
 import { Button } from "../../Input/Button/Button";
+import type { ButtonProps } from "../../Input/Button/Button";
 
-export interface BottomSheetAction {
+export interface BottomSheetAction extends UIProps.Button {
   label: string;
   onClick: () => void;
+  variant?: ButtonProps["variant"];
 }
 
 export interface BottomSheetProps {
@@ -16,6 +19,9 @@ export interface BottomSheetProps {
   actionsDirection?: "row" | "column";
   closeButton?: boolean;
   closeText?: string;
+  open?: boolean;
+  defaultOpen?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
 export const BottomSheet = ({
@@ -27,11 +33,19 @@ export const BottomSheet = ({
   actionsDirection = "row",
   closeButton = true,
   closeText = "Close",
-  ...props
+  open,
+  defaultOpen,
+  onOpenChange,
 }: BottomSheetProps) => {
   return (
-    <Drawer {...props}>
-      <DrawerTrigger>{trigger}</DrawerTrigger>
+    <Drawer open={open} defaultOpen={defaultOpen} onOpenChange={onOpenChange}>
+      {trigger ? (
+        <DrawerTrigger asChild>{trigger}</DrawerTrigger>
+      ) : (
+        <DrawerTrigger>
+          <Button variant="outlinedPrimary">Open</Button>
+        </DrawerTrigger>
+      )}
       <DrawerContent>
         <div className="flex w-full flex-col gap-1">
           {title && <span className="text-16/body/emp text-label-normal dark:text-dark-label-normal">{title}</span>}
@@ -48,14 +62,14 @@ export const BottomSheet = ({
               </Button>
             </DrawerClose>
           )}
-          {actions?.map((action) => (
+          {actions?.map(({ label, className, variant, ...props }) => (
             <Button
-              className={clsx(actionsDirection === "row" ? "flex-1" : "w-full")}
-              key={action.label}
-              onClick={action.onClick}
-              variant="solid"
+              className={clsx(actionsDirection === "row" ? "flex-1" : "w-full", className)}
+              key={label}
+              variant={variant ?? "solid"}
+              {...props}
             >
-              {action.label}
+              {label}
             </Button>
           ))}
           {closeButton && actionsDirection === "column" && (

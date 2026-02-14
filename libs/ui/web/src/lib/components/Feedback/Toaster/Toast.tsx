@@ -1,8 +1,7 @@
 import clsx from "clsx";
+import { CheckCircleIcon, InfoIcon, XCircleIcon } from "lucide-react";
 import { toast as sonnerToast } from "sonner";
 import type { UIProps } from "../../../props";
-import { Icon } from "../../Icon/Icon";
-import type { IconProps } from "../../Icon/Icon";
 import { Button } from "../../Input/Button/Button";
 
 export interface ToastProps extends Omit<UIProps.Div, "id"> {
@@ -17,34 +16,34 @@ export interface ToastProps extends Omit<UIProps.Div, "id"> {
   showIcon?: boolean;
 }
 
-const iconMap: Record<NonNullable<ToastProps["type"]>, IconProps["name"]> = {
-  success: "CircleCheckFilled",
-  error: "CircleErrorFilled",
-  info: "CircleInfoFilled",
+const IconMap: Record<NonNullable<ToastProps["type"]>, React.ReactNode> = {
+  success: <CheckCircleIcon className="h-5 w-5 text-status-positive dark:text-dark-status-positive" />,
+  error: <XCircleIcon className="h-5 w-5 text-status-negative dark:text-dark-status-negative" />,
+  info: <InfoIcon className="h-5 w-5 text-label-normal dark:text-dark-label-normal" />,
 };
 
 const colorMap: Record<NonNullable<ToastProps["type"]>, string> = {
-  success: "text-dark-status-positive dark:text-status-positive",
-  error: "text-dark-status-negative dark:text-status-negative",
-  info: "text-dark-label-normal dark:text-label-normal",
+  success: "text-status-positive dark:text-dark-status-positive",
+  error: "text-status-negative dark:text-dark-status-negative",
+  info: "text-label-normal dark:text-dark-label-normal",
 };
 
 export const Toast = ({ id, title, type = "info", description, button, showIcon = true }: ToastProps) => {
   return (
-    <div className="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal">
+    <div className="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]">
       <div className="flex items-center justify-start gap-2">
-        {showIcon && <Icon size={20} name={iconMap[type]} className={colorMap[type]} />}
+        {showIcon && IconMap[type]}
         <div className="flex flex-col gap-1">
           <p className={clsx("text-14/body/emp", colorMap[type])}>{title}</p>
           {description && (
-            <p className="text-12/body text-dark-label-assertive dark:text-label-assertive">{description}</p>
+            <p className="text-12/body text-label-assertive dark:text-dark-label-assertive">{description}</p>
           )}
         </div>
       </div>
       {!!button && (
         <Button
           size="small"
-          className="!w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
+          className="!w-fit !bg-dark-normal !text-dark-label-normal dark:!bg-normal dark:!text-label-normal"
           onClick={() => {
             button.onClick();
             sonnerToast.dismiss(id);

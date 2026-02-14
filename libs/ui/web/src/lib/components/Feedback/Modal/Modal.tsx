@@ -1,10 +1,10 @@
 import clsx from "clsx";
+import type { UIProps } from "../../../props";
 import { Dialog, DialogClose, DialogContent, DialogTrigger } from "../../../shadcn";
 import { Button } from "../../Input/Button/Button";
 
-export interface ModalAction {
+export interface ModalAction extends UIProps.Button {
   label: string;
-  onClick: () => void;
 }
 
 export interface ModalProps extends React.ComponentProps<typeof Dialog> {
@@ -12,6 +12,7 @@ export interface ModalProps extends React.ComponentProps<typeof Dialog> {
   size?: "small" | "medium";
   title?: string;
   description?: string;
+  contents?: React.ReactNode;
   actions?: ModalAction[];
   actionsDirection?: "row" | "column";
   closeButton?: boolean;
@@ -23,6 +24,7 @@ export const Modal = ({
   size = "small",
   title,
   description,
+  contents,
   actions,
   actionsDirection = "row",
   closeButton = true,
@@ -39,6 +41,7 @@ export const Modal = ({
             {description && (
               <span className="text-14/body text-label-assertive dark:text-dark-label-assertive">{description}</span>
             )}
+            {contents}
           </div>
         </div>
         <div className={clsx("flex w-full", actionsDirection === "row" ? "flex-row gap-3" : "flex-col gap-2")}>
@@ -49,14 +52,14 @@ export const Modal = ({
               </Button>
             </DialogClose>
           )}
-          {actions?.map((action) => (
+          {actions?.map(({ label, className, ...action }) => (
             <Button
-              className={clsx(actionsDirection === "row" ? "flex-1" : "w-full")}
-              key={action.label}
-              onClick={action.onClick}
+              className={clsx(actionsDirection === "row" ? "flex-1" : "w-full", className)}
+              key={label}
               variant="solid"
+              {...action}
             >
-              {action.label}
+              {label}
             </Button>
           ))}
           {closeButton && actionsDirection === "column" && (
@@ -71,3 +74,5 @@ export const Modal = ({
     </Dialog>
   );
 };
+
+export { Dialog, DialogContent, DialogTrigger, DialogClose };

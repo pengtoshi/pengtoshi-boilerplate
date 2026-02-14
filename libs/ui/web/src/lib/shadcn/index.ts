@@ -2,6 +2,7 @@
 export * from "./ui/button";
 export * from "./ui/dialog";
 export * from "./ui/drawer";
+export * from "./ui/dropdown-menu";
 export * from "./ui/tabs";
 export * from "./ui/sonner";
 

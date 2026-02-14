@@ -27,6 +27,7 @@ export const TabsTrigger = ({ className, ...props }: React.ComponentProps<typeof
       className={cn(
         "text-label-normal data-[state=active]:bg-white data-[state=disabled]:text-label-disabled dark:text-dark-label-normal dark:data-[state=active]:bg-black dark:data-[state=disabled]:text-dark-label-disabled",
         "inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-transparent px-2 py-1 text-14/body transition-[color,box-shadow] focus-visible:outline-1 focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "transition-all duration-300",
         className,
       )}
       {...props}

@@ -1,26 +1,29 @@
 import clsx from "clsx";
+import { forwardRef } from "react";
 import type { UIProps } from "../../../props";
-import { Icon } from "../../Icon/Icon";
-import type { IconProps } from "../../Icon/Icon";
 
 export interface IconButtonProps extends UIProps.Button {
   disabled?: boolean;
-  name: IconProps["name"];
-  size?: IconProps["size"];
-  iconClassName?: string;
+  icon: React.ReactNode;
 }
 
-export const IconButton = ({ disabled = false, className, name, size, iconClassName, ...props }: IconButtonProps) => {
-  return (
-    <button type="button" disabled={disabled} className={clsx("group", className)} {...props}>
-      <Icon
-        name={name}
-        size={size}
+export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
+  ({ disabled = false, className, icon, ...props }, ref) => {
+    return (
+      <button
+        ref={ref}
+        type="button"
+        disabled={disabled}
         className={clsx(
-          "text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled",
-          iconClassName,
+          "group text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled",
+          className,
         )}
-      />
-    </button>
-  );
-};
+        {...props}
+      >
+        {icon}
+      </button>
+    );
+  },
+);
+
+IconButton.displayName = "IconButton";
