@@ -3,28 +3,29 @@ import { useEffect, useState } from "react";
 import { Pressable, View } from "react-native";
 import type { PressableProps } from "react-native";
 
-export type SwitchSize = "small" | "medium";
-
 export type SwitchProps = Omit<PressableProps, "onPress"> & {
   active: boolean;
   onChange?: (next: boolean) => void;
   handleClick?: () => void;
-  size?: SwitchSize;
+  size?: "small" | "medium";
   disabled?: boolean;
   className?: string;
 };
 
-const switchSizeClasses: Record<SwitchSize, { track: string; thumb: string; translateX: string }> = {
-  small: {
-    track: "h-[18px] w-8",
-    thumb: "h-[14px] w-[14px]",
-    translateX: "translate-x-[14px]",
+const SwitchSize = {
+  toggle: {
+    small: "h-[14px] w-[14px]",
+    medium: "h-[22px] w-[22px]",
   },
-  medium: {
-    track: "h-[26px] w-12",
-    thumb: "h-[22px] w-[22px]",
-    translateX: "translate-x-[22px]",
+  container: {
+    small: "h-[18px] w-[32px]",
+    medium: "h-[26px] w-[48px]",
   },
+};
+
+const getTranslateClass = (active: boolean, size: "small" | "medium") => {
+  if (!active) return "translate-x-0";
+  return size === "medium" ? "translate-x-[22px]" : "translate-x-[14px]";
 };
 
 export const Switch = ({
@@ -42,15 +43,13 @@ export const Switch = ({
     setInternalActive(active);
   }, [active]);
 
-  const sizeStyle = switchSizeClasses[size];
-
   return (
     <Pressable
       accessibilityRole="switch"
       accessibilityState={{ checked: internalActive, disabled }}
       className={clsx(
-        "justify-center rounded-full p-0.5 disabled:opacity-40",
-        sizeStyle.track,
+        "relative z-10 flex-shrink-0 rounded-full transition-colors duration-300 disabled:opacity-40",
+        SwitchSize.container[size],
         internalActive ? "bg-primary-normal" : "bg-background-disabled",
         className,
       )}
@@ -65,9 +64,9 @@ export const Switch = ({
     >
       <View
         className={clsx(
-          "rounded-full bg-normal transition-transform duration-200",
-          sizeStyle.thumb,
-          internalActive ? sizeStyle.translateX : "translate-x-0",
+          "absolute left-0.5 top-0.5 z-20 flex-shrink-0 rounded-full bg-normal transition-transform duration-200",
+          SwitchSize.toggle[size],
+          getTranslateClass(internalActive, size),
         )}
       />
     </Pressable>

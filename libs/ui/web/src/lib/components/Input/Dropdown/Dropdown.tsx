@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { DropdownListText } from "./Dropdown.element";
 import type { UIProps } from "../../../props";
 import { Interaction } from "../../Display/Interaction/Interaction";
+import { Icon } from "../../Icon/Icon";
 
 export interface DropdownProps<T> extends Omit<UIProps.Div, "onSelect"> {
   options: T[];
@@ -70,9 +71,11 @@ export const Dropdown = <T extends string | number>({
         >
           {!disabled && <Interaction />}
           {selected ? selected.toString() : "Select an option"}
-          <ChevronDownIcon
+          <Icon
+            component={ChevronDownIcon}
+            size={20}
             className={clsx(
-              "h-5 w-5 text-label-normal transition-transform duration-500 dark:text-dark-label-normal",
+              "text-label-normal transition-transform duration-500 dark:text-dark-label-normal",
               isOpen && "rotate-180",
             )}
           />

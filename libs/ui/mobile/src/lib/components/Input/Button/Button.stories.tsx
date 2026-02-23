@@ -1,4 +1,4 @@
-import type { ComponentType } from "react";
+import React, { type ComponentType } from "react";
 import { View } from "react-native";
 import { Button } from "./Button";
 
@@ -13,13 +13,27 @@ const meta = {
     loading: false,
   },
   argTypes: {
+    variant: {
+      control: { type: "select" },
+      options: ["solid", "outlinedPrimary", "outlinedAssertive", "textPrimary", "textAssertive"],
+    },
+    size: {
+      control: { type: "select" },
+      options: ["small", "medium", "large", "extraLarge"],
+    },
+    disabled: {
+      control: { type: "boolean" },
+    },
+    loading: {
+      control: { type: "boolean" },
+    },
     onPress: {
       action: "pressed",
     },
   },
   decorators: [
     (Story: ComponentType) => (
-      <View className="w-full max-w-[320px]">
+      <View style={{ width: "100%", maxWidth: 320 }}>
         <Story />
       </View>
     ),

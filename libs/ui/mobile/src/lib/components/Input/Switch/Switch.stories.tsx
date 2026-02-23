@@ -1,5 +1,4 @@
-import type { ComponentProps } from "react";
-import { useState } from "react";
+import React, { type ComponentProps, useState } from "react";
 import { Switch } from "./Switch";
 
 const meta = {
@@ -8,6 +7,12 @@ const meta = {
   args: {
     active: false,
     size: "medium",
+  },
+  argTypes: {
+    size: {
+      control: { type: "select" },
+      options: ["small", "medium"],
+    },
   },
 };
 

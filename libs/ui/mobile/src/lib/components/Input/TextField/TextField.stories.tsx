@@ -8,6 +8,12 @@ const meta = {
     guide: "Helper text",
   },
   argTypes: {
+    guide: {
+      control: { type: "text" },
+    },
+    error: {
+      control: { type: "text" },
+    },
     onChangeText: {
       action: "changed",
     },

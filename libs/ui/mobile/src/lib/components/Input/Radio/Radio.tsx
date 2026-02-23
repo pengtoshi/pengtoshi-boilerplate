@@ -15,8 +15,8 @@ export type RadioProps = Omit<PressableProps, "onPress"> & {
 };
 
 const radioSizeClasses: Record<RadioSize, string> = {
-  small: "h-5 w-5",
-  medium: "h-6 w-6",
+  small: "h-[20px] w-[20px]", // 5*4
+  medium: "h-[24px] w-[24px]", // 6*4
 };
 
 const selectedBorderClasses: Record<RadioSize, string> = {
@@ -43,7 +43,11 @@ export const Radio = ({
     <Pressable
       accessibilityRole="radio"
       accessibilityState={{ checked: internalActive, disabled }}
-      className={clsx("items-center justify-center p-0.5 disabled:opacity-40", radioSizeClasses[size], className)}
+      className={clsx(
+        "items-center justify-center p-[2px] disabled:opacity-40", // 0.5*4
+        radioSizeClasses[size],
+        className,
+      )}
       disabled={disabled}
       onPress={() => {
         const next = !internalActive;

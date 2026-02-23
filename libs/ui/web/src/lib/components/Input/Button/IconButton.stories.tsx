@@ -1,6 +1,8 @@
 import type { StoryFn } from "@storybook/react";
+import { XIcon } from "lucide-react";
 import type { ComponentProps } from "react";
 import { IconButton } from "./IconButton";
+import { Icon } from "../../Icon/Icon";
 
 export default { component: IconButton };
 
@@ -15,6 +17,5 @@ const Template: StoryFn<ComponentProps<typeof IconButton>> = (args: ComponentPro
 
 export const Default = Template.bind({});
 Default.args = {
-  name: "CloseThick",
-  size: 24,
+  icon: <Icon component={XIcon} size={24} />,
 };

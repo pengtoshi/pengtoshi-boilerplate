@@ -38,17 +38,17 @@ export const TextArea = ({
   };
 
   return (
-    <View className={clsx("w-full gap-1.5", containerClassName)}>
+    <View className={clsx("w-full gap-[6px]", containerClassName)}>
       <View
         className={clsx(
-          "min-h-[100px] rounded-md border border-line-normal bg-background-strong px-4 py-2.5",
+          "h-[100px] rounded-md border border-line-normal bg-background-strong px-[16px] py-[10px]",
           !editable && "bg-background-disabled",
           !!error && "border-status-negative",
         )}
       >
         <TextInput
           className={clsx(
-            "text-14/body text-label-normal placeholder:text-label-placeholder",
+            "font-regular h-full px-0 py-0 text-14/body text-label-normal placeholder:text-label-placeholder",
             !editable && "text-label-disabled",
           )}
           editable={editable}
@@ -59,8 +59,8 @@ export const TextArea = ({
           {...props}
         />
       </View>
-      <View className="flex-row items-center justify-between gap-4">
-        <View className="gap-0.5">
+      <View className="flex-row items-center justify-between gap-[16px]">
+        <View className="gap-[2px]">
           {!!guide && <Text className="text-12/body text-label-assertive">{guide}</Text>}
           {!!error && <Text className="text-12/body text-status-negative">{error}</Text>}
         </View>

@@ -49,11 +49,11 @@ export const TextField = ({
   const showClearButton = !!onClear && !!internalValue.length && editable;
 
   return (
-    <View className={clsx("w-full gap-1.5", containerClassName)}>
+    <View className={clsx("w-full gap-[6px]", containerClassName)}>
       {!!label && <Text className="text-12/body text-label-assertive">{label}</Text>}
       <View
         className={clsx(
-          "h-10 flex-row items-center gap-2.5 rounded-md border border-line-normal bg-background-strong px-4",
+          "h-[40px] flex-row items-center gap-[10px] rounded-md border border-line-normal bg-background-strong px-[16px]",
           editable ? "active:border-primary-normal" : "bg-background-disabled",
           !!error && "border-status-negative",
         )}
@@ -61,7 +61,7 @@ export const TextField = ({
         {leadingIcon}
         <TextInput
           className={clsx(
-            "flex-1 text-14/body text-label-normal placeholder:text-label-placeholder",
+            "font-regular flex-1 px-0 py-0 text-14/body text-label-normal placeholder:text-label-placeholder",
             !editable && "text-label-disabled",
             inputClassName,
           )}
@@ -75,14 +75,14 @@ export const TextField = ({
           <Pressable
             accessibilityLabel="Clear input"
             accessibilityRole="button"
-            className="rounded-md px-1 py-0.5 active:opacity-70"
+            className="rounded-md px-[4px] py-[2px] active:opacity-70"
             onPress={onClear}
           >
             <Text className="text-12/body text-label-assertive">Clear</Text>
           </Pressable>
         )}
       </View>
-      <View className="gap-0.5">
+      <View className="gap-[2px]">
         {!!guide && <Text className="text-12/body text-label-assertive">{guide}</Text>}
         {!!error && <Text className="text-12/body text-status-negative">{error}</Text>}
       </View>

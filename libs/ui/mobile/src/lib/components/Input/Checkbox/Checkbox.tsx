@@ -23,7 +23,7 @@ export const Checkbox = ({ active, onChange, handleClick, disabled = false, clas
     <Pressable
       accessibilityRole="checkbox"
       accessibilityState={{ checked: internalActive, disabled }}
-      className={clsx("h-6 w-6 items-center justify-center p-[3px] disabled:opacity-40", className)}
+      className={clsx("h-[24px] w-[24px] items-center justify-center p-[3px] disabled:opacity-40", className)}
       disabled={disabled}
       onPress={() => {
         const next = !internalActive;

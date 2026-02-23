@@ -48,10 +48,10 @@ const variantClasses: Record<UIButtonVariant, { container: string; text: string;
 };
 
 const sizeClasses: Record<UIButtonSize, { container: string; text: string }> = {
-  small: { container: "h-8 rounded-md px-3", text: "text-14/button" },
-  medium: { container: "h-10 rounded-md px-4", text: "text-14/button" },
-  large: { container: "h-12 rounded-md px-5", text: "text-16/button" },
-  extraLarge: { container: "h-16 rounded-md px-6", text: "text-18/button" },
+  small: { container: "h-[32px] rounded-md px-[12px]", text: "text-14/button" }, // 8*4, 3*4
+  medium: { container: "h-[40px] rounded-md px-[16px]", text: "text-14/button" }, // 10*4, 4*4
+  large: { container: "h-[48px] rounded-md px-[20px]", text: "text-16/button" }, // 12*4, 5*4
+  extraLarge: { container: "h-[64px] rounded-md px-[24px]", text: "text-18/button" }, // 16*4, 6*4
 };
 
 export const Button = ({

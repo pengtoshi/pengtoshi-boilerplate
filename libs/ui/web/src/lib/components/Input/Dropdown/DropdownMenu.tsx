@@ -7,6 +7,7 @@ import {
   DropdownMenu as DropdownMenuPrimitive,
   DropdownMenuTrigger,
 } from "../../../shadcn";
+import { Icon } from "../../Icon/Icon";
 import { IconButton } from "../Button/IconButton";
 
 export interface DropdownMenuProps {
@@ -25,7 +26,13 @@ export const DropdownMenu = ({ items, trigger, menuLabel, avoidCollisions = true
       <DropdownMenuTrigger asChild>
         {trigger ?? (
           <IconButton
-            icon={<EllipsisVerticalIcon className="h-5 w-5 text-label-normal dark:text-dark-label-normal" />}
+            icon={
+              <Icon
+                component={EllipsisVerticalIcon}
+                size={20}
+                className="text-label-normal dark:text-dark-label-normal"
+              />
+            }
           />
         )}
       </DropdownMenuTrigger>

@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { CheckCircleIcon, InfoIcon, XCircleIcon } from "lucide-react";
 import { toast as sonnerToast } from "sonner";
 import type { UIProps } from "../../../props";
+import { Icon } from "../../Icon/Icon";
 import { Button } from "../../Input/Button/Button";
 
 export interface ToastProps extends Omit<UIProps.Div, "id"> {
@@ -17,9 +18,11 @@ export interface ToastProps extends Omit<UIProps.Div, "id"> {
 }
 
 const IconMap: Record<NonNullable<ToastProps["type"]>, React.ReactNode> = {
-  success: <CheckCircleIcon className="h-5 w-5 text-status-positive dark:text-dark-status-positive" />,
-  error: <XCircleIcon className="h-5 w-5 text-status-negative dark:text-dark-status-negative" />,
-  info: <InfoIcon className="h-5 w-5 text-label-normal dark:text-dark-label-normal" />,
+  success: (
+    <Icon component={CheckCircleIcon} size={20} className="text-status-positive dark:text-dark-status-positive" />
+  ),
+  error: <Icon component={XCircleIcon} size={20} className="text-status-negative dark:text-dark-status-negative" />,
+  info: <Icon component={InfoIcon} size={20} className="text-label-normal dark:text-dark-label-normal" />,
 };
 
 const colorMap: Record<NonNullable<ToastProps["type"]>, string> = {

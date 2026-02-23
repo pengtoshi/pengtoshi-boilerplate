@@ -9,6 +9,12 @@ const meta = {
     guide: "Max 120 characters",
   },
   argTypes: {
+    guide: {
+      control: { type: "text" },
+    },
+    error: {
+      control: { type: "text" },
+    },
     onChangeText: {
       action: "changed",
     },

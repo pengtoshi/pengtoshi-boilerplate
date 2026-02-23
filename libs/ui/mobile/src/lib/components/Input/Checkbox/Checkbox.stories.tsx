@@ -1,5 +1,4 @@
-import type { ComponentProps } from "react";
-import { useState } from "react";
+import React, { type ComponentProps, useState } from "react";
 import { Checkbox } from "./Checkbox";
 
 const meta = {
@@ -7,6 +6,15 @@ const meta = {
   title: "Input/Checkbox",
   args: {
     active: false,
+    disabled: false,
+  },
+  argTypes: {
+    disabled: {
+      control: { type: "boolean" },
+    },
+    onChange: {
+      action: "changed",
+    },
   },
 };
 

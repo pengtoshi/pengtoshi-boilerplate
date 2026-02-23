@@ -1,5 +1,4 @@
-import type { ComponentProps } from "react";
-import { useState } from "react";
+import React, { type ComponentProps, useState } from "react";
 import { Radio } from "./Radio";
 
 const meta = {
@@ -8,6 +7,19 @@ const meta = {
   args: {
     active: false,
     size: "medium",
+    disabled: false,
+  },
+  argTypes: {
+    size: {
+      control: { type: "select" },
+      options: ["small", "medium"],
+    },
+    disabled: {
+      control: { type: "boolean" },
+    },
+    onChange: {
+      action: "changed",
+    },
   },
 };
 

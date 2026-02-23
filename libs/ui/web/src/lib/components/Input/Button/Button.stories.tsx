@@ -3,6 +3,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import type { ComponentProps } from "react";
 import type { ButtonProps } from "./Button";
 import { Button } from "./Button";
+import { Icon as IconComponent } from "../../Icon/Icon";
 
 export default { component: Button };
 
@@ -88,6 +89,6 @@ export const Icon = IconList.bind({});
 Icon.args = {
   type: "button",
   children: "Button",
-  leftIcon: <ChevronLeftIcon className="h-5 w-5 text-normal" />,
-  rightIcon: <ChevronRightIcon className="h-5 w-5 text-normal" />,
+  leftIcon: <IconComponent component={ChevronLeftIcon} size={20} className="text-normal" />,
+  rightIcon: <IconComponent component={ChevronRightIcon} size={20} className="text-normal" />,
 };

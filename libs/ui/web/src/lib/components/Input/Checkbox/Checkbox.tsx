@@ -3,6 +3,7 @@ import { CheckIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import type { UIProps } from "../../../props";
 import { Interaction } from "../../Display/Interaction/Interaction";
+import { Icon } from "../../Icon/Icon";
 
 export interface CheckboxProps extends UIProps.Button {
   active: boolean;
@@ -36,7 +37,7 @@ export const Checkbox = ({ active, handleClick, className, disabled, ...props }:
             : "border-[1.5px] border-line-normal dark:border-dark-line-normal",
         )}
       >
-        {internalActive && <CheckIcon className="h-4 w-4 text-normal dark:text-dark-normal" />}
+        {internalActive && <Icon component={CheckIcon} size={16} className="text-normal dark:text-dark-normal" />}
       </div>
       {!disabled && <Interaction focus={false} className={clsx("-left-1 -top-1 h-8 w-8 rounded-full")} />}
     </button>

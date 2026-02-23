@@ -12,9 +12,9 @@ export type IconButtonProps = Omit<PressableProps, "children"> & {
 };
 
 const iconButtonSizeClass: Record<IconButtonSize, string> = {
-  small: "h-8 w-8",
-  medium: "h-10 w-10",
-  large: "h-12 w-12",
+  small: "h-[32px] w-[32px]", // 8*4
+  medium: "h-[40px] w-[40px]", // 10*4
+  large: "h-[48px] w-[48px]", // 12*4
 };
 
 export const IconButton = ({ icon, size = "medium", className, disabled = false, ...props }: IconButtonProps) => {

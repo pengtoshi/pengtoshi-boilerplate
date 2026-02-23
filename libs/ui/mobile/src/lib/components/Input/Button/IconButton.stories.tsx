@@ -1,5 +1,5 @@
 import { Plus } from "lucide-react-native";
-import type { ComponentType } from "react";
+import React, { type ComponentType } from "react";
 import { View } from "react-native";
 import { IconButton } from "./IconButton";
 
@@ -8,15 +8,24 @@ const meta = {
   title: "Input/IconButton",
   args: {
     icon: <Plus size={18} color="#1F1F1F" />,
+    size: "medium",
+    disabled: false,
   },
   argTypes: {
+    size: {
+      control: { type: "select" },
+      options: ["small", "medium", "large"],
+    },
+    disabled: {
+      control: { type: "boolean" },
+    },
     onPress: {
       action: "pressed",
     },
   },
   decorators: [
     (Story: ComponentType) => (
-      <View className="w-full max-w-[320px]">
+      <View style={{ width: "100%", maxWidth: 320 }}>
         <Story />
       </View>
     ),
