@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react-native";
+import type { ComponentProps } from "react";
 import { useState } from "react";
 import { Switch } from "./Switch";
 
-const meta: Meta<typeof Switch> = {
+const meta = {
   component: Switch,
   title: "Input/Switch",
   args: {
@@ -12,13 +12,11 @@ const meta: Meta<typeof Switch> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
-
-const SwitchExample = (args: Story["args"]) => {
+const SwitchExample = (args: ComponentProps<typeof Switch>) => {
   const [active, setActive] = useState(args?.active ?? false);
   return <Switch {...args} active={active} onChange={setActive} />;
 };
 
-export const Interactive: Story = {
-  render: (args) => <SwitchExample {...args} />,
+export const Interactive = {
+  render: (args: ComponentProps<typeof Switch>) => <SwitchExample {...args} />,
 };

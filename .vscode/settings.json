@@ -1,6 +1,5 @@
 {
   "files.exclude": {
-    ".cursor": true,
     ".husky": true,
     ".editorconfig": true,
     ".lintstagedrc": true,

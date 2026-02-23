@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react-native";
+import type { ComponentProps } from "react";
 import { useState } from "react";
 import { Radio } from "./Radio";
 
-const meta: Meta<typeof Radio> = {
+const meta = {
   component: Radio,
   title: "Input/Radio",
   args: {
@@ -12,13 +12,11 @@ const meta: Meta<typeof Radio> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
-
-const RadioExample = (args: Story["args"]) => {
+const RadioExample = (args: ComponentProps<typeof Radio>) => {
   const [active, setActive] = useState(args?.active ?? false);
   return <Radio {...args} active={active} onChange={setActive} />;
 };
 
-export const Interactive: Story = {
-  render: (args) => <RadioExample {...args} />,
+export const Interactive = {
+  render: (args: ComponentProps<typeof Radio>) => <RadioExample {...args} />,
 };

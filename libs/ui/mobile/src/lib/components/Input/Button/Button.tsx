@@ -1,10 +1,11 @@
 import clsx from "clsx";
 import type { ReactNode } from "react";
-import { ActivityIndicator, Pressable, Text } from "react-native";
+import { ActivityIndicator, Pressable } from "react-native";
 import type { PressableProps } from "react-native";
+import { Text } from "../../Display/Text/Text";
 
 export type UIButtonVariant = "solid" | "outlinedPrimary" | "outlinedAssertive" | "textPrimary" | "textAssertive";
-export type UIButtonSize = "small" | "medium" | "large";
+export type UIButtonSize = "small" | "medium" | "large" | "extraLarge";
 
 export type ButtonProps = Omit<PressableProps, "children"> & {
   children?: ReactNode;
@@ -47,9 +48,10 @@ const variantClasses: Record<UIButtonVariant, { container: string; text: string;
 };
 
 const sizeClasses: Record<UIButtonSize, { container: string; text: string }> = {
-  small: { container: "h-8 rounded-md px-4", text: "text-14/button" },
-  medium: { container: "h-10 rounded-md px-5", text: "text-14/button" },
-  large: { container: "h-12 rounded-md px-6", text: "text-16/button" },
+  small: { container: "h-8 rounded-md px-3", text: "text-14/button" },
+  medium: { container: "h-10 rounded-md px-4", text: "text-14/button" },
+  large: { container: "h-12 rounded-md px-5", text: "text-16/button" },
+  extraLarge: { container: "h-16 rounded-md px-6", text: "text-18/button" },
 };
 
 export const Button = ({
@@ -84,7 +86,7 @@ export const Button = ({
     >
       {loading ? <ActivityIndicator color={variantStyle.spinner} size="small" /> : leftIcon}
       {typeof textValue === "string" ? (
-        <Text className={clsx("font-sans", variantStyle.text, sizeStyle.text, textClassName)}>{textValue}</Text>
+        <Text className={clsx(variantStyle.text, sizeStyle.text, textClassName)}>{textValue}</Text>
       ) : (
         textValue
       )}

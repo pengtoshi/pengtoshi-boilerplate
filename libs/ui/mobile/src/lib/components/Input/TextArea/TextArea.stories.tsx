@@ -1,7 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react-native";
 import { TextArea } from "./TextArea";
 
-const meta: Meta<typeof TextArea> = {
+const meta = {
   component: TextArea,
   title: "Input/TextArea",
   args: {
@@ -17,6 +16,4 @@ const meta: Meta<typeof TextArea> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {};
+export const Default = {};

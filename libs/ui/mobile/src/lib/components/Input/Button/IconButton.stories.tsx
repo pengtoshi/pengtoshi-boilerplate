@@ -1,14 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react-native";
-import { Text, View } from "react-native";
+import { Plus } from "lucide-react-native";
+import type { ComponentType } from "react";
+import { View } from "react-native";
 import { IconButton } from "./IconButton";
 
-const meta: Meta<typeof IconButton> = {
+const meta = {
   component: IconButton,
   title: "Input/IconButton",
   args: {
-    size: "medium",
-    icon: <Text className="text-16/body">+</Text>,
-    variant: "outlinedAssertive",
+    icon: <Plus size={18} color="#1F1F1F" />,
   },
   argTypes: {
     onPress: {
@@ -16,7 +15,7 @@ const meta: Meta<typeof IconButton> = {
     },
   },
   decorators: [
-    (Story) => (
+    (Story: ComponentType) => (
       <View className="w-full max-w-[320px]">
         <Story />
       </View>
@@ -25,6 +24,4 @@ const meta: Meta<typeof IconButton> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {};
+export const Default = {};

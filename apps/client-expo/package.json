@@ -7,24 +7,5 @@
     "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/client-expo",
     "android": "expo run:android",
     "ios": "expo run:ios"
-  },
-  "dependencies": {
-    "@expo/metro-config": "*",
-    "@testing-library/react-native": "*",
-    "expo": "*",
-    "expo-router": "*",
-    "expo-splash-screen": "*",
-    "expo-status-bar": "*",
-    "expo-system-ui": "*",
-    "jest-expo": "*",
-    "metro-config": "*",
-    "metro-resolver": "*",
-    "nativewind": "*",
-    "react": "*",
-    "react-native": "*",
-    "react-native-screens": "~4.16.0",
-    "react-native-svg": "*",
-    "react-native-svg-transformer": "*",
-    "react-native-web": "*"
   }
 }

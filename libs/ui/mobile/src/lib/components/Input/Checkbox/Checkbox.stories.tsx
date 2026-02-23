@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react-native";
+import type { ComponentProps } from "react";
 import { useState } from "react";
 import { Checkbox } from "./Checkbox";
 
-const meta: Meta<typeof Checkbox> = {
+const meta = {
   component: Checkbox,
   title: "Input/Checkbox",
   args: {
@@ -11,13 +11,11 @@ const meta: Meta<typeof Checkbox> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
-
-const CheckboxExample = (args: Story["args"]) => {
+const CheckboxExample = (args: ComponentProps<typeof Checkbox>) => {
   const [active, setActive] = useState(args?.active ?? false);
   return <Checkbox {...args} active={active} onChange={setActive} />;
 };
 
-export const Interactive: Story = {
-  render: (args) => <CheckboxExample {...args} />,
+export const Interactive = {
+  render: (args: ComponentProps<typeof Checkbox>) => <CheckboxExample {...args} />,
 };

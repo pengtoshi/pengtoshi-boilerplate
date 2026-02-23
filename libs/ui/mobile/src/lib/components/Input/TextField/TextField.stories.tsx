@@ -1,7 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react-native";
 import { TextField } from "./TextField";
 
-const meta: Meta<typeof TextField> = {
+const meta = {
   component: TextField,
   title: "Input/TextField",
   args: {
@@ -16,11 +15,9 @@ const meta: Meta<typeof TextField> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+export const Default = {};
 
-export const Default: Story = {};
-
-export const WithError: Story = {
+export const WithError = {
   args: {
     error: "Invalid value",
   },

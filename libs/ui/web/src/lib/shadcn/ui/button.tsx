@@ -20,9 +20,10 @@ const buttonVariants = cva(
           "bg-transparent !text-label-assertive dark:!text-dark-label-assertive disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled !px-2",
       },
       size: {
-        small: "h-8 px-4 text-14/button gap-1",
-        medium: "h-10 px-5 text-14/button gap-1.5",
-        large: "h-12 px-6 text-16/button gap-1.5",
+        small: "h-8 px-3 text-14/button gap-1",
+        medium: "h-10 px-4 text-14/button gap-1.5",
+        large: "h-12 px-5 text-16/button gap-1.5",
+        extraLarge: "h-16 px-6 text-18/button gap-1.5",
       },
     },
     defaultVariants: {

@@ -78,6 +78,7 @@ const sharedTheme = {
     "24/heading": ["24px", { fontWeight: 600, lineHeight: "130%" }],
     "20/heading": ["20px", { fontWeight: 600, lineHeight: "130%" }],
     "18/heading": ["18px", { fontWeight: 600, lineHeight: "130%" }],
+    "18/button": ["18px", { fontWeight: 500, lineHeight: "130%" }],
     "16/button": ["16px", { fontWeight: 500, lineHeight: "130%" }],
     "14/button": ["14px", { fontWeight: 500, lineHeight: "130%" }],
     "16/body/emp": ["16px", { fontWeight: 500, lineHeight: "140%" }],

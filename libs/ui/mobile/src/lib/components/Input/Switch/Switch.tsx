@@ -7,7 +7,8 @@ export type SwitchSize = "small" | "medium";
 
 export type SwitchProps = Omit<PressableProps, "onPress"> & {
   active: boolean;
-  onChange: (next: boolean) => void;
+  onChange?: (next: boolean) => void;
+  handleClick?: () => void;
   size?: SwitchSize;
   disabled?: boolean;
   className?: string;
@@ -26,7 +27,15 @@ const switchSizeClasses: Record<SwitchSize, { track: string; thumb: string; tran
   },
 };
 
-export const Switch = ({ active, onChange, size = "medium", disabled = false, className, ...props }: SwitchProps) => {
+export const Switch = ({
+  active,
+  onChange,
+  handleClick,
+  size = "medium",
+  disabled = false,
+  className,
+  ...props
+}: SwitchProps) => {
   const [internalActive, setInternalActive] = useState(active);
 
   useEffect(() => {
@@ -49,7 +58,8 @@ export const Switch = ({ active, onChange, size = "medium", disabled = false, cl
       onPress={() => {
         const next = !internalActive;
         setInternalActive(next);
-        onChange(next);
+        onChange?.(next);
+        handleClick?.();
       }}
       {...props}
     >

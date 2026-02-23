@@ -1,7 +1,8 @@
 import clsx from "clsx";
 import { useEffect, useState } from "react";
-import { Text, TextInput, View } from "react-native";
+import { TextInput, View } from "react-native";
 import type { TextInputProps } from "react-native";
+import { Text } from "../../Display/Text/Text";
 
 export type TextAreaProps = Omit<TextInputProps, "onChangeText" | "value" | "defaultValue"> & {
   value?: string;
@@ -47,7 +48,7 @@ export const TextArea = ({
       >
         <TextInput
           className={clsx(
-            "font-sans text-14/body text-label-normal placeholder:text-label-placeholder",
+            "text-14/body text-label-normal placeholder:text-label-placeholder",
             !editable && "text-label-disabled",
           )}
           editable={editable}
@@ -60,11 +61,11 @@ export const TextArea = ({
       </View>
       <View className="flex-row items-center justify-between gap-4">
         <View className="gap-0.5">
-          {!!guide && <Text className="font-sans text-12/body text-label-assertive">{guide}</Text>}
-          {!!error && <Text className="font-sans text-12/body text-status-negative">{error}</Text>}
+          {!!guide && <Text className="text-12/body text-label-assertive">{guide}</Text>}
+          {!!error && <Text className="text-12/body text-status-negative">{error}</Text>}
         </View>
         {maxLength !== undefined && (
-          <Text className="font-sans text-12/body text-label-assertive">
+          <Text className="text-12/body text-label-assertive">
             {internalValue.length}/{maxLength}
           </Text>
         )}

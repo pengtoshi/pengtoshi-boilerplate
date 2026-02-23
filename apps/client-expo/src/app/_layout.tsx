@@ -1,10 +1,31 @@
+import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
-import { useSystemColorScheme } from "@libs/ui-mobile";
+import { useEffect } from "react";
+import { useColorScheme } from "react-native";
 import "../global.css";
 
+SplashScreen.preventAutoHideAsync().catch(() => null);
+
 export const RootLayout = () => {
-  const colorScheme = useSystemColorScheme();
+  const colorScheme = useColorScheme();
+  const [fontsLoaded, fontsLoadingError] = useFonts({
+    "Aspekta-Regular": require("../../assets/fonts/Aspekta-Regular.otf"),
+    "Aspekta-Medium": require("../../assets/fonts/Aspekta-Medium.otf"),
+    "Aspekta-SemiBold": require("../../assets/fonts/Aspekta-SemiBold.otf"),
+    "Aspekta-Bold": require("../../assets/fonts/Aspekta-Bold.otf"),
+  });
+
+  useEffect(() => {
+    if (fontsLoaded || fontsLoadingError) {
+      SplashScreen.hideAsync().catch(() => null);
+    }
+  }, [fontsLoaded, fontsLoadingError]);
+
+  if (!fontsLoaded && !fontsLoadingError) {
+    return null;
+  }
 
   return (
     <>

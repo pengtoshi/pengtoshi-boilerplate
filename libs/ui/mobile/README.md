@@ -26,9 +26,7 @@ Mobile uses system appearance by default (`darkMode: "media"`), which is the sta
 
 ## Font strategy (Aspekta)
 
-`ui-mobile` uses `Aspekta` as the default `font-sans`.
-
-- UI components apply `font-sans` as default text family.
+- `Text` typography tokens (`text-28/title`, `text-16/body`...) map to Aspekta weight classes (`font-semiBold`, `font-medium`, `font-regular`) in the wrapper.
 - The app must load actual Aspekta font assets via Expo Font.
 - Use `useUIMobileFonts` from `@libs/ui-mobile` for app-level font loading.
 

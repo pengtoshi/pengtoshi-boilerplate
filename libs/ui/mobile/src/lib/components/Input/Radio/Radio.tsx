@@ -7,7 +7,8 @@ export type RadioSize = "small" | "medium";
 
 export type RadioProps = Omit<PressableProps, "onPress"> & {
   active: boolean;
-  onChange: (next: boolean) => void;
+  onChange?: (next: boolean) => void;
+  handleClick?: () => void;
   size?: RadioSize;
   disabled?: boolean;
   className?: string;
@@ -23,7 +24,15 @@ const selectedBorderClasses: Record<RadioSize, string> = {
   medium: "border-[5px]",
 };
 
-export const Radio = ({ active, onChange, size = "medium", disabled = false, className, ...props }: RadioProps) => {
+export const Radio = ({
+  active,
+  onChange,
+  handleClick,
+  size = "medium",
+  disabled = false,
+  className,
+  ...props
+}: RadioProps) => {
   const [internalActive, setInternalActive] = useState(active);
 
   useEffect(() => {
@@ -39,7 +48,8 @@ export const Radio = ({ active, onChange, size = "medium", disabled = false, cla
       onPress={() => {
         const next = !internalActive;
         setInternalActive(next);
-        onChange(next);
+        onChange?.(next);
+        handleClick?.();
       }}
       {...props}
     >

@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react-native";
+import type { ComponentType } from "react";
 import { View } from "react-native";
 import { Button } from "./Button";
 
-const meta: Meta<typeof Button> = {
+const meta = {
   component: Button,
   title: "Input/Button",
   args: {
@@ -18,7 +18,7 @@ const meta: Meta<typeof Button> = {
     },
   },
   decorators: [
-    (Story) => (
+    (Story: ComponentType) => (
       <View className="w-full max-w-[320px]">
         <Story />
       </View>
@@ -27,18 +27,16 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+export const Solid = {};
 
-export const Solid: Story = {};
-
-export const Outlined: Story = {
+export const Outlined = {
   args: {
     variant: "outlinedPrimary",
     label: "Outlined",
   },
 };
 
-export const Loading: Story = {
+export const Loading = {
   args: {
     loading: true,
     label: "Loading",

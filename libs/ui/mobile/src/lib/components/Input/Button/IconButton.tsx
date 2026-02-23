@@ -1,27 +1,35 @@
 import clsx from "clsx";
 import type { ReactNode } from "react";
-import type { PressableProps } from "react-native";
-import { Button, type UIButtonSize, type UIButtonVariant } from "./Button";
+import { Pressable, type PressableProps } from "react-native";
+
+export type IconButtonSize = "small" | "medium" | "large";
 
 export type IconButtonProps = Omit<PressableProps, "children"> & {
   icon: ReactNode;
-  variant?: UIButtonVariant;
-  size?: UIButtonSize;
-  loading?: boolean;
+  size?: IconButtonSize;
   disabled?: boolean;
   className?: string;
 };
 
-const iconButtonSizeClass: Record<UIButtonSize, string> = {
-  small: "w-8 px-0",
-  medium: "w-10 px-0",
-  large: "w-12 px-0",
+const iconButtonSizeClass: Record<IconButtonSize, string> = {
+  small: "h-8 w-8",
+  medium: "h-10 w-10",
+  large: "h-12 w-12",
 };
 
-export const IconButton = ({ icon, size = "medium", className, ...props }: IconButtonProps) => {
+export const IconButton = ({ icon, size = "medium", className, disabled = false, ...props }: IconButtonProps) => {
   return (
-    <Button className={clsx(iconButtonSizeClass[size], className)} size={size} {...props}>
+    <Pressable
+      accessibilityRole="button"
+      className={clsx(
+        "items-center justify-center text-label-normal active:opacity-70 disabled:text-label-disabled dark:text-dark-label-normal dark:disabled:text-dark-label-disabled",
+        iconButtonSizeClass[size],
+        className,
+      )}
+      disabled={disabled}
+      {...props}
+    >
       {icon}
-    </Button>
+    </Pressable>
   );
 };
