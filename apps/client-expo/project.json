@@ -3,7 +3,18 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/client-expo/src",
   "projectType": "application",
-  "tags": [],
   "// targets": "to see all targets run: nx show project client-expo --web",
-  "targets": {}
+  "targets": {
+    "storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/client-expo",
+        "command": "expo start --clear",
+        "env": {
+          "EXPO_PUBLIC_STORYBOOK_ENABLED": "true"
+        }
+      }
+    }
+  },
+  "tags": ["scope:client"]
 }

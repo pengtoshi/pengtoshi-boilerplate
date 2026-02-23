@@ -2,7 +2,7 @@ import clsx from "clsx";
 import React, { forwardRef, useEffect, useId, useState } from "react";
 import type { UIProps } from "../../../props";
 
-export interface TextfieldProps extends UIProps.Input {
+export interface TextFieldProps extends UIProps.Input {
   id?: string;
   type?: "number" | "text";
   label?: string;
@@ -31,7 +31,7 @@ const fieldColor =
 const textColor =
   "text-label-normal dark:text-dark-label-normal placeholder:text-label-placeholder dark:placeholder:text-dark-label-placeholder disabled:text-label-disabled dark:disabled:text-dark-label-disabled";
 
-export const Textfield = forwardRef<HTMLInputElement, TextfieldProps>(function Textfield(
+export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(function Textfield(
   {
     id,
     type = "text",

@@ -1,12 +1,12 @@
 import type { StoryFn } from "@storybook/react";
 import { type ComponentProps, useState } from "react";
-import { Textarea } from "./Textarea";
+import { TextArea } from "./TextArea";
 
-export default { component: Textarea };
+export default { component: TextArea };
 
-const Template: StoryFn<ComponentProps<typeof Textarea>> = (args: ComponentProps<typeof Textarea>) => {
+const Template: StoryFn<ComponentProps<typeof TextArea>> = (args: ComponentProps<typeof TextArea>) => {
   const [value, setValue] = useState("");
-  return <Textarea {...args} value={value} onChange={(e) => setValue(e.target.value)} />;
+  return <TextArea {...args} value={value} onChange={(e) => setValue(e.target.value)} />;
 };
 
 export const Default = Template.bind({});

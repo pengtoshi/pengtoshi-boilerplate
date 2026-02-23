@@ -4,6 +4,18 @@
   "sourceRoot": "libs/ui/mobile/src",
   "projectType": "library",
   "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/ui/mobile"],
+      "options": {
+        "jestConfig": "libs/ui/mobile/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],

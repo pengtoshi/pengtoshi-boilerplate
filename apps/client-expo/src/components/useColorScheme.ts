@@ -1,5 +1,1 @@
-import { useColorScheme as useRNColorScheme } from "react-native";
-
-export function useColorScheme() {
-  return useRNColorScheme();
-}
+export { useSystemColorScheme as useColorScheme } from "@libs/ui-mobile";

@@ -1,2 +1,3 @@
-export * from "./lib/components/UIButton";
-export * from "./lib/components/UIText";
+export * from "./lib/components";
+export * from "./lib/theme/fonts";
+export * from "./lib/theme/useSystemColorScheme";

@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { forwardRef, useEffect, useId, useState } from "react";
 import type { UIProps } from "../../../props";
 
-export interface TextareaProps extends UIProps.TextArea {
+export interface TextAreaProps extends UIProps.TextArea {
   id?: string;
   label?: string;
   placeholder?: string;
@@ -21,7 +21,7 @@ const fieldColor =
 const textColor =
   "text-label-normal dark:text-dark-label-normal placeholder:text-label-placeholder dark:placeholder:text-dark-label-placeholder disabled:text-label-disabled dark:disabled:text-dark-label-disabled";
 
-export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function Textarea(
+export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(function TextArea(
   {
     id,
     label,

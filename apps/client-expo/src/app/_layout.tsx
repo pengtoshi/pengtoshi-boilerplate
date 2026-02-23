@@ -1,10 +1,10 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { useColorScheme } from "../components/useColorScheme";
+import { useSystemColorScheme } from "@libs/ui-mobile";
 import "../global.css";
 
 export const RootLayout = () => {
-  const colorScheme = useColorScheme();
+  const colorScheme = useSystemColorScheme();
 
   return (
     <>

@@ -1,7 +1,7 @@
 import { composeStories } from "@storybook/react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import * as stories from "./Textfield.stories";
+import * as stories from "./TextField.stories";
 
 describe("TextField", () => {
   Object.entries(composeStories(stories)).forEach(([, Story]) => {

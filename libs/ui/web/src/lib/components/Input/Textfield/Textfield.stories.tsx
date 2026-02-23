@@ -1,13 +1,13 @@
 import type { StoryFn } from "@storybook/react";
 import { useState } from "react";
 import type { ComponentProps } from "react";
-import { Textfield } from "./Textfield";
+import { TextField } from "./TextField";
 
-export default { component: Textfield };
+export default { component: TextField };
 
-const Template: StoryFn<ComponentProps<typeof Textfield>> = (args: ComponentProps<typeof Textfield>) => {
+const Template: StoryFn<ComponentProps<typeof TextField>> = (args: ComponentProps<typeof TextField>) => {
   const [value, setValue] = useState("");
-  return <Textfield {...args} value={value} onChange={(e) => setValue(e.target.value)} />;
+  return <TextField {...args} value={value} onChange={(e) => setValue(e.target.value)} />;
 };
 
 export const Default = Template.bind({});

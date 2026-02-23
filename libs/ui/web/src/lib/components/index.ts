@@ -23,6 +23,6 @@ export * from "./Input/Dropdown/DropdownMenu";
 export * from "./Input/Radio/Radio";
 export * from "./Input/Switch/Switch";
 export * from "./Input/Switch/ThemeSwitch";
-export * from "./Input/Textarea/Textarea";
-export * from "./Input/Textfield/Textfield";
+export * from "./Input/TextArea/TextArea";
+export * from "./Input/TextField/TextField";
 export * from "./Input/ToggleIcon/ToggleIcon";

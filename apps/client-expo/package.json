@@ -4,7 +4,9 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/client-expo"
+    "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/client-expo",
+    "android": "expo run:android",
+    "ios": "expo run:ios"
   },
   "dependencies": {
     "@expo/metro-config": "*",
@@ -20,6 +22,7 @@
     "nativewind": "*",
     "react": "*",
     "react-native": "*",
+    "react-native-screens": "~4.16.0",
     "react-native-svg": "*",
     "react-native-svg-transformer": "*",
     "react-native-web": "*"
