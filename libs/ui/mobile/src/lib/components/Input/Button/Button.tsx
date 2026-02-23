@@ -76,7 +76,7 @@ export const Button = ({
     <Pressable
       accessibilityRole="button"
       className={clsx(
-        "flex-row items-center justify-center gap-2 active:opacity-80 disabled:opacity-100",
+        "flex-row items-center justify-center gap-2 transition-opacity duration-300 active:opacity-80 disabled:opacity-100",
         variantStyle.container,
         sizeStyle.container,
         className,

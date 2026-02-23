@@ -44,7 +44,7 @@ export const Radio = ({
       accessibilityRole="radio"
       accessibilityState={{ checked: internalActive, disabled }}
       className={clsx(
-        "items-center justify-center p-[2px] disabled:opacity-40", // 0.5*4
+        "items-center justify-center p-[2px] transition-opacity duration-300 active:opacity-80 disabled:opacity-40", // 0.5*4
         radioSizeClasses[size],
         className,
       )}
@@ -59,7 +59,7 @@ export const Radio = ({
     >
       <View
         className={clsx(
-          "h-full w-full rounded-full bg-normal",
+          "h-full w-full rounded-full bg-normal transition-colors duration-300",
           internalActive
             ? clsx(selectedBorderClasses[size], "border-primary-normal")
             : "border-[1.5px] border-line-normal",

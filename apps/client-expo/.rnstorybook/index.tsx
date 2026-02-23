@@ -1,3 +1,5 @@
+import { useFonts } from "expo-font";
+import React from "react";
 import { view } from "./storybook.requires";
 import "../src/global.css";
 
@@ -26,4 +28,17 @@ const StorybookUIRoot = view.getStorybookUI({
   },
 });
 
-export default StorybookUIRoot;
+const StorybookApp = () => {
+  const [fontsLoaded] = useFonts({
+    "Aspekta-Regular": require("../assets/shared/fonts/Aspekta-Regular.otf"),
+    "Aspekta-Medium": require("../assets/shared/fonts/Aspekta-Medium.otf"),
+    "Aspekta-SemiBold": require("../assets/shared/fonts/Aspekta-SemiBold.otf"),
+    "Aspekta-Bold": require("../assets/shared/fonts/Aspekta-Bold.otf"),
+  });
+
+  if (!fontsLoaded) return null;
+
+  return <StorybookUIRoot />;
+};
+
+export default StorybookApp;

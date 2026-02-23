@@ -12,7 +12,8 @@ export interface TextFieldProps extends UIProps.Input {
   value?: string | number;
   defaultValue?: string | number;
   guide?: string;
-  error?: string;
+  isError?: boolean;
+  errorGuide?: string | React.ReactNode;
   onClear?: () => void;
 }
 
@@ -42,7 +43,8 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(function T
     value,
     defaultValue,
     guide,
-    error,
+    isError,
+    errorGuide,
     required,
     disabled = false,
     onChange,
@@ -72,6 +74,7 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(function T
         className={clsx(
           fieldCommon,
           fieldColor,
+          isError && "border-status-negative dark:border-dark-status-negative",
           disabled && "!bg-background-disabled dark:!bg-dark-background-disabled",
         )}
       >
@@ -92,7 +95,12 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(function T
       </div>
       <div className="flex w-full flex-col items-start gap-0.5">
         {!!guide && <div className="text-12/body text-label-assertive dark:text-dark-label-assertive">{guide}</div>}
-        {!!error && <div className="text-12/body text-status-negative dark:text-dark-status-negative">{error}</div>}
+        {!!errorGuide &&
+          (typeof errorGuide === "string" ? (
+            <div className="text-12/body text-status-negative dark:text-dark-status-negative">{errorGuide}</div>
+          ) : (
+            errorGuide
+          ))}
       </div>
     </div>
   );

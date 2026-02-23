@@ -22,7 +22,7 @@ export const IconButton = ({ icon, size = "medium", className, disabled = false,
     <Pressable
       accessibilityRole="button"
       className={clsx(
-        "items-center justify-center text-label-normal active:opacity-70 disabled:text-label-disabled dark:text-dark-label-normal dark:disabled:text-dark-label-disabled",
+        "items-center justify-center text-label-normal transition-opacity duration-300 active:opacity-70 disabled:text-label-disabled dark:text-dark-label-normal dark:disabled:text-dark-label-disabled",
         iconButtonSizeClass[size],
         className,
       )}

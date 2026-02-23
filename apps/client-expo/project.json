@@ -5,11 +5,38 @@
   "projectType": "application",
   "// targets": "to see all targets run: nx show project client-expo --web",
   "targets": {
+    "sync-assets": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "mkdir -p apps/client-expo/assets/shared && cp -R libs/ui/mobile/assets/. apps/client-expo/assets/shared"
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": ".",
+        "command": "nx run client-expo:sync-assets && cd apps/client-expo && expo start"
+      }
+    },
+    "run-ios": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": ".",
+        "command": "nx run client-expo:sync-assets && cd apps/client-expo && expo run:ios"
+      }
+    },
+    "run-android": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": ".",
+        "command": "nx run client-expo:sync-assets && cd apps/client-expo && expo run:android"
+      }
+    },
     "storybook": {
       "executor": "nx:run-commands",
       "options": {
-        "cwd": "apps/client-expo",
-        "command": "expo start --clear",
+        "cwd": ".",
+        "command": "nx run client-expo:sync-assets && cd apps/client-expo && expo start --clear",
         "env": {
           "EXPO_PUBLIC_STORYBOOK_ENABLED": "true"
         }

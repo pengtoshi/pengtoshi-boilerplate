@@ -10,7 +10,8 @@ export type TextFieldProps = Omit<TextInputProps, "onChangeText" | "value" | "de
   defaultValue?: string;
   label?: string;
   guide?: string;
-  error?: string;
+  isError?: boolean;
+  errorGuide?: string | ReactNode;
   leadingIcon?: ReactNode;
   trailingIcon?: ReactNode;
   containerClassName?: string;
@@ -24,7 +25,8 @@ export const TextField = ({
   defaultValue,
   label,
   guide,
-  error,
+  isError,
+  errorGuide,
   leadingIcon,
   trailingIcon,
   editable = true,
@@ -35,6 +37,7 @@ export const TextField = ({
   ...props
 }: TextFieldProps) => {
   const [internalValue, setInternalValue] = useState(value ?? defaultValue ?? "");
+  const [focused, setFocused] = useState(false);
 
   useEffect(() => {
     if (value === undefined) return;
@@ -53,9 +56,10 @@ export const TextField = ({
       {!!label && <Text className="text-12/body text-label-assertive">{label}</Text>}
       <View
         className={clsx(
-          "h-[40px] flex-row items-center gap-[10px] rounded-md border border-line-normal bg-background-strong px-[16px]",
-          editable ? "active:border-primary-normal" : "bg-background-disabled",
-          !!error && "border-status-negative",
+          "h-[40px] flex-row items-center gap-[10px] rounded-md border border-line-normal bg-background-strong px-[16px] transition-colors duration-300",
+          editable ? "" : "bg-background-disabled",
+          focused && "border-primary-normal bg-normal",
+          isError && "border-status-negative",
         )}
       >
         {leadingIcon}
@@ -65,6 +69,8 @@ export const TextField = ({
             !editable && "text-label-disabled",
             inputClassName,
           )}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
           editable={editable}
           onChangeText={handleChangeText}
           value={internalValue}
@@ -84,7 +90,7 @@ export const TextField = ({
       </View>
       <View className="gap-[2px]">
         {!!guide && <Text className="text-12/body text-label-assertive">{guide}</Text>}
-        {!!error && <Text className="text-12/body text-status-negative">{error}</Text>}
+        {!!errorGuide && <Text className="text-12/body text-status-negative">{errorGuide}</Text>}
       </View>
     </View>
   );
