@@ -4,7 +4,6 @@ export interface ConfigType {
   graphql: GraphqlConfig;
   jwt: JwtConfig;
   mixpanel: MixpanelConfig;
-  defiLlama: DefiLlamaConfig;
 }
 
 export interface NestConfig {
@@ -37,9 +36,4 @@ export interface JwtConfig {
 export interface MixpanelConfig {
   token: string;
   disable: boolean;
-}
-
-export interface DefiLlamaConfig {
-  baseUrl: string;
-  accessKey: string;
 }

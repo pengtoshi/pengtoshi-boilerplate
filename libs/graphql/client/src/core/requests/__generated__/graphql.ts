@@ -20,6 +20,10 @@ export type Scalars = {
   JWT: { input: any; output: any; }
 };
 
+/** 인증 방식 */
+export type AuthProvider =
+  | 'KAKAO';
+
 export type AuthToken = {
   /** Access token */
   accessToken: Scalars['JWT']['output'];
@@ -32,18 +36,6 @@ export type AuthTokenInput = {
   accessToken?: InputMaybe<Scalars['String']['input']>;
   /** Refresh token */
   refreshToken?: InputMaybe<Scalars['String']['input']>;
-};
-
-/** 체인 정보 */
-export type ChainInfo = {
-  /** 체인 ID */
-  chainId: Scalars['Int']['output'];
-  /** 생성 일시 */
-  createdAt: Scalars['DateTime']['output'];
-  /** 이름 */
-  name: Scalars['String']['output'];
-  /** 수정 일시 */
-  updatedAt: Scalars['DateTime']['output'];
 };
 
 export type Mutation = {
@@ -68,15 +60,8 @@ export type MutationVerifyLoginArgs = {
 };
 
 export type Query = {
-  findAllTokens: Array<TokenInfo>;
   findAllUsers: Array<UserInfo>;
-  findTokenByAddress: TokenInfo;
   findUser: UserInfo;
-};
-
-
-export type QueryFindTokenByAddressArgs = {
-  address: Scalars['String']['input'];
 };
 
 /** 사용자 역할 */
@@ -90,39 +75,18 @@ export type Status =
   | 'DELETE'
   | 'INACTIVE';
 
-/** 토큰 정보 */
-export type TokenInfo = {
-  /** 토큰 주소 */
-  address: Scalars['String']['output'];
-  chain: ChainInfo;
-  /** 체인 ID */
-  chainId: Scalars['Int']['output'];
-  /** 생성 일시 */
-  createdAt: Scalars['DateTime']['output'];
-  /** 자리수 */
-  decimals: Scalars['Int']['output'];
-  /** 아이디 */
-  id: Scalars['ID']['output'];
-  /** 로고 URL */
-  logoUrl: Scalars['String']['output'];
-  /** 이름 */
-  name: Scalars['String']['output'];
-  /** 가격 */
-  price: Scalars['Float']['output'];
-  /** 심볼 */
-  symbol: Scalars['String']['output'];
-  /** 수정 일시 */
-  updatedAt: Scalars['DateTime']['output'];
-};
-
 /** User Model */
 export type UserInfo = {
-  /** Wallet Address */
-  address: Scalars['String']['output'];
+  /** Auth Provider */
+  authProvider: AuthProvider;
   /** Created At */
   createdAt: Scalars['DateTime']['output'];
-  /** Nonce for Login */
-  nonce?: Maybe<Scalars['String']['output']>;
+  /** Email */
+  email?: Maybe<Scalars['String']['output']>;
+  /** User Id */
+  id: Scalars['String']['output'];
+  /** Kakao User Id */
+  kakaoId?: Maybe<Scalars['String']['output']>;
   /** Role */
   role: Role;
   /** Status */
@@ -132,22 +96,16 @@ export type UserInfo = {
 };
 
 export type UserInput = {
-  /** 지갑 주소 */
-  address?: InputMaybe<Scalars['String']['input']>;
+  /** 카카오 액세스 토큰 */
+  kakaoAccessToken: Scalars['String']['input'];
 };
 
 export type VerifyUserInput = {
-  /** Message */
-  message: Scalars['String']['input'];
-  /** Signature */
-  signature: Scalars['String']['input'];
+  /** 카카오 액세스 토큰 */
+  kakaoAccessToken: Scalars['String']['input'];
 };
 
-export type ChainFragment = { chainId: number, name: string };
-
-export type TokenFragment = { id: string, address: string, chainId: number, name: string, symbol: string, decimals: number, logoUrl: string, price: number, createdAt: any, updatedAt: any, chain: { chainId: number, name: string } };
-
-export type UserFragment = { address: string, role: Role, status: Status, nonce?: string | null, createdAt: any, updatedAt: any };
+export type UserFragment = { id: string, email?: string | null, role: Role, status: Status, createdAt: any, updatedAt: any };
 
 export type RefreshTokensMutationVariables = Exact<{
   input: AuthTokenInput;
@@ -161,7 +119,7 @@ export type RequestLoginMutationVariables = Exact<{
 }>;
 
 
-export type RequestLoginMutation = { requestLogin: { address: string, role: Role, status: Status, nonce?: string | null, createdAt: any, updatedAt: any } };
+export type RequestLoginMutation = { requestLogin: { id: string, email?: string | null, role: Role, status: Status, createdAt: any, updatedAt: any } };
 
 export type VerifyLoginMutationVariables = Exact<{
   input: VerifyUserInput;
@@ -173,12 +131,10 @@ export type VerifyLoginMutation = { verifyLogin: { accessToken: any, refreshToke
 export type FindUserQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FindUserQuery = { findUser: { address: string, role: Role, status: Status, nonce?: string | null, createdAt: any, updatedAt: any } };
+export type FindUserQuery = { findUser: { id: string, email?: string | null, role: Role, status: Status, createdAt: any, updatedAt: any } };
 
-export const ChainFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Chain"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ChainInfo"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"chainId"}},{"kind":"Field","name":{"kind":"Name","value":"name"}}]}}]} as unknown as DocumentNode<ChainFragment, unknown>;
-export const TokenFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Token"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TokenInfo"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"address"}},{"kind":"Field","name":{"kind":"Name","value":"chainId"}},{"kind":"Field","name":{"kind":"Name","value":"chain"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"Chain"}}]}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"symbol"}},{"kind":"Field","name":{"kind":"Name","value":"decimals"}},{"kind":"Field","name":{"kind":"Name","value":"logoUrl"}},{"kind":"Field","name":{"kind":"Name","value":"price"}},{"kind":"Field","name":{"kind":"Name","value":"createdAt"}},{"kind":"Field","name":{"kind":"Name","value":"updatedAt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Chain"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ChainInfo"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"chainId"}},{"kind":"Field","name":{"kind":"Name","value":"name"}}]}}]} as unknown as DocumentNode<TokenFragment, unknown>;
-export const UserFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"User"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"UserInfo"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"address"}},{"kind":"Field","name":{"kind":"Name","value":"role"}},{"kind":"Field","name":{"kind":"Name","value":"status"}},{"kind":"Field","name":{"kind":"Name","value":"nonce"}},{"kind":"Field","name":{"kind":"Name","value":"createdAt"}},{"kind":"Field","name":{"kind":"Name","value":"updatedAt"}}]}}]} as unknown as DocumentNode<UserFragment, unknown>;
+export const UserFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"User"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"UserInfo"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"email"}},{"kind":"Field","name":{"kind":"Name","value":"role"}},{"kind":"Field","name":{"kind":"Name","value":"status"}},{"kind":"Field","name":{"kind":"Name","value":"createdAt"}},{"kind":"Field","name":{"kind":"Name","value":"updatedAt"}}]}}]} as unknown as DocumentNode<UserFragment, unknown>;
 export const RefreshTokensDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"RefreshTokens"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"AuthTokenInput"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"refreshTokens"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"accessToken"}},{"kind":"Field","name":{"kind":"Name","value":"refreshToken"}}]}}]}}]} as unknown as DocumentNode<RefreshTokensMutation, RefreshTokensMutationVariables>;
-export const RequestLoginDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"RequestLogin"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"UserInput"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"requestLogin"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"User"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"User"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"UserInfo"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"address"}},{"kind":"Field","name":{"kind":"Name","value":"role"}},{"kind":"Field","name":{"kind":"Name","value":"status"}},{"kind":"Field","name":{"kind":"Name","value":"nonce"}},{"kind":"Field","name":{"kind":"Name","value":"createdAt"}},{"kind":"Field","name":{"kind":"Name","value":"updatedAt"}}]}}]} as unknown as DocumentNode<RequestLoginMutation, RequestLoginMutationVariables>;
+export const RequestLoginDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"RequestLogin"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"UserInput"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"requestLogin"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"User"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"User"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"UserInfo"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"email"}},{"kind":"Field","name":{"kind":"Name","value":"role"}},{"kind":"Field","name":{"kind":"Name","value":"status"}},{"kind":"Field","name":{"kind":"Name","value":"createdAt"}},{"kind":"Field","name":{"kind":"Name","value":"updatedAt"}}]}}]} as unknown as DocumentNode<RequestLoginMutation, RequestLoginMutationVariables>;
 export const VerifyLoginDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"VerifyLogin"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"VerifyUserInput"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"verifyLogin"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"accessToken"}},{"kind":"Field","name":{"kind":"Name","value":"refreshToken"}}]}}]}}]} as unknown as DocumentNode<VerifyLoginMutation, VerifyLoginMutationVariables>;
-export const FindUserDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"FindUser"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"findUser"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"User"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"User"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"UserInfo"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"address"}},{"kind":"Field","name":{"kind":"Name","value":"role"}},{"kind":"Field","name":{"kind":"Name","value":"status"}},{"kind":"Field","name":{"kind":"Name","value":"nonce"}},{"kind":"Field","name":{"kind":"Name","value":"createdAt"}},{"kind":"Field","name":{"kind":"Name","value":"updatedAt"}}]}}]} as unknown as DocumentNode<FindUserQuery, FindUserQueryVariables>;
+export const FindUserDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"FindUser"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"findUser"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"User"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"User"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"UserInfo"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"email"}},{"kind":"Field","name":{"kind":"Name","value":"role"}},{"kind":"Field","name":{"kind":"Name","value":"status"}},{"kind":"Field","name":{"kind":"Name","value":"createdAt"}},{"kind":"Field","name":{"kind":"Name","value":"updatedAt"}}]}}]} as unknown as DocumentNode<FindUserQuery, FindUserQueryVariables>;

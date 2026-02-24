@@ -34,6 +34,6 @@ export class UserResolver {
   @UseGuards(JwtAuthGuard)
   @Query(() => UserInfo)
   async findUser(@UserDecoded() payload: JwtPayload) {
-    return this.userService.findUserByAddress(payload.address);
+    return this.userService.findUserById(payload.userId);
   }
 }

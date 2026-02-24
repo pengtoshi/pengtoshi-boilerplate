@@ -9,69 +9,40 @@ generator client {
 }
 
 model User {
-    /// 지갑 주소
-    address   String     @id @unique @db.VarChar(42)
+    /// 아이디
+    id           String        @id @default(cuid())
+    /// 이메일
+    email        String?       @unique
+    /// 카카오 고유 아이디
+    kakaoId      String?       @unique
+    /// 인증 방식
+    authProvider AUTH_PROVIDER
     /// 역할
-    role      ROLE       @default(USER)
+    role         ROLE          @default(USER)
     /// 상태
-    status    STATUS     @default(ACTIVE)
-    /// 일회용 논스값
-    nonce     String?
+    status       STATUS        @default(ACTIVE)
     /// 인증 관련 정보
-    authToken AuthToken?
+    authToken    AuthToken?
     /// 생성 일시
-    createdAt DateTime   @default(now()) @db.Timestamp(3)
+    createdAt    DateTime      @default(now()) @db.Timestamp(3)
     /// 수정 일시
-    updatedAt DateTime   @updatedAt @db.Timestamp(3)
+    updatedAt    DateTime      @updatedAt @db.Timestamp(3)
 }
 
 model AuthToken {
-    /// 사용자
-    user                  User    @relation(fields: [userAddress], references: [address])
-    /// 사용자 지갑 주소
-    userAddress           String  @id @unique
-    /// access token
-    accessToken           String
-    /// 암호화된 refresh token
-    encryptedRefreshToken String?
-}
-
-model Token {
     /// 아이디
-    id        String   @id @default(cuid())
-    /// 토큰 주소
-    address   String   @unique
-    /// 체인
-    chain     Chain    @relation(fields: [chainId], references: [chainId])
-    /// 체인 ID
-    chainId   Int
-    /// 이름
-    name      String
-    /// 심볼
-    symbol    String
-    /// 자리수
-    decimals  Int
-    /// 로고 URL
-    logoUrl   String
-    /// 가격
-    price     Float
-    /// 생성 일시
-    createdAt DateTime @default(now()) @db.Timestamp(3)
-    /// 수정 일시
-    updatedAt DateTime @updatedAt @db.Timestamp(3)
-}
+    id           String @id @default(cuid())
+    /// 사용자
+    user         User   @relation(fields: [userId], references: [id])
+    /// 사용자 아이디
+    userId       String @unique
+    /// access token
+    accessToken  String
+    /// 암호화된 refresh token
+    refreshToken String
 
-model Chain {
-    /// 체인 ID
-    chainId   Int      @id @unique
-    /// 체인 이름
-    name      String
-    /// 생성 일시
-    createdAt DateTime @default(now()) @db.Timestamp(3)
-    /// 수정 일시
-    updatedAt DateTime @updatedAt @db.Timestamp(3)
-    /// 토큰
-    tokens    Token[]
+    @@index([userId, accessToken])
+    @@index([refreshToken])
 }
 
 enum ROLE {
@@ -83,4 +54,8 @@ enum STATUS {
     ACTIVE
     INACTIVE
     DELETE
+}
+
+enum AUTH_PROVIDER {
+    KAKAO
 }

@@ -18,10 +18,6 @@ export const config = (): ConfigType => ({
     schemaDestination: process.env.SCHEMA_DESTINATION!,
     sortSchema: process.env.SORT_SCHEMA! === "true",
   },
-  defiLlama: {
-    baseUrl: process.env.DEFILLAMA_BASE_URL!,
-    accessKey: process.env.DEFILLAMA_ACCESS_KEY!,
-  },
   jwt: {
     secret: process.env.JWT_SECRET!,
     expiredTime: process.env.JWT_EXPIRES_IN!,
@@ -31,5 +27,8 @@ export const config = (): ConfigType => ({
   mixpanel: {
     token: process.env.MIXPANEL_TOKEN!,
     disable: process.env.MIXPANEL_DISABLE === "true" || false,
+  },
+  kakao: {
+    userInfoUrl: process.env.KAKAO_USER_INFO_URL!,
   },
 });

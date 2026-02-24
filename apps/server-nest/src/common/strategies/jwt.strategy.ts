@@ -23,7 +23,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
 
   async validate(payload: JwtPayload, done: VerifiedCallback) {
     // FIXME: Change Patterns - check redis instead of DB
-    const user = await this.userService.findUserByAddress(payload.address);
+    const user = await this.userService.findUserById(payload.userId);
     if (!user) {
       return done(new GraphQLError(ErrorMessage.MSG_NOT_FOUND_USER), false);
     }

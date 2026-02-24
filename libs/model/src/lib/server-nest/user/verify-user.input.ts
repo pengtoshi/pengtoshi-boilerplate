@@ -3,11 +3,7 @@ import { IsString } from "class-validator";
 
 @InputType()
 export class VerifyUserInput {
-  @Field(() => String, { nullable: false, description: "Message" })
+  @Field(() => String, { nullable: false, description: "카카오 액세스 토큰" })
   @IsString()
-  message!: string;
-
-  @Field(() => String, { nullable: false, description: "Signature" })
-  @IsString()
-  signature!: string;
+  kakaoAccessToken!: string;
 }

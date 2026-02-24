@@ -1,6 +1,6 @@
 import { Field, InputType } from "@nestjs/graphql";
 import { NestedEnumStatusFilter } from "./nested-enum-status-filter.input";
-import { Status } from "../dtos/enum/status.enum";
+import { Status } from "../../server-nest/enum/status.enum";
 
 @InputType()
 export class EnumStatusFilter {
