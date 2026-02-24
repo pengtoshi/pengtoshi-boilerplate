@@ -1,0 +1,32 @@
+---
+description: 공통 UI 디자인 시스템 사용 원칙
+globs: "{libs/ui/**,apps/client-expo/**,apps/client-next/**}"
+alwaysApply: false
+---
+
+# UI 디자인 시스템 공통 원칙
+
+- **반드시 `libs/ui` 우선 사용**
+  - 새 UI를 만들 때 RN/DOM 기본 컴포넌트(`Text`, `Button`, `Modal`, `View`, `div` 등)를 직접 스타일링하기 전에
+    항상 `libs/ui/mobile`, `libs/ui/web`에 이미 있는 컴포넌트부터 찾습니다.
+  - 공통 패턴(토스트, 모달, 바텀시트, 인풋, 버튼 등)은 앱 레벨에서 새로 만들지 않습니다.
+
+- **Tailwind 토큰 우선 사용**
+  - 색상, 타이포, 간격은 `@libs/ui/tailwind`에서 정의한 토큰 클래스를 우선 사용합니다.
+  - ❌ BAD:
+    ```tsx
+    <Text className="text-[13px] text-[#FF0000] mt-[3px]">내용</Text>
+    ```
+  - ✅ GOOD:
+    ```tsx
+    <Text className="text-14/body text-status-negative mt-1">내용</Text>
+    ```
+
+- **새 디자인 토큰 추가 방법**
+  - 새로운 색상/타이포/spacing이 필요하면:
+    1. `base.js` / `mobile.preset.js` / `web.preset.js` 중 적절한 preset에 토큰을 먼저 추가합니다.
+    2. 컴포넌트/앱 코드에서는 해당 토큰 클래스만 사용합니다.
+
+- **상태 전환 애니메이션 일관성**
+  - hover, pressed, active 등 상태 전환에서는 가능하면 `transition-colors duration-300`을 기본으로 사용합니다.
+  - 웹/모바일 모두에서 색상 전환 시간이 크게 다르지 않도록 200~300ms 범위에서 유지합니다.

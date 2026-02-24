@@ -1,0 +1,41 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "../../dist/out-tsc",
+    "types": ["nativewind/types", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@libs/ui-mobile": ["../../libs/ui/mobile/src/index.ts"]
+    }
+  },
+  "files": ["../../node_modules/@nx/expo/typings/svg.d.ts"],
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "**/*.test.tsx",
+    "**/*.spec.tsx",
+    "**/*.test.js",
+    "**/*.spec.js",
+    "**/*.test.jsx",
+    "**/*.spec.jsx",
+    "src/test-setup.ts",
+    "jest.config.ts",
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    ".rnstorybook/**/*.ts",
+    ".rnstorybook/**/*.tsx",
+    "../../libs/ui/mobile/src/**/*.ts",
+    "../../libs/ui/mobile/src/**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "nativewind-env.d.ts"
+  ]
+}

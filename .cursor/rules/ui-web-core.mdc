@@ -1,0 +1,46 @@
+---
+description: 웹(UI-Web) 디자인 시스템 사용 규칙
+globs: "{libs/ui/web/**,apps/client-next/**}"
+alwaysApply: false
+---
+
+# 웹 디자인 시스템 사용 규칙
+
+## DOM 기본 컴포넌트 대체
+
+- **텍스트/타이포**
+  - 가능한 경우 `libs/ui/web`의 텍스트/타이포 컴포넌트 또는 공통 클래스 토큰을 사용합니다.
+  - 임의의 `font-weight`, `font-size` 스타일을 직접 쓰지 말고 `text-14/body`, `text-16/body/emp` 등의 토큰을 사용합니다.
+
+- **버튼/입력**
+  - HTML `button`, `input`, `textarea`를 직접 스타일링하는 대신 `libs/ui/web/src/lib/components/Input/*`의
+    `Button`, `TextField`, `TextArea` 등을 먼저 사용합니다.
+
+## 피드백 컴포넌트(Toast / Modal / BottomSheet)
+
+- **Toast / Toaster**
+  - `sonner`를 직접 사용하지 않고 `libs/ui/web/src/lib/components/Feedback/Toaster/Toaster.tsx`에서 노출하는
+    `Toaster`, `toast()` 헬퍼를 사용합니다.
+  - 새 토스트 UI가 필요하면 `Toast` 컴포넌트를 확장하거나 해당 폴더에 추가합니다.
+
+- **Modal / BottomSheet**
+  - `shadcn` 원본 컴포넌트 대신 `libs/ui/web/src/lib/components/Feedback`의 `Modal`, `BottomSheet` 래퍼를 사용해
+    디자인 시스템을 유지합니다.
+
+## Tailwind 스타일 작성 규칙 (웹)
+
+- **라이트/다크 모드 토큰을 항상 쌍으로 작성**
+  - 웹에서는 다크 모드 지원을 위해 라이트/다크 토큰을 항상 함께 작성합니다.
+  - 텍스트/아이콘/배경 색상 클래스는 `dark:` 버전까지 포함하는 것을 원칙으로 합니다.
+  - ❌ BAD:
+    ```tsx
+    <p className="text-label-normal">텍스트</p>
+    ```
+  - ✅ GOOD:
+    ```tsx
+    <p className="text-label-normal dark:text-dark-label-normal">텍스트</p>
+    ```
+
+- **Semantic 클래스 우선**
+  - 의미가 있는 토큰(`text-status-positive`, `bg-background-strong`, `text-label-assertive`)을 우선 사용합니다.
+  - raw color/spacing 유틸 대신 semantic 토큰이 존재하는지 먼저 확인합니다.

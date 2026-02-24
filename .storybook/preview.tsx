@@ -1,6 +1,6 @@
 import { Preview } from "@storybook/react";
-import { ThemeProvider, Toaster } from "@libs/ui";
-import "~/ui/public/styles/globals.css";
+import { ThemeProvider, Toaster } from "@libs/ui-web";
+import "~/ui-web/public/styles/globals.css";
 
 const preview: Preview = {
   parameters: {

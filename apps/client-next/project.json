@@ -14,7 +14,7 @@
         "assets": [
           {
             "glob": "**/*.!(ts)",
-            "input": "libs/ui/public",
+            "input": "libs/ui/web/public",
             "output": "shared"
           }
         ]

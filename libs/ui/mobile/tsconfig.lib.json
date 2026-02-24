@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "../../../dist/out-tsc",
+    "declaration": true,
+    "types": ["nativewind/types", "node"]
+  },
+  "include": ["nativewind-env.d.ts", "src/**/*.ts", "src/**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "src/test-setup.ts",
+    "src/**/*.stories.ts",
+    "src/**/*.stories.tsx",
+    "src/**/*.spec.ts",
+    "src/**/*.spec.tsx",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx"
+  ]
+}

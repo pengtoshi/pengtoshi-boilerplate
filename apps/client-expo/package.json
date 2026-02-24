@@ -1,0 +1,13 @@
+{
+  "name": "client-expo",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "eas-build-post-install": "cd ../../ && nx run client-expo:sync-assets && node tools/scripts/eas-build-post-install.mjs . apps/client-expo",
+    "android": "cd ../../ && nx run client-expo:run-android",
+    "ios": "cd ../../ && nx run client-expo:run-ios"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
