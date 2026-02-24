@@ -18,4 +18,7 @@ export const ErrorMessage = {
 
   // External Api
   MSG_EXTERNAL_API_FETCH_FAILED: "External API fetch failed.",
+
+  // Paginate
+  MSG_NOT_FOUND_TOTAL_COUNT: "Total count not found.",
 };

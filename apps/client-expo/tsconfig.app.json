@@ -7,7 +7,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@libs/ui-mobile": ["../../libs/ui/mobile/src/index.ts"]
+      "@libs/ui-mobile": ["../../libs/ui/mobile/src/index.ts"],
+      "@libs/model": ["../../libs/model/src/index.ts"],
+      "@libs/utils-client-web": ["../../libs/utils/src/client/web/index.ts"],
+      "@libs/graphql-core": ["../../libs/graphql/client/src/core/index.ts"],
+      "@libs/graphql-mobile": ["../../libs/graphql/client/src/expo/index.ts"]
     }
   },
   "files": ["../../node_modules/@nx/expo/typings/svg.d.ts"],
@@ -34,6 +38,8 @@
     ".rnstorybook/**/*.tsx",
     "../../libs/ui/mobile/src/**/*.ts",
     "../../libs/ui/mobile/src/**/*.tsx",
+    "../../libs/graphql/client/src/**/*.ts",
+    "../../libs/graphql/client/src/**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
     "nativewind-env.d.ts"

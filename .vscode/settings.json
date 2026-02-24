@@ -8,7 +8,6 @@
     ".prettierignore": true,
     ".prettierrc": true,
     ".nxignore": true,
-    ".gitignore": true,
     ".gitmodules": true,
     "commitlint.config.ts": true,
     "**/.nx": true,
@@ -25,14 +24,14 @@
     "**/*.lock": true
   },
   "workbench.colorCustomizations": {
-    "activityBar.activeFocusBorder": "#0E61FE",
+    "activityBar.activeFocusBorder": "#B571BB",
     "activityBar.activeBackground": "#FFFFFF",
     "activityBar.background": "#333333",
-    "activityBar.foreground": "#0E61FE",
+    "activityBar.foreground": "#B571BB",
     "activityBar.inactiveForeground": "#FFFFFF",
     "editorGroup.border": "#444444",
     "sash.hoverBorder": "#666666",
-    "sideBar.border": "#0E61FE",
+    "sideBar.border": "#B571BB",
     "tab.activeBorder": "#000000"
   },
   "editor.formatOnSave": true,

@@ -1,7 +1,7 @@
-import { ErrorMessage } from "@1tx/constants";
 import type { Type } from "@nestjs/common";
 import { Field, Int, ObjectType } from "@nestjs/graphql";
 import { IsNotEmpty, IsNumber, IsOptional } from "class-validator";
+import { ErrorMessage } from "@libs/constants";
 
 const { MSG_NOT_FOUND_TOTAL_COUNT } = ErrorMessage;
 

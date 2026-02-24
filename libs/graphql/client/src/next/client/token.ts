@@ -1,8 +1,8 @@
-import type { ApolloClient, NormalizedCacheObject } from "@apollo/client";
 import type { AuthToken } from "@libs/model";
-import { getCookie, removeCookie, setCookie } from "@libs/utils-client";
-import type { CookieContext } from "@libs/utils-client";
-import { refreshTokens } from "../requests";
+import { getCookie, removeCookie, setCookie } from "@libs/utils-client-web";
+import type { CookieContext } from "@libs/utils-client-web";
+import { authCookieKey } from "../../core/client/auth-cookie-key";
+import type { AuthTokenStorage } from "../../core/client/token-storage";
 
 export interface AuthCookieContext extends CookieContext {
   authCookieKey: {
@@ -10,11 +10,6 @@ export interface AuthCookieContext extends CookieContext {
     refreshToken: string;
   };
 }
-
-export const authCookieKey = {
-  accessToken: "ACCESS_TOKEN",
-  refreshToken: "REFRESH_TOKEN",
-};
 
 export const getCurrentToken = (cookieContext?: CookieContext) => {
   const context: AuthCookieContext = { authCookieKey, ...cookieContext };
@@ -26,19 +21,6 @@ export const getCurrentToken = (cookieContext?: CookieContext) => {
     accessToken,
     refreshToken,
   };
-};
-
-export const getNewToken = async (client: ApolloClient<NormalizedCacheObject>, refreshToken: string) => {
-  const { data } = await client.mutate({
-    mutation: refreshTokens,
-    variables: { input: { refreshToken } },
-    fetchPolicy: "no-cache",
-  });
-
-  const newAccessToken = data?.refreshTokens.accessToken as string;
-  const newRefreshToken = data?.refreshTokens.refreshToken as string;
-
-  return { accessToken: newAccessToken, refreshToken: newRefreshToken };
 };
 
 export const removeToken = (cookieContext?: CookieContext) => {
@@ -61,4 +43,12 @@ export const setToken = (token: AuthToken, cookieContext?: CookieContext) => {
     new Date(Date.now() + 1000 * 60 * 60 * 24 * 30),
     context,
   );
+};
+
+export const createWebTokenStorage = (cookieContext?: CookieContext): AuthTokenStorage => {
+  return {
+    getToken: () => getCurrentToken(cookieContext),
+    setToken: (token: AuthToken) => setToken(token, cookieContext),
+    removeToken: () => removeToken(cookieContext),
+  };
 };

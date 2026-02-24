@@ -8,11 +8,11 @@ export const sleep = async (milliseconds: number): Promise<void> => {
 
 export const localId = () => {
   const id = uuidv4();
-  const prefix = "1tx-";
+  const prefix = "pengtoshi-";
   return `${prefix}${id}`;
 };
 
 export const isLocalId = (id?: string) => {
-  const prefix = "1tx-";
+  const prefix = "pengtoshi-";
   return id?.startsWith(prefix) ?? false;
 };
