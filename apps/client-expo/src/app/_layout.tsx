@@ -1,10 +1,15 @@
+import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
+import { PortalHost } from "@rn-primitives/portal";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import { useColorScheme } from "react-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { ReanimatedLogLevel, configureReanimatedLogger } from "react-native-reanimated";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { Toaster } from "@libs/ui-mobile";
 import "../global.css";
 
 SplashScreen.preventAutoHideAsync().catch(() => null);
@@ -34,12 +39,18 @@ export const RootLayout = () => {
   }
 
   return (
-    <>
-      <StatusBar style={colorScheme === "dark" ? "light" : "dark"} />
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="index" />
-      </Stack>
-    </>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaProvider>
+        <BottomSheetModalProvider>
+          <StatusBar style={colorScheme === "dark" ? "light" : "dark"} />
+          <Stack screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="index" />
+          </Stack>
+          <Toaster />
+          <PortalHost />
+        </BottomSheetModalProvider>
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   );
 };
 

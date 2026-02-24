@@ -11,6 +11,7 @@ const colors = {
   },
   background: {
     strong: "#F4F4F4",
+    emphasize: "#EBEBEB",
     disabled: "#E0E0E0",
   },
   line: {
@@ -47,6 +48,7 @@ const colors = {
     },
     background: {
       strong: "#262626",
+      emphasize: "#333333",
       disabled: "#393939",
     },
     primary: {

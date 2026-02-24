@@ -1,5 +1,13 @@
+// animation
+export * from "./Animation/HeartbeatWrapper";
+
 // display
 export * from "./Display/Text/Text";
+export * from "./Feedback/Toaster/Toaster";
+export * from "./Feedback/Modal/Modal";
+export * from "./Feedback/BottomSheet/BottomSheet";
+
+// icon
 export * from "./Icon/Icon";
 
 // input
