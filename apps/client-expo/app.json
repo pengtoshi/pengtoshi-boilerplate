@@ -39,6 +39,9 @@
     "extra": {
       "router": {
         "root": "src/app"
+      },
+      "eas": {
+        "projectId": "fc154b3b-f25e-489f-bb2f-36f88c282543"
       }
     }
   }
