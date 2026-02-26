@@ -1,51 +1,67 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as SecureStore from "expo-secure-store";
+import { Platform } from "react-native";
 import type { AuthToken } from "@libs/model";
 import { authCookieKey } from "../../core/client/auth-cookie-key";
 import type { AuthTokenStorage } from "../../core/client/token-storage";
 
-const getSecureStoreValue = async (key: string) => {
+const isWeb = Platform.OS === "web";
+
+const getWebStoreValue = (key: string) => {
   try {
-    const secureValue = await SecureStore.getItemAsync(key);
-    if (secureValue !== null) {
-      await AsyncStorage.setItem(key, secureValue);
-      return secureValue;
-    }
+    return globalThis.localStorage?.getItem(key) ?? undefined;
   } catch (_error) {
-    // noop: falls back to AsyncStorage.
+    return undefined;
   }
+};
+
+const setWebStoreValue = (key: string, value: string) => {
+  try {
+    globalThis.localStorage?.setItem(key, value);
+  } catch (_error) {
+    // noop
+  }
+};
+
+const removeWebStoreValue = (key: string) => {
+  try {
+    globalThis.localStorage?.removeItem(key);
+  } catch (_error) {
+    // noop
+  }
+};
+
+const getSecureStoreValue = async (key: string) => {
+  if (isWeb) return getWebStoreValue(key);
 
   try {
-    const fallbackValue = await AsyncStorage.getItem(key);
-    return fallbackValue ?? undefined;
+    const secureValue = await SecureStore.getItemAsync(key);
+    return secureValue ?? undefined;
   } catch (_error) {
     return undefined;
   }
 };
 
 const setStoreValue = async (key: string, value: string) => {
-  try {
-    await SecureStore.setItemAsync(key, value);
-  } catch (_error) {
-    // noop: keep AsyncStorage as fallback.
+  if (isWeb) {
+    setWebStoreValue(key, value);
+    return;
   }
 
   try {
-    await AsyncStorage.setItem(key, value);
+    await SecureStore.setItemAsync(key, value);
   } catch (_error) {
     // noop
   }
 };
 
 const removeStoreValue = async (key: string) => {
-  try {
-    await SecureStore.deleteItemAsync(key);
-  } catch (_error) {
-    // noop: continue deleting fallback storage.
+  if (isWeb) {
+    removeWebStoreValue(key);
+    return;
   }
 
   try {
-    await AsyncStorage.removeItem(key);
+    await SecureStore.deleteItemAsync(key);
   } catch (_error) {
     // noop
   }

@@ -77,6 +77,11 @@ RN `Modal`이나 서드파티 바텀시트를 직접 조합하지 말고 `libs/u
 
 ## Tailwind 스타일 작성 규칙 (모바일)
 
+### Tailwind/Nativewind 클래스 — 반드시 아래 목록만 사용
+
+`libs/ui/tailwind/mobile.preset.js`, `libs/ui/tailwind/base.js`에 정의된 클래스만 사용합니다.
+**목록에 없는 클래스(예: `text-13/body`, `text-22/heading`)은 불가피한 경우를 제외하고 사용하지 않습니다.**
+
 ### 다크 모드를 별도 클래스로 중복 정의하지 않기
 
 모바일에서는 RN 스타일 시스템 특성상 다크 모드 토큰을 따로 `dark:` prefix로 반복해서 작성하지 않습니다.
@@ -84,8 +89,3 @@ RN `Modal`이나 서드파티 바텀시트를 직접 조합하지 말고 `libs/u
 
 ❌ BAD: `<Text className="text-label-normal dark:text-dark-label-normal">텍스트</Text>`
 ✅ GOOD: `<Text className="text-label-normal">텍스트</Text>`
-
-### tailwind mobile preset 기반
-
-새로운 모바일 컴포넌트의 클래스는 `mobile.preset.js`에 이미 존재하는 토큰을 사용합니다.
-필요 시 새로운 semantic 토큰을 preset에 추가한 뒤, 컴포넌트에서는 그 토큰만 사용합니다.

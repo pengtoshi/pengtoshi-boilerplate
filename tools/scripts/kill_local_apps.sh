@@ -7,6 +7,11 @@ if [[ "" !=  "$client_app_pid" ]]; then
     echo "killing client app"
     kill -9 $client_app_pid
 fi
+client_expo_pid="$(lsof -t -i :8081)"
+if [[ "" !=  "$client_expo_pid" ]]; then
+    echo "killing client expo app"
+    kill -9 $client_expo_pid
+fi
 server_nest_pid="$(lsof -t -i :3000)"
 if [[ "" !=  "$server_nest_pid" ]]; then
     echo "killing server"
