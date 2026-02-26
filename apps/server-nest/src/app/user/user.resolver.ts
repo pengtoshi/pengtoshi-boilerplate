@@ -1,6 +1,14 @@
 import { UseGuards } from "@nestjs/common";
 import { Args, Mutation, Query, Resolver } from "@nestjs/graphql";
-import { AuthToken, AuthTokenInput, JwtPayload, Role, UserInfo, UserInput, VerifyUserInput } from "@libs/model";
+import {
+  AuthToken,
+  AuthTokenInput,
+  JwtPayload,
+  Role,
+  UserInfo,
+  UserSignInInput,
+  UserSignInWithKakaoCodeInput,
+} from "@libs/model";
 import { JwtAuthGuard, Roles, RolesGuard, UserDecoded } from "@libs/nestjs-core";
 import { UserService } from "./user.service";
 
@@ -8,19 +16,25 @@ import { UserService } from "./user.service";
 export class UserResolver {
   constructor(private readonly userService: UserService) {}
 
-  @Mutation(() => UserInfo)
-  requestLogin(@Args("input") userInput: UserInput) {
-    return this.userService.requestLogin(userInput);
+  @Mutation(() => AuthToken)
+  userSignIn(@Args("input") userSignInInput: UserSignInInput) {
+    return this.userService.userSignIn(userSignInInput);
   }
 
   @Mutation(() => AuthToken)
-  verifyLogin(@Args("input") verifyUserInput: VerifyUserInput) {
-    return this.userService.verifyLogin(verifyUserInput);
+  userSignInWithKakaoCode(@Args("input") input: UserSignInWithKakaoCodeInput) {
+    return this.userService.userSignInWithKakaoCode(input);
   }
 
   @Mutation(() => AuthToken)
   refreshTokens(@Args("input") tokenInput: AuthTokenInput) {
     return this.userService.refreshTokens(tokenInput);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Mutation(() => Boolean)
+  signOut(@UserDecoded() payload: JwtPayload) {
+    return this.userService.signOut(payload);
   }
 
   @UseGuards(RolesGuard)

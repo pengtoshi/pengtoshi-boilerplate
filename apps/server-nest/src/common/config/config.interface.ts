@@ -5,5 +5,10 @@ export interface ConfigType extends CommonConfigType {
 }
 
 export interface KakaoConfig {
+  restApiKey: string;
+  clientSecret: string;
+  tokenUrl: string;
   userInfoUrl: string;
+  mobileCallbackUrl: string;
+  mobileAppRedirectUri: string;
 }

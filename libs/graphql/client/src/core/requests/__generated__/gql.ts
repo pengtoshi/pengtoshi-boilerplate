@@ -16,15 +16,17 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
 type Documents = {
     "\n  fragment User on UserInfo {\n    id\n    email\n    role\n    status\n    createdAt\n    updatedAt\n  }\n": typeof types.UserFragmentDoc,
     "\n  mutation RefreshTokens($input: AuthTokenInput!) {\n    refreshTokens(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n": typeof types.RefreshTokensDocument,
-    "\n  mutation RequestLogin($input: UserInput!) {\n    requestLogin(input: $input) {\n      ...User\n    }\n  }\n": typeof types.RequestLoginDocument,
-    "\n  mutation VerifyLogin($input: VerifyUserInput!) {\n    verifyLogin(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n": typeof types.VerifyLoginDocument,
+    "\n  mutation SignOut {\n    signOut\n  }\n": typeof types.SignOutDocument,
+    "\n  mutation UserSignIn($input: UserSignInInput!) {\n    userSignIn(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n": typeof types.UserSignInDocument,
+    "\n  mutation UserSignInWithKakaoCode($input: UserSignInWithKakaoCodeInput!) {\n    userSignInWithKakaoCode(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n": typeof types.UserSignInWithKakaoCodeDocument,
     "\n  query FindUser {\n    findUser {\n      ...User\n    }\n  }\n": typeof types.FindUserDocument,
 };
 const documents: Documents = {
     "\n  fragment User on UserInfo {\n    id\n    email\n    role\n    status\n    createdAt\n    updatedAt\n  }\n": types.UserFragmentDoc,
     "\n  mutation RefreshTokens($input: AuthTokenInput!) {\n    refreshTokens(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n": types.RefreshTokensDocument,
-    "\n  mutation RequestLogin($input: UserInput!) {\n    requestLogin(input: $input) {\n      ...User\n    }\n  }\n": types.RequestLoginDocument,
-    "\n  mutation VerifyLogin($input: VerifyUserInput!) {\n    verifyLogin(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n": types.VerifyLoginDocument,
+    "\n  mutation SignOut {\n    signOut\n  }\n": types.SignOutDocument,
+    "\n  mutation UserSignIn($input: UserSignInInput!) {\n    userSignIn(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n": types.UserSignInDocument,
+    "\n  mutation UserSignInWithKakaoCode($input: UserSignInWithKakaoCodeInput!) {\n    userSignInWithKakaoCode(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n": types.UserSignInWithKakaoCodeDocument,
     "\n  query FindUser {\n    findUser {\n      ...User\n    }\n  }\n": types.FindUserDocument,
 };
 
@@ -53,11 +55,15 @@ export function gql(source: "\n  mutation RefreshTokens($input: AuthTokenInput!)
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function gql(source: "\n  mutation RequestLogin($input: UserInput!) {\n    requestLogin(input: $input) {\n      ...User\n    }\n  }\n"): (typeof documents)["\n  mutation RequestLogin($input: UserInput!) {\n    requestLogin(input: $input) {\n      ...User\n    }\n  }\n"];
+export function gql(source: "\n  mutation SignOut {\n    signOut\n  }\n"): (typeof documents)["\n  mutation SignOut {\n    signOut\n  }\n"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function gql(source: "\n  mutation VerifyLogin($input: VerifyUserInput!) {\n    verifyLogin(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n"): (typeof documents)["\n  mutation VerifyLogin($input: VerifyUserInput!) {\n    verifyLogin(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n"];
+export function gql(source: "\n  mutation UserSignIn($input: UserSignInInput!) {\n    userSignIn(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n"): (typeof documents)["\n  mutation UserSignIn($input: UserSignInInput!) {\n    userSignIn(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "\n  mutation UserSignInWithKakaoCode($input: UserSignInWithKakaoCodeInput!) {\n    userSignInWithKakaoCode(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n"): (typeof documents)["\n  mutation UserSignInWithKakaoCode($input: UserSignInWithKakaoCodeInput!) {\n    userSignInWithKakaoCode(input: $input) {\n      accessToken\n      refreshToken\n    }\n  }\n"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

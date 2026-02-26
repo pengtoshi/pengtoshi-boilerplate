@@ -29,6 +29,11 @@ export const config = (): ConfigType => ({
     disable: process.env.MIXPANEL_DISABLE === "true" || false,
   },
   kakao: {
+    restApiKey: process.env.KAKAO_REST_API_KEY!,
+    clientSecret: process.env.KAKAO_CLIENT_SECRET!,
+    tokenUrl: process.env.KAKAO_TOKEN_URL!,
     userInfoUrl: process.env.KAKAO_USER_INFO_URL!,
+    mobileCallbackUrl: process.env.KAKAO_MOBILE_CALLBACK_URL!,
+    mobileAppRedirectUri: process.env.KAKAO_MOBILE_APP_REDIRECT_URI!,
   },
 });
