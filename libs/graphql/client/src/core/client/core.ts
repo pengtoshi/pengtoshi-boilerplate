@@ -1,4 +1,4 @@
-import type { NormalizedCacheObject } from "@apollo/client";
+import type { ApolloCache, NormalizedCacheObject } from "@apollo/client";
 import { ApolloClient, InMemoryCache, createHttpLink, from, fromPromise } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { onError } from "@apollo/client/link/error";
@@ -31,9 +31,10 @@ export type GraphqlClientOptions = {
   uri?: string;
   tokenStorage: AuthTokenStorage;
   onAuthFailed?: () => void;
+  cache?: ApolloCache<NormalizedCacheObject>;
 };
 
-export const getApolloCoreClient = ({ uri, tokenStorage, onAuthFailed }: GraphqlClientOptions) => {
+export const getApolloCoreClient = ({ uri, tokenStorage, onAuthFailed, cache }: GraphqlClientOptions) => {
   let client: ApolloClient<NormalizedCacheObject>;
   const graphqlUrl = resolveGraphqlUri(uri);
 
@@ -135,7 +136,7 @@ export const getApolloCoreClient = ({ uri, tokenStorage, onAuthFailed }: Graphql
   client = new ApolloClient({
     ssrMode: typeof window === "undefined",
     link: from([authLink, errorLink, serverLink]),
-    cache: new InMemoryCache(),
+    cache: cache ?? new InMemoryCache(),
   });
 
   return client;

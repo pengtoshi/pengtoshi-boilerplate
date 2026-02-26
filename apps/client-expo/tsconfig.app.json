@@ -6,10 +6,10 @@
     "types": ["nativewind/types", "node"],
     "baseUrl": ".",
     "paths": {
+      "~/client-expo/*": ["./*"],
       "@/*": ["src/*"],
       "@libs/ui-mobile": ["../../libs/ui/mobile/src/index.ts"],
       "@libs/model": ["../../libs/model/src/index.ts"],
-      "@libs/utils-client-web": ["../../libs/utils/src/client/web/index.ts"],
       "@libs/graphql-core": ["../../libs/graphql/client/src/core/index.ts"],
       "@libs/graphql-mobile": ["../../libs/graphql/client/src/expo/index.ts"]
     }

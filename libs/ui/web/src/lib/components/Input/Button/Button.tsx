@@ -6,6 +6,7 @@ import { Interaction } from "../../Display/Interaction/Interaction";
 export type ButtonProps = ShadcnButtonProps & {
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
+  textClassName?: string;
 };
 
 const interactionClasses = {
@@ -16,12 +17,12 @@ const interactionClasses = {
   textAssertive: "",
 };
 
-export const Button = ({ children, leftIcon, rightIcon, className, ...props }: ButtonProps) => {
+export const Button = ({ children, leftIcon, rightIcon, className, textClassName, ...props }: ButtonProps) => {
   return (
     <ShadcnButton {...props} className={clsx("relative overflow-hidden", className)}>
       <Interaction focus={false} className={interactionClasses[props.variant ?? "solid"]} />
       {leftIcon}
-      <span className="relative z-10">{children}</span>
+      <span className={clsx("relative z-10", textClassName)}>{children}</span>
       {rightIcon}
     </ShadcnButton>
   );

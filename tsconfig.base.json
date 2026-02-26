@@ -30,6 +30,7 @@
       "@libs/utils-server": ["libs/utils/src/server/index.ts"],
       "~/.storybook/*": [".storybook/*"],
       "~/client-next/*": ["apps/client-next/*"],
+      "~/client-expo/*": ["apps/client-expo/*"],
       "~/prisma/*": ["libs/prisma/*"],
       "~/server-nest/*": ["apps/server-nest/*"],
       "~/ui-web/*": ["libs/ui/web/*"],

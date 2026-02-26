@@ -1,13 +1,13 @@
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 import clsx from "clsx";
 import * as Crypto from "expo-crypto";
 import { useRouter } from "expo-router";
 import * as WebBrowser from "expo-web-browser";
 import { useCallback, useRef, useState } from "react";
-import { ActivityIndicator, Platform, View } from "react-native";
+import { ActivityIndicator, Image, Platform, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { createExpoTokenStorage, useSignInWithKakaoCode } from "@libs/graphql-mobile";
 import { Button, Text } from "@libs/ui-mobile";
+import KakaoIcon from "~/client-expo/assets/shared/images/kakao.png";
 
 const KAKAO_AUTHORIZE_URL = "https://kauth.kakao.com/oauth/authorize";
 const PKCE_CHARSET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~";
@@ -156,9 +156,9 @@ const LoginScreen = () => {
           onPress={() => handleKakaoSignIn().catch(() => undefined)}
           leftIcon={
             loading ? (
-              <ActivityIndicator size={24} color="#000000" />
+              <ActivityIndicator size={20} color="#000000" />
             ) : (
-              <MaterialCommunityIcons name="chat" size={24} color="#000000" />
+              <Image source={KakaoIcon} style={{ width: 20, height: 20 }} resizeMode="contain" />
             )
           }
           textClassName="!text-black"

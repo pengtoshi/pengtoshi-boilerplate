@@ -195,6 +195,7 @@
     "@types/crypto-js": "^4.2.2",
     "@types/mixpanel-browser": "^2.50.0",
     "apollo-server-express": "^3.10.1",
+    "apollo3-cache-persist": "^0.14.1",
     "axios": "^1.6.0",
     "bcrypt": "^5.1.1",
     "blueimp-md5": "^2.19.0",
