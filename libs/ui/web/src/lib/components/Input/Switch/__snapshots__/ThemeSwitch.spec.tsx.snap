@@ -43,18 +43,68 @@ exports[`ThemeSwitch should render 1`] = `
       class="bg-background-disabled relative flex-shrink-0 overflow-hidden rounded-full transition-all duration-300 disabled:opacity-40 h-[26px] w-12"
       type="button"
     >
-      <div
+      <svg
         aria-hidden="false"
-        class="opacity-100 pointer-events-none absolute right-1.5 top-1/2 -translate-y-1/2 text-line-normal transition-all duration-300"
+        class="lucide lucide-sun text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled opacity-100 pointer-events-none absolute top-1/2 -translate-y-1/2 !text-dark-label-assertive transition-all duration-300 right-1.5"
+        component="[object Object]"
+        fill="none"
         height="14"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
         width="14"
-      />
-      <div
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="4"
+        />
+        <path
+          d="M12 2v2"
+        />
+        <path
+          d="M12 20v2"
+        />
+        <path
+          d="m4.93 4.93 1.41 1.41"
+        />
+        <path
+          d="m17.66 17.66 1.41 1.41"
+        />
+        <path
+          d="M2 12h2"
+        />
+        <path
+          d="M20 12h2"
+        />
+        <path
+          d="m6.34 17.66-1.41 1.41"
+        />
+        <path
+          d="m19.07 4.93-1.41 1.41"
+        />
+      </svg>
+      <svg
         aria-hidden="true"
-        class="opacity-0 pointer-events-none absolute left-1.5 top-1/2 -translate-y-1/2 text-dark-line-normal transition-all duration-300"
+        class="lucide lucide-moon text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled opacity-0 pointer-events-none absolute top-1/2 -translate-y-1/2 !text-label-assertive transition-all duration-300 left-1.5"
+        component="[object Object]"
+        fill="none"
         height="14"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
         width="14"
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
+        />
+      </svg>
       <div
         class="bg-normal absolute left-0.5 top-0.5 rounded-full transition-all duration-300 h-[22px] w-[22px] translate-x-0"
       />

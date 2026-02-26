@@ -40,16 +40,34 @@ exports[`ToggleIcon should render 1`] = `
       tabindex="-1"
     />
     <button
-      class="group relative"
+      class="group relative text-label-placeholder dark:text-dark-label-placeholder"
       type="button"
     >
-      <div
-        class="text-label-placeholder dark:text-dark-label-placeholder"
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-download h-5 w-5 text-label-normal dark:text-dark-label-normal"
+        fill="none"
         height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
         width="24"
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 15V3"
+        />
+        <path
+          d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+        />
+        <path
+          d="m7 10 5 5 5-5"
+        />
+      </svg>
       <div
-        class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12] -left-1 -top-1 h-8 w-8 rounded-full"
+        class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12] inset-auto left-1/2 top-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full"
       />
     </button>
   </div>

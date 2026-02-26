@@ -50,7 +50,7 @@ const variantClasses: Record<UIButtonVariant, { container: string; text: string;
 const sizeClasses: Record<UIButtonSize, { container: string; text: string }> = {
   small: { container: "h-[32px] rounded-md px-[12px]", text: "text-14/button" }, // 8*4, 3*4
   medium: { container: "h-[40px] rounded-md px-[16px]", text: "text-14/button" }, // 10*4, 4*4
-  large: { container: "h-[48px] rounded-md px-[20px]", text: "text-16/button" }, // 12*4, 5*4
+  large: { container: "h-[52px] rounded-md px-[20px]", text: "text-16/button" }, // 12*4, 5*4
   extraLarge: { container: "h-[64px] rounded-md px-[24px]", text: "text-18/button" }, // 16*4, 6*4
 };
 
@@ -76,7 +76,7 @@ export const Button = ({
     <Pressable
       accessibilityRole="button"
       className={clsx(
-        "flex-row items-center justify-center gap-2 transition-opacity duration-300 active:opacity-80 disabled:opacity-100",
+        "flex-row items-center justify-center gap-2 transition-all duration-300 active:opacity-80 disabled:opacity-100",
         variantStyle.container,
         sizeStyle.container,
         className,
@@ -84,7 +84,7 @@ export const Button = ({
       disabled={isDisabled}
       {...props}
     >
-      {loading ? <ActivityIndicator color={variantStyle.spinner} size="small" /> : leftIcon}
+      {loading ? <ActivityIndicator color={variantStyle.spinner} size={24} /> : leftIcon}
       {typeof textValue === "string" ? (
         <Text className={clsx(variantStyle.text, sizeStyle.text, textClassName)}>{textValue}</Text>
       ) : (

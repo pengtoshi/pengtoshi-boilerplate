@@ -43,26 +43,47 @@ exports[`Toast should render 1`] = `
       class="flex w-[360px] flex-col gap-4"
     >
       <div
-        class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+        class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
       >
         <div
           class="flex items-center justify-start gap-2"
         >
-          <div
-            class="text-dark-label-normal dark:text-label-normal"
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-info text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-label-normal dark:text-dark-label-normal"
+            component="[object Object]"
+            fill="none"
             height="20"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
             width="20"
-          />
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+            />
+            <path
+              d="M12 16v-4"
+            />
+            <path
+              d="M12 8h.01"
+            />
+          </svg>
           <div
             class="flex flex-col gap-1"
           >
             <p
-              class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
+              class="text-14/body/emp text-label-normal dark:text-dark-label-normal"
             >
               Example Toast
             </p>
             <p
-              class="text-12/body text-dark-label-assertive dark:text-label-assertive"
+              class="text-12/body text-label-assertive dark:text-dark-label-assertive"
             >
               This is toast description.
             </p>
@@ -70,7 +91,7 @@ exports[`Toast should render 1`] = `
         </div>
       </div>
       <button
-        class="group inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden w-[160px]"
+        class="group inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden w-[160px]"
       >
         <div
           class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -137,21 +158,42 @@ exports[`Toast should render 2`] = `
           default
         </span>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-label-normal dark:text-label-normal"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-info text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-label-normal dark:text-dark-label-normal"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <path
+                d="M12 16v-4"
+              />
+              <path
+                d="M12 8h.01"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
+                class="text-14/body/emp text-label-normal dark:text-dark-label-normal"
               >
                 Example Toast
               </p>
@@ -159,28 +201,49 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-label-normal dark:text-label-normal"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-info text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-label-normal dark:text-dark-label-normal"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <path
+                d="M12 16v-4"
+              />
+              <path
+                d="M12 8h.01"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
+                class="text-14/body/emp text-label-normal dark:text-dark-label-normal"
               >
                 Example Toast
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-3 text-14/button gap-1 relative overflow-hidden !w-fit !bg-dark-normal !text-dark-label-normal dark:!bg-normal dark:!text-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -193,26 +256,47 @@ exports[`Toast should render 2`] = `
           </button>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-label-normal dark:text-label-normal"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-info text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-label-normal dark:text-dark-label-normal"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <path
+                d="M12 16v-4"
+              />
+              <path
+                d="M12 8h.01"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
+                class="text-14/body/emp text-label-normal dark:text-dark-label-normal"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
+                class="text-12/body text-label-assertive dark:text-dark-label-assertive"
               >
                 This is toast description.
               </p>
@@ -220,33 +304,54 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-label-normal dark:text-label-normal"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-info text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-label-normal dark:text-dark-label-normal"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <path
+                d="M12 16v-4"
+              />
+              <path
+                d="M12 8h.01"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
+                class="text-14/body/emp text-label-normal dark:text-dark-label-normal"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
+                class="text-12/body text-label-assertive dark:text-dark-label-assertive"
               >
                 This is toast description.
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-3 text-14/button gap-1 relative overflow-hidden !w-fit !bg-dark-normal !text-dark-label-normal dark:!bg-normal dark:!text-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -268,21 +373,37 @@ exports[`Toast should render 2`] = `
           success
         </span>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-status-positive dark:text-status-positive"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-circle-check-big text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-status-positive dark:text-dark-status-positive"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.801 10A10 10 0 1 1 17 3.335"
+              />
+              <path
+                d="m9 11 3 3L22 4"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-status-positive dark:text-status-positive"
+                class="text-14/body/emp text-status-positive dark:text-dark-status-positive"
               >
                 Example Toast
               </p>
@@ -290,28 +411,44 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-status-positive dark:text-status-positive"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-circle-check-big text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-status-positive dark:text-dark-status-positive"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.801 10A10 10 0 1 1 17 3.335"
+              />
+              <path
+                d="m9 11 3 3L22 4"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-status-positive dark:text-status-positive"
+                class="text-14/body/emp text-status-positive dark:text-dark-status-positive"
               >
                 Example Toast
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-3 text-14/button gap-1 relative overflow-hidden !w-fit !bg-dark-normal !text-dark-label-normal dark:!bg-normal dark:!text-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -324,26 +461,42 @@ exports[`Toast should render 2`] = `
           </button>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-status-positive dark:text-status-positive"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-circle-check-big text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-status-positive dark:text-dark-status-positive"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.801 10A10 10 0 1 1 17 3.335"
+              />
+              <path
+                d="m9 11 3 3L22 4"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-status-positive dark:text-status-positive"
+                class="text-14/body/emp text-status-positive dark:text-dark-status-positive"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
+                class="text-12/body text-label-assertive dark:text-dark-label-assertive"
               >
                 This is toast description.
               </p>
@@ -351,33 +504,49 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-status-positive dark:text-status-positive"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-circle-check-big text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-status-positive dark:text-dark-status-positive"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.801 10A10 10 0 1 1 17 3.335"
+              />
+              <path
+                d="m9 11 3 3L22 4"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-status-positive dark:text-status-positive"
+                class="text-14/body/emp text-status-positive dark:text-dark-status-positive"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
+                class="text-12/body text-label-assertive dark:text-dark-label-assertive"
               >
                 This is toast description.
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-3 text-14/button gap-1 relative overflow-hidden !w-fit !bg-dark-normal !text-dark-label-normal dark:!bg-normal dark:!text-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -399,21 +568,42 @@ exports[`Toast should render 2`] = `
           error
         </span>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-status-negative dark:text-status-negative"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-circle-x text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-status-negative dark:text-dark-status-negative"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <path
+                d="m15 9-6 6"
+              />
+              <path
+                d="m9 9 6 6"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-status-negative dark:text-status-negative"
+                class="text-14/body/emp text-status-negative dark:text-dark-status-negative"
               >
                 Example Toast
               </p>
@@ -421,28 +611,49 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-status-negative dark:text-status-negative"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-circle-x text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-status-negative dark:text-dark-status-negative"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <path
+                d="m15 9-6 6"
+              />
+              <path
+                d="m9 9 6 6"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-status-negative dark:text-status-negative"
+                class="text-14/body/emp text-status-negative dark:text-dark-status-negative"
               >
                 Example Toast
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-3 text-14/button gap-1 relative overflow-hidden !w-fit !bg-dark-normal !text-dark-label-normal dark:!bg-normal dark:!text-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -455,26 +666,47 @@ exports[`Toast should render 2`] = `
           </button>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-status-negative dark:text-status-negative"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-circle-x text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-status-negative dark:text-dark-status-negative"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <path
+                d="m15 9-6 6"
+              />
+              <path
+                d="m9 9 6 6"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-status-negative dark:text-status-negative"
+                class="text-14/body/emp text-status-negative dark:text-dark-status-negative"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
+                class="text-12/body text-label-assertive dark:text-dark-label-assertive"
               >
                 This is toast description.
               </p>
@@ -482,33 +714,54 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-status-negative dark:text-status-negative"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-circle-x text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-status-negative dark:text-dark-status-negative"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <path
+                d="m15 9-6 6"
+              />
+              <path
+                d="m9 9 6 6"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-status-negative dark:text-status-negative"
+                class="text-14/body/emp text-status-negative dark:text-dark-status-negative"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
+                class="text-12/body text-label-assertive dark:text-dark-label-assertive"
               >
                 This is toast description.
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-3 text-14/button gap-1 relative overflow-hidden !w-fit !bg-dark-normal !text-dark-label-normal dark:!bg-normal dark:!text-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -530,21 +783,42 @@ exports[`Toast should render 2`] = `
           info
         </span>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-label-normal dark:text-label-normal"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-info text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-label-normal dark:text-dark-label-normal"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <path
+                d="M12 16v-4"
+              />
+              <path
+                d="M12 8h.01"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
+                class="text-14/body/emp text-label-normal dark:text-dark-label-normal"
               >
                 Example Toast
               </p>
@@ -552,28 +826,49 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-label-normal dark:text-label-normal"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-info text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-label-normal dark:text-dark-label-normal"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <path
+                d="M12 16v-4"
+              />
+              <path
+                d="M12 8h.01"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
+                class="text-14/body/emp text-label-normal dark:text-dark-label-normal"
               >
                 Example Toast
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-3 text-14/button gap-1 relative overflow-hidden !w-fit !bg-dark-normal !text-dark-label-normal dark:!bg-normal dark:!text-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
@@ -586,26 +881,47 @@ exports[`Toast should render 2`] = `
           </button>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-label-normal dark:text-label-normal"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-info text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-label-normal dark:text-dark-label-normal"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <path
+                d="M12 16v-4"
+              />
+              <path
+                d="M12 8h.01"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
+                class="text-14/body/emp text-label-normal dark:text-dark-label-normal"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
+                class="text-12/body text-label-assertive dark:text-dark-label-assertive"
               >
                 This is toast description.
               </p>
@@ -613,33 +929,54 @@ exports[`Toast should render 2`] = `
           </div>
         </div>
         <div
-          class="flex w-[360px] items-center justify-between gap-3 rounded-md bg-dark-normal px-4 py-3 dark:bg-normal"
+          class="flex w-full items-center justify-between gap-3 rounded-md bg-background-strong px-4 py-3 shadow-emphasize dark:bg-dark-background-strong sm:w-[360px]"
         >
           <div
             class="flex items-center justify-start gap-2"
           >
-            <div
-              class="text-dark-label-normal dark:text-label-normal"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-info text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-label-normal dark:text-dark-label-normal"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <path
+                d="M12 16v-4"
+              />
+              <path
+                d="M12 8h.01"
+              />
+            </svg>
             <div
               class="flex flex-col gap-1"
             >
               <p
-                class="text-14/body/emp text-dark-label-normal dark:text-label-normal"
+                class="text-14/body/emp text-label-normal dark:text-dark-label-normal"
               >
                 Example Toast
               </p>
               <p
-                class="text-12/body text-dark-label-assertive dark:text-label-assertive"
+                class="text-12/body text-label-assertive dark:text-dark-label-assertive"
               >
                 This is toast description.
               </p>
             </div>
           </div>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden !w-fit !bg-normal !text-label-normal dark:!bg-dark-normal dark:!text-dark-label-normal"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-3 text-14/button gap-1 relative overflow-hidden !w-fit !bg-dark-normal !text-dark-label-normal dark:!bg-normal dark:!text-label-normal"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"

@@ -47,7 +47,7 @@ exports[`TextArea should render 1`] = `
       >
         <textarea
           class="text-14/body peer w-full self-stretch overflow-ellipsis bg-transparent focus:outline-none resize-none text-label-normal dark:text-dark-label-normal placeholder:text-label-placeholder dark:placeholder:text-dark-label-placeholder disabled:text-label-disabled dark:disabled:text-dark-label-disabled"
-          id="ui-:r0:"
+          id="ui-«r0»"
           maxlength="200"
           placeholder="Enter text here"
         />
