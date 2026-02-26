@@ -7,7 +7,6 @@ import { ActivityIndicator, Image, Platform, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { createExpoTokenStorage, useSignInWithKakaoCode } from "@libs/graphql-mobile";
 import { Button, Text } from "@libs/ui-mobile";
-import KakaoIcon from "~/client-expo/assets/shared/images/kakao.png";
 
 const KAKAO_AUTHORIZE_URL = "https://kauth.kakao.com/oauth/authorize";
 const PKCE_CHARSET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~";
@@ -158,7 +157,11 @@ const LoginScreen = () => {
             loading ? (
               <ActivityIndicator size={20} color="#000000" />
             ) : (
-              <Image source={KakaoIcon} style={{ width: 20, height: 20 }} resizeMode="contain" />
+              <Image
+                source={require("../../assets/shared/images/kakao.png")}
+                style={{ width: 20, height: 20 }}
+                resizeMode="contain"
+              />
             )
           }
           textClassName="!text-black"

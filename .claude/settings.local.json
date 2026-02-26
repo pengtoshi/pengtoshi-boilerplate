@@ -1,9 +1,5 @@
 {
   "permissions": {
-    "allow": [
-      "Bash(yarn add:*)",
-      "Bash(yarn info:*)",
-      "Bash(yarn remove:*)"
-    ]
+    "allow": ["Bash(yarn add:*)", "Bash(yarn info:*)", "Bash(yarn remove:*)", "Bash(ls:*)", "Bash(node:*)"]
   }
 }
