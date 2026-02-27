@@ -38,10 +38,6 @@ export const getApolloCoreClient = ({ uri, tokenStorage, onAuthFailed, cache }: 
   let client: ApolloClient<NormalizedCacheObject>;
   const graphqlUrl = resolveGraphqlUri(uri);
 
-  if (!graphqlUrl) {
-    throw new Error("GraphQL server URL is required. Set uri, NEXT_PUBLIC_SERVER_URL, or EXPO_PUBLIC_SERVER_URL.");
-  }
-
   const serverLink = createHttpLink({
     uri: graphqlUrl,
     fetchOptions: {
