@@ -6,6 +6,11 @@
     "declaration": true,
     "types": ["node"]
   },
+  "references": [
+    {
+      "path": "../constants/tsconfig.lib.json"
+    }
+  ],
   "include": ["src/**/*.ts"],
   "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"]
 }

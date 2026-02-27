@@ -37,6 +37,10 @@ yarn-error.log
 testem.log
 /typings
 
+# Environment files
+.env.*
+!.env.example
+
 # generated
 libs/graphql/schema.graphql
 libs/graphql/*.schema.graphql

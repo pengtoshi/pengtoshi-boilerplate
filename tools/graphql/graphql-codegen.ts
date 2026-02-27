@@ -4,14 +4,14 @@ const config: CodegenConfig = {
   schema: "libs/graphql/schema.graphql",
   documents: [],
   generates: {
-    "libs/graphql/client/src/lib/requests/__generated__/": {
+    "libs/graphql/client/src/core/requests/__generated__/": {
       preset: "client",
       plugins: [],
       presetConfig: {
         gqlTagName: "gql",
         fragmentMasking: false,
       },
-      documents: ["libs/graphql/client/src/lib/requests/**/*.ts"],
+      documents: ["libs/graphql/client/src/core/requests/**/*.ts"],
     },
   },
   ignoreNoDocuments: true,

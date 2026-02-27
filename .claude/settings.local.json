@@ -1,0 +1,6 @@
+{
+  "permissions": {
+    "allow": ["Bash"],
+    "ask": ["Bash(sudo:*)", "Bash(/usr/bin/sudo:*)"]
+  }
+}

@@ -2,5 +2,6 @@
 
 export * from "./lib/components/index";
 export * from "./lib/contexts/index";
+export * from "./lib/layouts/index";
 export * from "./lib/hooks/index";
 export * from "./lib/props";

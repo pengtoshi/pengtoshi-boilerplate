@@ -40,7 +40,7 @@ exports[`Button should render 1`] = `
       tabindex="-1"
     />
     <button
-      class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+      class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
       type="button"
     >
       <div
@@ -110,7 +110,7 @@ exports[`Button should render 2`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -123,7 +123,7 @@ exports[`Button should render 2`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -150,17 +150,30 @@ exports[`Button should render 2`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
             />
-            <div
-              class="text-gray-50"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-chevron-left text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-normal"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m15 18-6-6 6-6"
+              />
+            </svg>
             <span
               class="relative z-10"
             >
@@ -168,18 +181,31 @@ exports[`Button should render 2`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
             <div
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-active:opacity-[0.12]"
             />
-            <div
-              class="text-gray-50"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-chevron-left text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-normal"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m15 18-6-6 6-6"
+              />
+            </svg>
             <span
               class="relative z-10"
             >
@@ -200,7 +226,7 @@ exports[`Button should render 2`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -211,14 +237,27 @@ exports[`Button should render 2`] = `
             >
               Button
             </span>
-            <div
-              class="text-gray-50"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-chevron-right text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-normal"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -230,11 +269,24 @@ exports[`Button should render 2`] = `
             >
               Button
             </span>
-            <div
-              class="text-gray-50"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-chevron-right text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-normal"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
           </button>
         </div>
       </div>
@@ -297,7 +349,7 @@ exports[`Button should render 3`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -310,7 +362,7 @@ exports[`Button should render 3`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -337,7 +389,7 @@ exports[`Button should render 3`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-3 text-14/button gap-1 relative overflow-hidden"
             type="button"
           >
             <div
@@ -350,7 +402,7 @@ exports[`Button should render 3`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-4 text-14/button gap-1 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-8 px-3 text-14/button gap-1 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -377,7 +429,7 @@ exports[`Button should render 3`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -390,7 +442,7 @@ exports[`Button should render 3`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -417,7 +469,7 @@ exports[`Button should render 3`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-12 px-6 text-16/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-[52px] px-5 text-16/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -430,7 +482,7 @@ exports[`Button should render 3`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-12 px-6 text-16/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-[52px] px-5 text-16/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -504,7 +556,7 @@ exports[`Button should render 4`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -517,7 +569,7 @@ exports[`Button should render 4`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -544,7 +596,7 @@ exports[`Button should render 4`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -557,7 +609,7 @@ exports[`Button should render 4`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-primary-normal dark:bg-dark-primary-normal !text-normal dark:!text-dark-normal disabled:bg-background-disabled dark:disabled:bg-dark-background-disabled disabled:text-label-disabled dark:disabled:text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -584,7 +636,7 @@ exports[`Button should render 4`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-primary-normal dark:border-dark-primary-normal !text-primary-normal dark:!text-dark-primary-normal disabled:border-line-normal dark:disabled:border-dark-line-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-primary-normal dark:border-dark-primary-normal !text-primary-normal dark:!text-dark-primary-normal disabled:border-line-normal dark:disabled:border-dark-line-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -597,7 +649,7 @@ exports[`Button should render 4`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-primary-normal dark:border-dark-primary-normal !text-primary-normal dark:!text-dark-primary-normal disabled:border-line-normal dark:disabled:border-dark-line-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-primary-normal dark:border-dark-primary-normal !text-primary-normal dark:!text-dark-primary-normal disabled:border-line-normal dark:disabled:border-dark-line-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -624,7 +676,7 @@ exports[`Button should render 4`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-line-normal dark:border-dark-line-normal !text-label-normal dark:!text-dark-label-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-line-normal dark:border-dark-line-normal !text-label-normal dark:!text-dark-label-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -637,7 +689,7 @@ exports[`Button should render 4`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-line-normal dark:border-dark-line-normal !text-label-normal dark:!text-dark-label-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent border border-line-normal dark:border-dark-line-normal !text-label-normal dark:!text-dark-label-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -664,7 +716,7 @@ exports[`Button should render 4`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-primary-normal dark:!text-dark-primary-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled !px-2 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-primary-normal dark:!text-dark-primary-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled !px-2 h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -677,7 +729,7 @@ exports[`Button should render 4`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-primary-normal dark:!text-dark-primary-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled !px-2 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-primary-normal dark:!text-dark-primary-normal disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled !px-2 h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >
@@ -704,7 +756,7 @@ exports[`Button should render 4`] = `
           class="flex flex-col gap-4"
         >
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-label-assertive dark:!text-dark-label-assertive disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled !px-2 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-label-assertive dark:!text-dark-label-assertive disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled !px-2 h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             type="button"
           >
             <div
@@ -717,7 +769,7 @@ exports[`Button should render 4`] = `
             </span>
           </button>
           <button
-            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-label-assertive dark:!text-dark-label-assertive disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled !px-2 h-10 px-5 text-14/button gap-1.5 relative overflow-hidden"
+            class="group w-fit inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 disabled:pointer-events-none bg-transparent !text-label-assertive dark:!text-dark-label-assertive disabled:!text-label-disabled dark:disabled:!text-dark-label-disabled !px-2 h-10 px-4 text-14/button gap-1.5 relative overflow-hidden"
             disabled=""
             type="button"
           >

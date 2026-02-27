@@ -56,11 +56,24 @@ exports[`Dropdown should render 1`] = `
               class="absolute inset-0 bg-gray-950 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.06] group-focus:opacity-[0.06] group-active:opacity-[0.12]"
             />
             Select an option
-            <div
-              class="transition-transform duration-300"
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-chevron-down text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled text-label-normal transition-transform duration-500 dark:text-dark-label-normal"
+              component="[object Object]"
+              fill="none"
               height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
               width="20"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m6 9 6 6 6-6"
+              />
+            </svg>
           </button>
         </div>
         <div

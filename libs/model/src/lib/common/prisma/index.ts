@@ -22,14 +22,8 @@ export { NestedDateTimeNullableFilter } from "./nested-date-time-nullable-filter
 export { DateTimeNullableFilter } from "./date-time-nullable-filter.input";
 
 /* Enum */
-export { NestedEnumSupportedNetworkFilter } from "./nested-enum-supported-network-filter.input";
-export { EnumSupportedNetworkFilter } from "./enum-supported-network-filter.input";
-export { NestedEnumPoolTypeFilter } from "./nested-enum-pool-type-filter.input";
-export { EnumPoolTypeFilter } from "./enum-pool-type-filter.input";
 export { EnumStatusFilter } from "./enum-status-filter.input";
 export { NestedEnumStatusFilter } from "./nested-enum-status-filter.input";
-export { EnumTransactionTypeFilter } from "./enum-transaction-type-filter.input";
-export { NestedEnumTransactionTypeFilter } from "./nested-enum-transaction-type-filter.input";
 
 /* Order */
 export { NullsOrder } from "./nulls-order.enum";

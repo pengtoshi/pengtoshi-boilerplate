@@ -37,7 +37,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({
 }) => {
   return (
     <View
-      className={clsx("flex-row items-center border-t border-line-normal bg-normal px-4 pb-8 pt-2", className)}
+      className={clsx("flex-row items-center border-t border-line-normal bg-normal px-4 pt-2", className)}
       style={contentContainerStyle}
     >
       {items.map((item) => {

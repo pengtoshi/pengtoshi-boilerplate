@@ -16,6 +16,12 @@ export const ErrorMessage = {
   // Chain
   MSG_NOT_FOUND_CHAIN: "Chain not found.",
 
+  // Config
+  MSG_NOT_FOUND_CONFIG: "Config not found. Check your environment variables.",
+
   // External Api
   MSG_EXTERNAL_API_FETCH_FAILED: "External API fetch failed.",
+
+  // Paginate
+  MSG_NOT_FOUND_TOTAL_COUNT: "Total count not found.",
 };

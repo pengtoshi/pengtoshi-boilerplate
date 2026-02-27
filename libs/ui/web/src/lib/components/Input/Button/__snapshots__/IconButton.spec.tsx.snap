@@ -43,25 +43,57 @@ exports[`IconButton should render 1`] = `
       class="flex flex-row gap-4"
     >
       <button
-        class="group"
+        class="group text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled"
         type="button"
       >
-        <div
-          class="text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled"
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-x text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled"
+          component="[object Object]"
+          fill="none"
           height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
           width="24"
-        />
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18 6 6 18"
+          />
+          <path
+            d="m6 6 12 12"
+          />
+        </svg>
       </button>
       <button
-        class="group"
+        class="group text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled"
         disabled=""
         type="button"
       >
-        <div
-          class="text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled"
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-x text-label-normal group-disabled:text-label-disabled dark:text-dark-label-normal dark:group-disabled:text-dark-label-disabled"
+          component="[object Object]"
+          fill="none"
           height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
           width="24"
-        />
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18 6 6 18"
+          />
+          <path
+            d="m6 6 12 12"
+          />
+        </svg>
       </button>
     </div>
   </div>

@@ -8,6 +8,14 @@
     "android": "cd ../../ && nx run client-expo:run-android",
     "ios": "cd ../../ && nx run client-expo:run-ios"
   },
+  "expo": {
+    "autolinking": {
+      "searchPaths": [
+        "../../node_modules",
+        "./node_modules"
+      ]
+    }
+  },
   "dependencies": {},
   "devDependencies": {}
 }

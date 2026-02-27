@@ -58,14 +58,14 @@ exports[`Tabs should render 1`] = `
           tabindex="0"
         >
           <button
-            aria-controls="radix-:r0:-content-account"
+            aria-controls="radix-«r0»-content-account"
             aria-selected="true"
-            class="data-[state=active]:bg-white data-[state=disabled]:text-label-disabled dark:text-dark-label-normal dark:data-[state=active]:bg-black dark:data-[state=disabled]:text-dark-label-disabled inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-transparent px-2 py-1 text-14/body transition-[color,box-shadow] focus-visible:outline-1 focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0"
+            class="data-[state=active]:bg-white data-[state=disabled]:text-label-disabled dark:text-dark-label-normal dark:data-[state=active]:bg-black dark:data-[state=disabled]:text-dark-label-disabled inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-transparent px-2 py-1 text-14/body focus-visible:outline-1 focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 transition-all duration-300"
             data-orientation="horizontal"
             data-radix-collection-item=""
             data-slot="tabs-trigger"
             data-state="active"
-            id="radix-:r0:-trigger-account"
+            id="radix-«r0»-trigger-account"
             role="tab"
             tabindex="-1"
             type="button"
@@ -73,14 +73,14 @@ exports[`Tabs should render 1`] = `
             Account
           </button>
           <button
-            aria-controls="radix-:r0:-content-password"
+            aria-controls="radix-«r0»-content-password"
             aria-selected="false"
-            class="data-[state=active]:bg-white data-[state=disabled]:text-label-disabled dark:text-dark-label-normal dark:data-[state=active]:bg-black dark:data-[state=disabled]:text-dark-label-disabled inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-transparent px-2 py-1 text-14/body transition-[color,box-shadow] focus-visible:outline-1 focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0"
+            class="data-[state=active]:bg-white data-[state=disabled]:text-label-disabled dark:text-dark-label-normal dark:data-[state=active]:bg-black dark:data-[state=disabled]:text-dark-label-disabled inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-transparent px-2 py-1 text-14/body focus-visible:outline-1 focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 transition-all duration-300"
             data-orientation="horizontal"
             data-radix-collection-item=""
             data-slot="tabs-trigger"
             data-state="inactive"
-            id="radix-:r0:-trigger-password"
+            id="radix-«r0»-trigger-password"
             role="tab"
             tabindex="-1"
             type="button"
@@ -88,14 +88,14 @@ exports[`Tabs should render 1`] = `
             Password
           </button>
           <button
-            aria-controls="radix-:r0:-content-settings"
+            aria-controls="radix-«r0»-content-settings"
             aria-selected="false"
-            class="data-[state=active]:bg-white data-[state=disabled]:text-label-disabled dark:text-dark-label-normal dark:data-[state=active]:bg-black dark:data-[state=disabled]:text-dark-label-disabled inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-transparent px-2 py-1 text-14/body transition-[color,box-shadow] focus-visible:outline-1 focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0"
+            class="data-[state=active]:bg-white data-[state=disabled]:text-label-disabled dark:text-dark-label-normal dark:data-[state=active]:bg-black dark:data-[state=disabled]:text-dark-label-disabled inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-transparent px-2 py-1 text-14/body focus-visible:outline-1 focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 transition-all duration-300"
             data-orientation="horizontal"
             data-radix-collection-item=""
             data-slot="tabs-trigger"
             data-state="inactive"
-            id="radix-:r0:-trigger-settings"
+            id="radix-«r0»-trigger-settings"
             role="tab"
             tabindex="-1"
             type="button"
@@ -104,12 +104,12 @@ exports[`Tabs should render 1`] = `
           </button>
         </div>
         <div
-          aria-labelledby="radix-:r0:-trigger-account"
+          aria-labelledby="radix-«r0»-trigger-account"
           class="flex-1 outline-none"
           data-orientation="horizontal"
           data-slot="tabs-content"
           data-state="active"
-          id="radix-:r0:-content-account"
+          id="radix-«r0»-content-account"
           role="tabpanel"
           style="animation-duration: 0s;"
           tabindex="0"
@@ -119,24 +119,24 @@ exports[`Tabs should render 1`] = `
           </div>
         </div>
         <div
-          aria-labelledby="radix-:r0:-trigger-password"
+          aria-labelledby="radix-«r0»-trigger-password"
           class="flex-1 outline-none"
           data-orientation="horizontal"
           data-slot="tabs-content"
           data-state="inactive"
           hidden=""
-          id="radix-:r0:-content-password"
+          id="radix-«r0»-content-password"
           role="tabpanel"
           tabindex="0"
         />
         <div
-          aria-labelledby="radix-:r0:-trigger-settings"
+          aria-labelledby="radix-«r0»-trigger-settings"
           class="flex-1 outline-none"
           data-orientation="horizontal"
           data-slot="tabs-content"
           data-state="inactive"
           hidden=""
-          id="radix-:r0:-content-settings"
+          id="radix-«r0»-content-settings"
           role="tabpanel"
           tabindex="0"
         />

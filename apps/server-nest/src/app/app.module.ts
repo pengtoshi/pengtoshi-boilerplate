@@ -5,11 +5,11 @@ import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
 import { GraphQLModule } from "@nestjs/graphql";
 import { TerminusModule } from "@nestjs/terminus";
-import { GqlConfigService, MonitorModule, PrismaModule, config } from "@libs/nestjs-core";
+import { GqlConfigService, MonitorModule, PrismaModule } from "@libs/nestjs-core";
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
-import { TokenModule } from "./token/token.module";
 import { UserModule } from "./user/user.module";
+import { config } from "../common/config/config";
 import { JwtStrategy } from "../common/strategies/jwt.strategy";
 
 @Module({
@@ -38,7 +38,6 @@ import { JwtStrategy } from "../common/strategies/jwt.strategy";
 
     // App
     PrismaModule,
-    TokenModule,
     UserModule,
   ],
   controllers: [AppController],

@@ -1,11 +1,6 @@
-// api
-export * from "./lib/api/defillama-api/defillama-api.module";
-export * from "./lib/api/defillama-api/defillama-api.service";
-
 // common
 export * from "./lib/common/cache/cache.module";
 export * from "./lib/common/config/config.interface";
-export * from "./lib/common/config/config";
 export * from "./lib/common/decorators/cache.decorator";
 export * from "./lib/common/decorators/roles.decorator";
 export * from "./lib/common/decorators/user.decorator";
